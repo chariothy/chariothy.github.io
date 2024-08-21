@@ -1,0 +1,57 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>读书笔记 - 分类 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+        <description>读书笔记 - 分类 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 22 Feb 2020 16:43:09 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+    <title>漫步华尔街</title>
+    <link>https://www.thy.pub/a-random-walk-down-wall-street/</link>
+    <pubDate>Sat, 22 Feb 2020 16:43:09 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/a-random-walk-down-wall-street/</guid>
+    <description><![CDATA[漫步华尔街 这是第二遍看了，之前一遍的印象已经不深了。 正是在这一遍看的过程当中，我经历了入市以来的一次大挫折，加深了对市场更多的思考。 原来认为]]></description>
+</item><item>
+    <title>Yii2最佳实践</title>
+    <link>https://www.thy.pub/yii2-best-practice/</link>
+    <pubDate>Sat, 22 Feb 2020 14:55:23 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/yii2-best-practice/</guid>
+    <description><![CDATA[Yii2最佳实践 控制器： 视图： 模型： 小部件： 模块： HTTP状态码：]]></description>
+</item><item>
+    <title>PHP Cookbook经典实例（第二版）</title>
+    <link>https://www.thy.pub/php-cookbook-classic-example-second-edition/</link>
+    <pubDate>Sat, 22 Feb 2020 14:53:20 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/php-cookbook-classic-example-second-edition/</guid>
+    <description><![CDATA[PHP Cookbook经典实例（第二版） 字符 1 2 3 4 ucfirst()、ucwords() 首字母大写 fputcsv()、fgetcsv() pac]]></description>
+</item><item>
+    <title>改善Python程序的91个建议</title>
+    <link>https://www.thy.pub/improving-91-suggestions-from-python-programs/</link>
+    <pubDate>Sat, 22 Feb 2020 14:49:37 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/improving-91-suggestions-from-python-programs/</guid>
+    <description><![CDATA[改善Python程序的91个建议 P15. enumerate()的本质是生成器 1 2 3 4 5 def enumerate(seq, start=0): n = start for el in seq: yield n, el n += 1 P22. ++j不是自增运算，将被解]]></description>
+</item><item>
+    <title>我如何从股市赚了200万</title>
+    <link>https://www.thy.pub/how-do-i-earn-2-million-from-the-stock-market/</link>
+    <pubDate>Wed, 12 Feb 2020 16:44:48 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/how-do-i-earn-2-million-from-the-stock-market/</guid>
+    <description><![CDATA[我如何从股市赚了200万 很快的时间内看完了这本书主要是因为这是一位非专业人士写的，没有指标和术语，像看故事一样，读得很流畅。 综合一下作者的观]]></description>
+</item><item>
+    <title>可转债投资魔法书</title>
+    <link>https://www.thy.pub/convertible-invested-investment-magic-book/</link>
+    <pubDate>Wed, 22 Jan 2020 16:42:14 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/convertible-invested-investment-magic-book/</guid>
+    <description><![CDATA[可转债投资魔法书 可转债数据东财可转债 要点 转股价： 本次可转债的初始转股价格为 2.67 元/股，不低于募集说明书公告日前二十个交易日公司股票交易均价和前]]></description>
+</item><item>
+    <title>富爸爸，穷爸爸</title>
+    <link>https://www.thy.pub/rich-dad-poor-dad/</link>
+    <pubDate>Fri, 22 Feb 2019 15:09:49 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/rich-dad-poor-dad/</guid>
+    <description><![CDATA[富爸爸，穷爸爸 此书的主要内容 人的思想要转变 不要把人生的道路只放在好好学习、上好学校、找好工作的单一路径上，不谈学习、工作的意义，单谈如何不让]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,50 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Docker - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/docker/</link>
+        <description>Docker - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 18 Mar 2021 11:36:36 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/docker/" rel="self" type="application/rss+xml" /><item>
+    <title>frps docker command</title>
+    <link>https://www.thy.pub/docker-frps-command/</link>
+    <pubDate>Thu, 18 Mar 2021 11:36:36 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/docker-frps-command/</guid>
+    <description><![CDATA[frps===============使用本机网络============== 1 2 3 4 5 6 docker run -d -it \ --restart unless-stopped \ --name frps \ -v /volume2/docker/frps.ini:/etc/frp/frps.ini \ --network=host \ snowdreamtech/frps ========]]></description>
+</item><item>
+    <title>Docker安装OpenWRT</title>
+    <link>https://www.thy.pub/install-openwrt-in-docker/</link>
+    <pubDate>Wed, 17 Feb 2021 13:40:47 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/install-openwrt-in-docker/</guid>
+    <description><![CDATA[Docker安装OpenWRT 打开网卡混杂模式sudo ip link set eth0 promisc on 创建网络(须结合实际网络情况，不能照抄命令) 使Docker支持IPV6， 1]]></description>
+</item><item>
+    <title>softether docker command</title>
+    <link>https://www.thy.pub/docker-softether-command/</link>
+    <pubDate>Sun, 14 Feb 2021 13:37:23 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/docker-softether-command/</guid>
+    <description><![CDATA[softether client 1 2 3 4 5 6 7 8 9 docker run -d --name=softether-vpnclient \ --net=host --privileged \ -e VPN_SERVER=tq.thy.pub \ -e VPN_PORT=45555 \ -e ACCOUNT_USER=henry \ -e ACCOUNT_PASS=770808 \ -e VIRTUAL_HUB=VPNAT \ -e TAP_IPADDR=192.168.30.111 \ mitsutaka/softether-vpnclient]]></description>
+</item><item>
+    <title>frpc docker command</title>
+    <link>https://www.thy.pub/docker-frpc-command/</link>
+    <pubDate>Tue, 12 Jan 2021 11:29:35 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/docker-frpc-command/</guid>
+    <description><![CDATA[frpc===============使用本机网络============== 1 2 3 4 5 6 docker run -d -it \ --restart unless-stopped \ --name frpc \ -v /volume2/docker/frpc.ini:/etc/frp/frpc.ini \ --network=host \ snowdreamtech/frpc]]></description>
+</item><item>
+    <title>debian安装docker</title>
+    <link>https://www.thy.pub/install-docker-on-debian/</link>
+    <pubDate>Sun, 15 Nov 2020 11:50:24 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/install-docker-on-debian/</guid>
+    <description><![CDATA[debian安装dockersudo apt-get update https 1 2 3 4 5 6 sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ gnupg2 \ software-properties-common 官方keycurl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add - 查看sudo apt-key fingerprint 0EBFCD88 设置源 1 2]]></description>
+</item><item>
+    <title>docker迁移数据目录</title>
+    <link>https://www.thy.pub/migrate-data-of-docker/</link>
+    <pubDate>Fri, 13 Nov 2020 11:52:25 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/migrate-data-of-docker/</guid>
+    <description><![CDATA[docker迁移数据目录 Docker的数据目录在/var/lib/docker下，往往需要大量空间，迁移过程：sudo mkdir /home/docker sudo rsync -aP /var/lib/docker/ /home/docker sudo nano /etc/docker/daemon.json 1]]></description>
+</item></channel>
+</rss>

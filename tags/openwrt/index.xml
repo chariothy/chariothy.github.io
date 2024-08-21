@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Openwrt - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/openwrt/</link>
+        <description>Openwrt - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Aug 2024 15:51:31 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/openwrt/" rel="self" type="application/rss+xml" /><item>
+    <title>openwrt安装privoxy转换socks5到http代理</title>
+    <link>https://www.thy.pub/openwrt-privoxy-http-proxy-from-socks5/</link>
+    <pubDate>Fri, 09 Aug 2024 15:51:31 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-privoxy-http-proxy-from-socks5/</guid>
+    <description><![CDATA[openwrt安装privoxy转换socks5到http代理很多软件不支持socks5代理，只支持http代理，比如cmd和powersh]]></description>
+</item><item>
+    <title>openwrt配置LAN口多IP</title>
+    <link>https://www.thy.pub/openwrt-config-lan-multi-ip/</link>
+    <pubDate>Wed, 31 Jul 2024 23:31:24 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-config-lan-multi-ip/</guid>
+    <description><![CDATA[openwrt配置LAN口多IP 与虚拟机中不同之前都是在PVE中装的openwrt，要访问其它网段，直接加虚拟网卡就可以。 但在实体硬件上这招]]></description>
+</item><item>
+    <title>openwrt编译支持安卓usb共享网络</title>
+    <link>https://www.thy.pub/openwrt-compile-usb-share-network-android/</link>
+    <pubDate>Wed, 31 Jul 2024 23:00:10 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-compile-usb-share-network-android/</guid>
+    <description><![CDATA[openwrt编译支持安卓usb共享网络 必备组件 1 2 3 4 5 6 7 8 9 Kernal modules - USB Support - kmod-usb-net - kmod-usb-net-cdc-ether - kmod-usb-net-rndis #手机热点usb共享Modem拨号 Utilities - Editors - nano-full - usbutils 连接]]></description>
+</item><item>
+    <title>树莓派3B&#43;编译openwrt</title>
+    <link>https://www.thy.pub/raspberry-3b-openwrt/</link>
+    <pubDate>Wed, 31 Jul 2024 22:07:20 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/raspberry-3b-openwrt/</guid>
+    <description><![CDATA[树莓派3B+编译openwrt 更换CPU架构 如果需要同时编译多个CPU架构，可以将每个CPU架构用一个虚拟机编译 清除之前CPU架构的编译残留]]></description>
+</item><item>
+    <title>openwrt-BCM2710-compile</title>
+    <link>https://www.thy.pub/openwrt-compile/</link>
+    <pubDate>Sun, 07 Apr 2024 09:17:52 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-compile/</guid>
+    <description><![CDATA[openwrt-compile 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 #!/bin/bash proj=immortalwrt home=/home/henry ver=openwrt-23.05 nasdir=henry@10.8.0.2:/volume1/pve/images system=bcm27xx target=bcm2710 profile=rpi-3 bindir=$home/$proj/bin/targets/$system/$target factory=$proj-$system-$target-$profile-squashfs-factory sysupgrade=$proj-$system-$target-$profile-squashfs-sysupgrade timestamp=$(date +&#34;%Y%m%d&#34;) ## For the first time compile #git clone -b $ver --single-branch --filter=blob:none]]></description>
+</item><item>
+    <title>openwrt-feeds</title>
+    <link>https://www.thy.pub/openwrt-feeds/</link>
+    <pubDate>Sun, 07 Apr 2024 09:06:15 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-feeds/</guid>
+    <description><![CDATA[-penwrt-feedssrc-git packages https://github.com/coolsnowwolf/packages src-git luci https://github.com/coolsnowwolf/luci src-git routing https://git.openwrt.org/feed/routing.git src-git telephony https://git.openwrt.org/feed/telephony.git src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main]]></description>
+</item><item>
+    <title>PVE-OPENWRT-VLAN组网</title>
+    <link>https://www.thy.pub/pve-openwrt-vlan-dual-wan/</link>
+    <pubDate>Thu, 14 Apr 2022 14:12:53 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/pve-openwrt-vlan-dual-wan/</guid>
+    <description><![CDATA[PVE-OPENWRT-VLAN组网 需求 访问外网从电信家宽走，SNF内网从LAN走 snfchina.com和snf.com从SNF解析，其它]]></description>
+</item><item>
+    <title>通过zerotier转发dns解析到openwrt</title>
+    <link>https://www.thy.pub/forward-dns-to-openwrt-through-zerotier/</link>
+    <pubDate>Sun, 27 Mar 2022 22:59:19 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/forward-dns-to-openwrt-through-zerotier/</guid>
+    <description><![CDATA[通过zerotier转发dns解析到openwrt 原因家里的dhcp中已经有了各个设备的静态地址和名称，但在公司没法使用，都要用IP地址。 因]]></description>
+</item><item>
+    <title>openwrt-x86-compile</title>
+    <link>https://www.thy.pub/openwrt-compile/</link>
+    <pubDate>Thu, 17 Mar 2022 12:14:15 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-compile/</guid>
+    <description><![CDATA[openwrt-compile 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 #!/bin/bash proj=immortalwrt home=/home/henry ver=openwrt-23.05 nasdir=henry@10.8.0.2:/volume1/pve/images system=x86 target=64 profile=generic bindir=$home/$proj/bin/targets/$system/$target combined=$proj-$system-$target-$profile-squashfs-combined-efi timestamp=$(date +&#34;%Y%m%d&#34;) ## For the first time compile #git clone -b $ver --single-branch --filter=blob:none https://github.com/immortalwrt/immortalwrt cd]]></description>
+</item><item>
+    <title>openwrt配置迁移备忘</title>
+    <link>https://www.thy.pub/migrate-config-to-new-openwrt-image/</link>
+    <pubDate>Mon, 10 Jan 2022 11:02:09 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/migrate-config-to-new-openwrt-image/</guid>
+    <description><![CDATA[openwrt配置迁移备忘 优先使用恢复配置的方法，如果无法启动再尝试下面的方法 具体步骤 将openwrt的配置文件下载 将openwrt的网络接]]></description>
+</item></channel>
+</rss>

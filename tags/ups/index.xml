@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Ups - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/ups/</link>
+        <description>Ups - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 11 Jan 2021 14:12:03 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/ups/" rel="self" type="application/rss+xml" /><item>
+    <title>UPS直通DSM并通知QNAP与PVE</title>
+    <link>https://www.thy.pub/bypass-ups-pve-dsm/</link>
+    <pubDate>Mon, 11 Jan 2021 14:12:03 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/bypass-ups-pve-dsm/</guid>
+    <description><![CDATA[UPS直通DSM并通知QNAP与PVE PVE: DSM QNAP PVE -&gt; CONSOLE 1 2 3 4 apt install nut -y nano /etc/nut/nut.conf MODE=netclient nano /etc/nut/upsmon.conf 在MONITOR小节加入 1 MONITOR ups@10.8.0.2 1 upsmon pass slave systemctl start nut-client &amp;&amp; systemctl enable nut-client upsc ups@10.8.0.2 # 应该显]]></description>
+</item></channel>
+</rss>

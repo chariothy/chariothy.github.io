@@ -1,0 +1,36 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Omnis - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/omnis/</link>
+        <description>Omnis - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 13 May 2022 11:36:09 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/omnis/" rel="self" type="application/rss+xml" /><item>
+    <title>Omnis经验备忘</title>
+    <link>https://www.thy.pub/omnis-experience-memo/</link>
+    <pubDate>Fri, 13 May 2022 11:36:09 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/omnis-experience-memo/</guid>
+    <description><![CDATA[Omnis经验备忘 语言基础 #F只能存0,1,kTrue,kFalse这四种值，可以与数值直接相加 几种CRUD返回值：. 原生的$update,]]></description>
+</item><item>
+    <title>Omnis逗号分隔符及编码</title>
+    <link>https://www.thy.pub/omnis-comma-separator-and-encoding/</link>
+    <pubDate>Wed, 22 Dec 2021 14:47:11 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/omnis-comma-separator-and-encoding/</guid>
+    <description><![CDATA[Omnis逗号分隔符及编码 $clib.$prefs.$userexportdelimiter 只要显式设置$userexportdelimiter就不用担心在Omnis其它地方改写此设定值，需要担心的是Ex]]></description>
+</item><item>
+    <title>Omnis历史</title>
+    <link>https://www.thy.pub/omnis-history/</link>
+    <pubDate>Sat, 22 Feb 2020 14:48:33 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/omnis-history/</guid>
+    <description><![CDATA[Omnis历史]]></description>
+</item><item>
+    <title>Omnis event route</title>
+    <link>https://www.thy.pub/omnis-event-route/</link>
+    <pubDate>Sat, 22 Feb 2020 14:44:37 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/omnis-event-route/</guid>
+    <description><![CDATA[Omnis-event-route]]></description>
+</item></channel>
+</rss>

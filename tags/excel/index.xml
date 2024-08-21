@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Excel - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/excel/</link>
+        <description>Excel - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 11 Oct 2021 11:22:47 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/excel/" rel="self" type="application/rss+xml" /><item>
+    <title>excelcnv参数备忘</title>
+    <link>https://www.thy.pub/excelcnv-parameters/</link>
+    <pubDate>Mon, 11 Oct 2021 11:22:47 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/excelcnv-parameters/</guid>
+    <description><![CDATA[excelcnv.exe参数备忘The command line arguments for excelcnv.exe are not documented well. Many examples online refer to “-oice” argument followed by the input and output file names. That’s it. And yeah, this actually works, so since I have already mentioned that input parameter]]></description>
+</item></channel>
+</rss>

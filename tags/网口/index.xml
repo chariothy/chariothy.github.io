@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>网口 - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/%E7%BD%91%E5%8F%A3/</link>
+        <description>网口 - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 31 Jul 2024 23:31:24 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/%E7%BD%91%E5%8F%A3/" rel="self" type="application/rss+xml" /><item>
+    <title>openwrt配置LAN口多IP</title>
+    <link>https://www.thy.pub/openwrt-config-lan-multi-ip/</link>
+    <pubDate>Wed, 31 Jul 2024 23:31:24 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-config-lan-multi-ip/</guid>
+    <description><![CDATA[openwrt配置LAN口多IP 与虚拟机中不同之前都是在PVE中装的openwrt，要访问其它网段，直接加虚拟网卡就可以。 但在实体硬件上这招]]></description>
+</item></channel>
+</rss>

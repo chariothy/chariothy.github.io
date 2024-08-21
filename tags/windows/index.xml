@@ -1,0 +1,36 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Windows - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/windows/</link>
+        <description>Windows - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Aug 2024 10:28:49 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/windows/" rel="self" type="application/rss+xml" /><item>
+    <title>常见工具的代理设置.</title>
+    <link>https://www.thy.pub/proxy-setting-on-windows/</link>
+    <pubDate>Fri, 09 Aug 2024 10:28:49 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/proxy-setting-on-windows/</guid>
+    <description><![CDATA[常见工具的代理设置.socks5代理转http代理可见 openwrt安装privoxy转换socks5到http代理 powershell proxy 1 2 $env:http_proxy=&#34;http://10.18.18.1:1071&#34; $env:https_proxy=&#34;http://10.18.18.1:1071&#34; scoop proxyscoop config proxy 10.18.18.1:1071 ##]]></description>
+</item><item>
+    <title>在WindowsServer2019安装WindowsStore</title>
+    <link>https://www.thy.pub/install-windows-store-in-windows-server-2019/</link>
+    <pubDate>Tue, 29 Mar 2022 16:36:47 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/install-windows-store-in-windows-server-2019/</guid>
+    <description><![CDATA[在Windows Server 2019安装Windows Store Why其实只是为了安装 Snip &amp; Sketch （截图和草图），在Windows下面目前还没有找到能取代它的工具：]]></description>
+</item><item>
+    <title>神州网信政府版WIN10设置</title>
+    <link>https://www.thy.pub/shenzhou-netcom-government-edition-win10-settings/</link>
+    <pubDate>Wed, 23 Mar 2022 11:07:24 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/shenzhou-netcom-government-edition-win10-settings/</guid>
+    <description><![CDATA[神州网信政府版WIN10设置 不错的系统精简掉了很多平时用不到的服务，我是安装在PVE中用迅雷的，在闲置状态下CPU仅仅占用2%左右，内存仅仅]]></description>
+</item><item>
+    <title>Vagrant使用samba共享文件夹</title>
+    <link>https://www.thy.pub/vagrant-use-samba-share-folder/</link>
+    <pubDate>Thu, 17 Feb 2022 14:26:39 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/vagrant-use-samba-share-folder/</guid>
+    <description><![CDATA[Vagrant使用samba共享文件夹 在windows下使用Vagrant时可以使用samba方式共享文件夹。配置如下： 1 2 3 4 5 6 config.vm.synced_folder &#34;./&#34;, &#34;/path/to/web/root&#34;, type:]]></description>
+</item></channel>
+</rss>

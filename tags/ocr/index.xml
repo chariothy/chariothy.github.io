@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Ocr - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/ocr/</link>
+        <description>Ocr - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 18 Mar 2020 09:49:42 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/ocr/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux裁剪图片&#43;OCR识别</title>
+    <link>https://www.thy.pub/linux-cropped-picture-ocr-identification/</link>
+    <pubDate>Wed, 18 Mar 2020 09:49:42 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/linux-cropped-picture-ocr-identification/</guid>
+    <description><![CDATA[Linux裁剪图片+OCR识别 安装： 1 2 3 4 5 sudo yum-config-manager --add-repo https://download.opensuse.org/repositories/home:/Alexander_Pozdnyakov/CentOS_7/ sudo rpm --import https://build.opensuse.org/projects/home:Alexander_Pozdnyakov/public_key sudo yum update sudo yum install tesseract # sudo yum install tesseract-langpack-deu 裁剪：convert zlpic.jpg -crop 300x50+268+600 zlpic1.jpg 识别： 1 2 tesseract zlpic1.jpg out cat out.txt]]></description>
+</item></channel>
+</rss>

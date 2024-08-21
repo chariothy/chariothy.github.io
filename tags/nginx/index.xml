@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Nginx - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/nginx/</link>
+        <description>Nginx - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 16 May 2022 14:20:35 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/nginx/" rel="self" type="application/rss+xml" /><item>
+    <title>nginx全局变量对照表</title>
+    <link>https://www.thy.pub/nginx-global-variable-control-table/</link>
+    <pubDate>Mon, 16 May 2022 14:20:35 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/nginx-global-variable-control-table/</guid>
+    <description><![CDATA[nginx全局变量对照表 变量 含义 remote_addr 客户端ip,如：192.168.4.2 binary_remote_addr 客户端ip（二进制) remote_port 客户端port，如：50472 remote_user 已经经过Au]]></description>
+</item></channel>
+</rss>

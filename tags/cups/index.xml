@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Cups - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/cups/</link>
+        <description>Cups - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 15 Nov 2020 12:49:37 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/cups/" rel="self" type="application/rss+xml" /><item>
+    <title>debian安装cups</title>
+    <link>https://www.thy.pub/install-cups-on-debian/</link>
+    <pubDate>Sun, 15 Nov 2020 12:49:37 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/install-cups-on-debian/</guid>
+    <description><![CDATA[debian安装cups (HP1106) 1 2 3 sudo apt update sudo apt install cups -y sudo nano /etc/cups/cupsd.conf 第一步：将cupsd.conf中的 Browsing Off 改为 Browsing On 第二步：将cupsd.conf中的 Listen localhost:631 改]]></description>
+</item></channel>
+</rss>

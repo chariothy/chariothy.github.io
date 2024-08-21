@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>WIN10 - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/win10/</link>
+        <description>WIN10 - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 06 May 2023 09:23:55 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/win10/" rel="self" type="application/rss+xml" /><item>
+    <title>WIN10无法睡眠的解决方法</title>
+    <link>https://www.thy.pub/win10-can-not-sleep-solution/</link>
+    <pubDate>Sat, 06 May 2023 09:23:55 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/win10-can-not-sleep-solution/</guid>
+    <description><![CDATA[WIN10无法睡眠的解决方法 网卡：检查是否因为网卡数据传输引起。取消允许此设备唤醒计算机，从根本上杜绝软件调用网卡引起的不睡眠。（挂机下载貌]]></description>
+</item></channel>
+</rss>

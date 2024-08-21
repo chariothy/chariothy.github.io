@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Vagrant - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/vagrant/</link>
+        <description>Vagrant - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 17 Feb 2022 14:26:39 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/vagrant/" rel="self" type="application/rss+xml" /><item>
+    <title>Vagrant使用samba共享文件夹</title>
+    <link>https://www.thy.pub/vagrant-use-samba-share-folder/</link>
+    <pubDate>Thu, 17 Feb 2022 14:26:39 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/vagrant-use-samba-share-folder/</guid>
+    <description><![CDATA[Vagrant使用samba共享文件夹 在windows下使用Vagrant时可以使用samba方式共享文件夹。配置如下： 1 2 3 4 5 6 config.vm.synced_folder &#34;./&#34;, &#34;/path/to/web/root&#34;, type:]]></description>
+</item><item>
+    <title>Vagrant共享目录文件系统sshfs、nfs、vboxfs、native fs性能比较测试</title>
+    <link>https://www.thy.pub/vagrant-share-folder-sshfs-nfs-vboxfs-nativefs-benchmark/</link>
+    <pubDate>Sun, 13 Aug 2017 14:36:47 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/vagrant-share-folder-sshfs-nfs-vboxfs-nativefs-benchmark/</guid>
+    <description><![CDATA[Vagrant共享目录文件系统sshfs、nfs、vboxfs、native fs性能比较测试 为什么测试工作中使用vagrant作为开发环境，]]></description>
+</item></channel>
+</rss>

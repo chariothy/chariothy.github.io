@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>zfs命令 - 孤独的长跑者</title><meta name="Description" content="zfs命令"><meta property="og:url" content="https://www.thy.pub/zfs-command-remark/">
+  <meta property="og:site_name" content="孤独的长跑者">
+  <meta property="og:title" content="zfs命令">
+  <meta property="og:description" content="zfs命令">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-01-11T14:13:20+08:00">
+    <meta property="article:modified_time" content="2020-01-11T14:13:20+08:00">
+    <meta property="article:tag" content="Zfs">
+    <meta property="og:image" content="https://www.thy.pub/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.thy.pub/logo.png">
+  <meta name="twitter:title" content="zfs命令">
+  <meta name="twitter:description" content="zfs命令">
+<meta name="application-name" content="孤独的长跑者">
+<meta name="apple-mobile-web-app-title" content="孤独的长跑者">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.thy.pub/zfs-command-remark/" /><link rel="prev" href="https://www.thy.pub/ssh-usage-remark/" /><link rel="next" href="https://www.thy.pub/config-sphinx-as-a-better-real-time-search-engine/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript>
+    
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "zfs命令",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.thy.pub\/zfs-command-remark\/"
+        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "zfs","wordcount":  323 ,
+        "url": "https:\/\/www.thy.pub\/zfs-command-remark\/","datePublished": "2020-01-11T14:13:20+08:00","dateModified": "2020-01-11T14:13:20+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "chariothy","logo": "https:\/\/www.thy.pub\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "chariothy"
+            },"description": "zfs命令"
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="选择语言" id="language-select-desktop" onchange="location = this.value;"><option value="/zfs-command-remark/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="选择语言" onchange="location = this.value;"><option value="/zfs-command-remark/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#摧毀儲存池">摧毀儲存池:</a></li>
+    <li><a href="#清除超級塊">清除超級塊:</a></li>
+    <li><a href="#強制清除當台裝置上所有儲存超級塊請謹慎使用">強制清除當台裝置上所有儲存超級塊(請謹慎使用):</a></li>
+    <li><a href="#取得儲存池資訊">取得儲存池資訊:</a></li>
+    <li><a href="#同位元檢查">同位元檢查:</a></li>
+    <li><a href="#取得碎片化狀態">取得碎片化狀態:</a></li>
+    <li><a href="#列出硬碟詳細列表">列出硬碟詳細列表:</a></li>
+    <li><a href="#列出儲存池狀態">列出儲存池狀態:</a></li>
+    <li><a href="#設定自動擴展容量">設定自動擴展容量:</a></li>
+    <li><a href="#建立儲存池">建立儲存池:</a></li>
+    <li><a href="#添加vdev到現有儲存池">添加vdev到現有儲存池:</a></li>
+    <li><a href="#增加l2arc讀取快取">增加L2ARC讀取快取:</a></li>
+    <li><a href="#增加zil寫入快取">增加ZIL寫入快取:</a></li>
+    <li><a href="#重新更新zpoolcache-file">重新更新zpool.cache File</a></li>
+    <li><a href="#匯入-zpool-儲存池">匯入 zpool 儲存池:</a></li>
+    <li><a href="#匯入已摧毀-zpool-儲存池">匯入已摧毀 zpool 儲存池:</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">zfs命令</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-11">2020-01-11</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-01-11">2020-01-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 323 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;
+    
+
+    
+        
+
+        
+        
+            <span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读</span>
+        
+    
+
+</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#摧毀儲存池">摧毀儲存池:</a></li>
+    <li><a href="#清除超級塊">清除超級塊:</a></li>
+    <li><a href="#強制清除當台裝置上所有儲存超級塊請謹慎使用">強制清除當台裝置上所有儲存超級塊(請謹慎使用):</a></li>
+    <li><a href="#取得儲存池資訊">取得儲存池資訊:</a></li>
+    <li><a href="#同位元檢查">同位元檢查:</a></li>
+    <li><a href="#取得碎片化狀態">取得碎片化狀態:</a></li>
+    <li><a href="#列出硬碟詳細列表">列出硬碟詳細列表:</a></li>
+    <li><a href="#列出儲存池狀態">列出儲存池狀態:</a></li>
+    <li><a href="#設定自動擴展容量">設定自動擴展容量:</a></li>
+    <li><a href="#建立儲存池">建立儲存池:</a></li>
+    <li><a href="#添加vdev到現有儲存池">添加vdev到現有儲存池:</a></li>
+    <li><a href="#增加l2arc讀取快取">增加L2ARC讀取快取:</a></li>
+    <li><a href="#增加zil寫入快取">增加ZIL寫入快取:</a></li>
+    <li><a href="#重新更新zpoolcache-file">重新更新zpool.cache File</a></li>
+    <li><a href="#匯入-zpool-儲存池">匯入 zpool 儲存池:</a></li>
+    <li><a href="#匯入已摧毀-zpool-儲存池">匯入已摧毀 zpool 儲存池:</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="zfs命令" class="headerLink">
+    <a href="#zfs%e5%91%bd%e4%bb%a4" class="header-mark"></a>zfs命令</h1><p>zpool</p>
+<p>tank=儲存池名稱</p>
+<h2 id="摧毀儲存池" class="headerLink">
+    <a href="#%e6%91%a7%e6%af%80%e5%84%b2%e5%ad%98%e6%b1%a0" class="header-mark"></a>摧毀儲存池:</h2><p><code>zpool destroy tank</code></p>
+<h2 id="清除超級塊" class="headerLink">
+    <a href="#%e6%b8%85%e9%99%a4%e8%b6%85%e7%b4%9a%e5%a1%8a" class="header-mark"></a>清除超級塊:</h2><p><code>zpool labelclear</code></p>
+<h2 id="強制清除當台裝置上所有儲存超級塊請謹慎使用" class="headerLink">
+    <a href="#%e5%bc%b7%e5%88%b6%e6%b8%85%e9%99%a4%e7%95%b6%e5%8f%b0%e8%a3%9d%e7%bd%ae%e4%b8%8a%e6%89%80%e6%9c%89%e5%84%b2%e5%ad%98%e8%b6%85%e7%b4%9a%e5%a1%8a%e8%ab%8b%e8%ac%b9%e6%85%8e%e4%bd%bf%e7%94%a8" class="header-mark"></a>強制清除當台裝置上所有儲存超級塊(請謹慎使用):</h2><p><code>zpool labelclear -f /dev/sd[a-z]</code></p>
+<h2 id="取得儲存池資訊" class="headerLink">
+    <a href="#%e5%8f%96%e5%be%97%e5%84%b2%e5%ad%98%e6%b1%a0%e8%b3%87%e8%a8%8a" class="header-mark"></a>取得儲存池資訊:</h2><p><code>zpool get all (選填tank)</code></p>
+<h2 id="同位元檢查" class="headerLink">
+    <a href="#%e5%90%8c%e4%bd%8d%e5%85%83%e6%aa%a2%e6%9f%a5" class="header-mark"></a>同位元檢查:</h2><p><code>zpool scrub tank</code> (不打tank 做所有pool)</p>
+<h2 id="取得碎片化狀態" class="headerLink">
+    <a href="#%e5%8f%96%e5%be%97%e7%a2%8e%e7%89%87%e5%8c%96%e7%8b%80%e6%85%8b" class="header-mark"></a>取得碎片化狀態:</h2><p><code>zpool get fragmentation</code></p>
+<h2 id="列出硬碟詳細列表" class="headerLink">
+    <a href="#%e5%88%97%e5%87%ba%e7%a1%ac%e7%a2%9f%e8%a9%b3%e7%b4%b0%e5%88%97%e8%a1%a8" class="header-mark"></a>列出硬碟詳細列表:</h2><p><code>zpool list -v</code></p>
+<h2 id="列出儲存池狀態" class="headerLink">
+    <a href="#%e5%88%97%e5%87%ba%e5%84%b2%e5%ad%98%e6%b1%a0%e7%8b%80%e6%85%8b" class="header-mark"></a>列出儲存池狀態:</h2><p><code>zpool status tank</code></p>
+<h2 id="設定自動擴展容量" class="headerLink">
+    <a href="#%e8%a8%ad%e5%ae%9a%e8%87%aa%e5%8b%95%e6%93%b4%e5%b1%95%e5%ae%b9%e9%87%8f" class="header-mark"></a>設定自動擴展容量:</h2><p><code>zpool set autoexpand=on tank</code></p>
+<h2 id="建立儲存池" class="headerLink">
+    <a href="#%e5%bb%ba%e7%ab%8b%e5%84%b2%e5%ad%98%e6%b1%a0" class="header-mark"></a>建立儲存池:</h2><p><code>zpool create -o ashift=12 tank raidz /dev/disk/by-id/</code></p>
+<h2 id="添加vdev到現有儲存池" class="headerLink">
+    <a href="#%e6%b7%bb%e5%8a%a0vdev%e5%88%b0%e7%8f%be%e6%9c%89%e5%84%b2%e5%ad%98%e6%b1%a0" class="header-mark"></a>添加vdev到現有儲存池:</h2><p><code>zpool add tank raidz /dev/disk/by-id/</code></p>
+<h2 id="增加l2arc讀取快取" class="headerLink">
+    <a href="#%e5%a2%9e%e5%8a%a0l2arc%e8%ae%80%e5%8f%96%e5%bf%ab%e5%8f%96" class="header-mark"></a>增加L2ARC讀取快取:</h2><p><code>zpool add -f tank cache /dev/disk/by-id/</code></p>
+<h2 id="增加zil寫入快取" class="headerLink">
+    <a href="#%e5%a2%9e%e5%8a%a0zil%e5%af%ab%e5%85%a5%e5%bf%ab%e5%8f%96" class="header-mark"></a>增加ZIL寫入快取:</h2><p><code>zpool add tank log /dev/disk/by-id/</code></p>
+<h2 id="重新更新zpoolcache-file" class="headerLink">
+    <a href="#%e9%87%8d%e6%96%b0%e6%9b%b4%e6%96%b0zpoolcache-file" class="header-mark"></a>重新更新zpool.cache File</h2><p><code>zpool set cachefile=/etc/zfs/zpool.cache tank</code></p>
+<h2 id="匯入-zpool-儲存池" class="headerLink">
+    <a href="#%e5%8c%af%e5%85%a5-zpool-%e5%84%b2%e5%ad%98%e6%b1%a0" class="header-mark"></a>匯入 zpool 儲存池:</h2><p><code>zpool import tank (-f)</code></p>
+<h2 id="匯入已摧毀-zpool-儲存池" class="headerLink">
+    <a href="#%e5%8c%af%e5%85%a5%e5%b7%b2%e6%91%a7%e6%af%80-zpool-%e5%84%b2%e5%ad%98%e6%b1%a0" class="header-mark"></a>匯入已摧毀 zpool 儲存池:</h2><p><code>zpool import -Df tank</code></p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-01-11</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><button title="分享到 Twitter" data-sharer="twitter" data-url="https://www.thy.pub/zfs-command-remark/" data-title="zfs命令" data-hashtags="zfs"><span class="fab fa-twitter fa-fw"></span></button><button title="分享到 Facebook" data-sharer="facebook" data-url="https://www.thy.pub/zfs-command-remark/" data-hashtag="zfs"><span class="fab fa-facebook-square fa-fw"></span></button><button title="分享到 微博" data-sharer="weibo" data-url="https://www.thy.pub/zfs-command-remark/" data-title="zfs命令"><span class="fab fa-weibo fa-fw"></span></button><button title="分享到 百度" data-sharer="baidu" data-url="https://www.thy.pub/zfs-command-remark/" data-title="zfs命令"><span data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@v5.21.1/icons/baidu.svg"></span></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/zfs/">Zfs</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/ssh-usage-remark/" class="prev" rel="prev" title="SSH隧道配置"><i class="fas fa-angle-left fa-fw"></i>SSH隧道配置</a>
+            <a href="/config-sphinx-as-a-better-real-time-search-engine/" class="next" rel="next" title="将sphinx配置为更好的实时搜索引擎">将sphinx配置为更好的实时搜索引擎<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line"><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> • <span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span>人次</span></div><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.129.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">chariothy</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    
+        
+        <script async src=" //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+    
+
+    
+        
+            <section>
+                
+                    <span id="busuanzi_container_value_site_pv"><i class="far fa-eye fa-fw"></i>
+                        
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+
+                
+                    &nbsp;|&nbsp;              
+                
+
+                
+                    <span id="busuanzi_container_value_site_uv"><i class="fa fa-user"></i>
+                        
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+            </section>
+        
+
+        
+        
+    
+
+</div><script>
+                    if('serviceWorker' in navigator) {
+                        navigator.serviceWorker
+                            .register('/sw.min.js', { scope: '/' })
+                            .then(function(registration) {
+                            });
+                
+                        navigator.serviceWorker
+                            .ready
+                            .then(function(registration) {
+                            });
+                    }
+                </script></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["chariothy"],"clientID":"0e48b6595a9725cd9cf9","clientSecret":"d9ee702d2cbedaecf2693bee849b867325b990b1","id":"2020-01-11T14:13:20+08:00","owner":"chariothy","repo":"chariothy.github.io","title":"zfs命令"}},"data":{"desktop-header-typeit":"孤独的长跑者","mobile-header-typeit":"孤独的长跑者"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.2/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?fbbcc12eba9fd250dabc045b58df3809";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script></div>
+</body>
+
+</html>

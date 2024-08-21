@@ -1,0 +1,80 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>孤独的长跑者</title>
+        <link>https://www.thy.pub/</link>
+        <description>关于</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Aug 2024 15:51:31 &#43;0800</lastBuildDate>
+            <atom:link href="https://www.thy.pub/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>openwrt安装privoxy转换socks5到http代理</title>
+    <link>https://www.thy.pub/openwrt-privoxy-http-proxy-from-socks5/</link>
+    <pubDate>Fri, 09 Aug 2024 15:51:31 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-privoxy-http-proxy-from-socks5/</guid>
+    <description><![CDATA[openwrt安装privoxy转换socks5到http代理很多软件不支持socks5代理，只支持http代理，比如cmd和powersh]]></description>
+</item><item>
+    <title>常见工具的代理设置.</title>
+    <link>https://www.thy.pub/proxy-setting-on-windows/</link>
+    <pubDate>Fri, 09 Aug 2024 10:28:49 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/proxy-setting-on-windows/</guid>
+    <description><![CDATA[常见工具的代理设置.socks5代理转http代理可见 openwrt安装privoxy转换socks5到http代理 powershell proxy 1 2 $env:http_proxy=&#34;http://10.18.18.1:1071&#34; $env:https_proxy=&#34;http://10.18.18.1:1071&#34; scoop proxyscoop config proxy 10.18.18.1:1071 ##]]></description>
+</item><item>
+    <title>群晖NAS上面使用Crontab</title>
+    <link>https://www.thy.pub/synology-dsm-nas-crontab/</link>
+    <pubDate>Thu, 08 Aug 2024 19:36:02 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/synology-dsm-nas-crontab/</guid>
+    <description><![CDATA[群晖NAS上面使用Crontab群晖nas默认不能直接使用crontab -e来管理计划任务 默认群晖是不允许root直接登陆的, 所以我们要先切]]></description>
+</item><item>
+    <title>openwrt配置LAN口多IP</title>
+    <link>https://www.thy.pub/openwrt-config-lan-multi-ip/</link>
+    <pubDate>Wed, 31 Jul 2024 23:31:24 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-config-lan-multi-ip/</guid>
+    <description><![CDATA[openwrt配置LAN口多IP 与虚拟机中不同之前都是在PVE中装的openwrt，要访问其它网段，直接加虚拟网卡就可以。 但在实体硬件上这招]]></description>
+</item><item>
+    <title>openwrt编译支持安卓usb共享网络</title>
+    <link>https://www.thy.pub/openwrt-compile-usb-share-network-android/</link>
+    <pubDate>Wed, 31 Jul 2024 23:00:10 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-compile-usb-share-network-android/</guid>
+    <description><![CDATA[openwrt编译支持安卓usb共享网络 必备组件 1 2 3 4 5 6 7 8 9 Kernal modules - USB Support - kmod-usb-net - kmod-usb-net-cdc-ether - kmod-usb-net-rndis #手机热点usb共享Modem拨号 Utilities - Editors - nano-full - usbutils 连接]]></description>
+</item><item>
+    <title>树莓派3B&#43;编译openwrt</title>
+    <link>https://www.thy.pub/raspberry-3b-openwrt/</link>
+    <pubDate>Wed, 31 Jul 2024 22:07:20 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/raspberry-3b-openwrt/</guid>
+    <description><![CDATA[树莓派3B+编译openwrt 更换CPU架构 如果需要同时编译多个CPU架构，可以将每个CPU架构用一个虚拟机编译 清除之前CPU架构的编译残留]]></description>
+</item><item>
+    <title>TPLINK的AP无法连接</title>
+    <link>https://www.thy.pub/tplink-ap-connot-connect/</link>
+    <pubDate>Tue, 07 May 2024 20:16:30 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/tplink-ap-connot-connect/</guid>
+    <description><![CDATA[TPLINK的AP无法连接突然发现4个AP中有两个无法连接（管理），查资料后发现是因为AP无法在DHCP获取IP。 因为我的TPLINK路由器]]></description>
+</item><item>
+    <title>挂载raid1的其中一块盘</title>
+    <link>https://www.thy.pub/mount-one-disk-of-raid1/</link>
+    <pubDate>Thu, 25 Apr 2024 19:17:19 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/mount-one-disk-of-raid1/</guid>
+    <description><![CDATA[挂载raid1的其中一块盘直接挂载会报错 sudo mount /dev/sdf3 /volume1/sync/old mount: /volume1/sync/old: unknown filesystem type &rsquo;linux_raid_member'. 需要先组装成软raid1 sudo mdadm --assemble --run /dev/md6 /dev/sdf3 然后再挂载软raid1 sudo mount /dev/md6 /volume1/sync/old]]></description>
+</item><item>
+    <title>PVE安装黑群DSM7</title>
+    <link>https://www.thy.pub/pve-xpenology-dsm7/</link>
+    <pubDate>Thu, 18 Apr 2024 09:33:01 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/pve-xpenology-dsm7/</guid>
+    <description><![CDATA[PVE安装黑群DSM7 下载最新引导arpl 新建vm cpu选host，打开NUMA 打开QEMU GA 内存4G 默认的硬盘（装完就分离此硬盘） 接上要直]]></description>
+</item><item>
+    <title>WIN11无线网卡没有电源管理选项</title>
+    <link>https://www.thy.pub/no-power-management-option-for-the-wi-n11-wireless-card/</link>
+    <pubDate>Wed, 10 Apr 2024 13:55:15 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/no-power-management-option-for-the-wi-n11-wireless-card/</guid>
+    <description><![CDATA[WIN11无线网卡没有电源管理选项reg add HKLM\System\CurrentControlSet\Control\Power /v PlatformAoAcOverride /t REG_DWORD /d 0]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Linux - 分类 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/categories/linux/</link>
+        <description>Linux - 分类 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Aug 2024 15:51:31 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/categories/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>openwrt安装privoxy转换socks5到http代理</title>
+    <link>https://www.thy.pub/openwrt-privoxy-http-proxy-from-socks5/</link>
+    <pubDate>Fri, 09 Aug 2024 15:51:31 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-privoxy-http-proxy-from-socks5/</guid>
+    <description><![CDATA[openwrt安装privoxy转换socks5到http代理很多软件不支持socks5代理，只支持http代理，比如cmd和powersh]]></description>
+</item><item>
+    <title>群晖NAS上面使用Crontab</title>
+    <link>https://www.thy.pub/synology-dsm-nas-crontab/</link>
+    <pubDate>Thu, 08 Aug 2024 19:36:02 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/synology-dsm-nas-crontab/</guid>
+    <description><![CDATA[群晖NAS上面使用Crontab群晖nas默认不能直接使用crontab -e来管理计划任务 默认群晖是不允许root直接登陆的, 所以我们要先切]]></description>
+</item><item>
+    <title>openwrt配置LAN口多IP</title>
+    <link>https://www.thy.pub/openwrt-config-lan-multi-ip/</link>
+    <pubDate>Wed, 31 Jul 2024 23:31:24 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-config-lan-multi-ip/</guid>
+    <description><![CDATA[openwrt配置LAN口多IP 与虚拟机中不同之前都是在PVE中装的openwrt，要访问其它网段，直接加虚拟网卡就可以。 但在实体硬件上这招]]></description>
+</item><item>
+    <title>openwrt编译支持安卓usb共享网络</title>
+    <link>https://www.thy.pub/openwrt-compile-usb-share-network-android/</link>
+    <pubDate>Wed, 31 Jul 2024 23:00:10 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-compile-usb-share-network-android/</guid>
+    <description><![CDATA[openwrt编译支持安卓usb共享网络 必备组件 1 2 3 4 5 6 7 8 9 Kernal modules - USB Support - kmod-usb-net - kmod-usb-net-cdc-ether - kmod-usb-net-rndis #手机热点usb共享Modem拨号 Utilities - Editors - nano-full - usbutils 连接]]></description>
+</item><item>
+    <title>树莓派3B&#43;编译openwrt</title>
+    <link>https://www.thy.pub/raspberry-3b-openwrt/</link>
+    <pubDate>Wed, 31 Jul 2024 22:07:20 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/raspberry-3b-openwrt/</guid>
+    <description><![CDATA[树莓派3B+编译openwrt 更换CPU架构 如果需要同时编译多个CPU架构，可以将每个CPU架构用一个虚拟机编译 清除之前CPU架构的编译残留]]></description>
+</item><item>
+    <title>PVE安装黑群DSM7</title>
+    <link>https://www.thy.pub/pve-xpenology-dsm7/</link>
+    <pubDate>Thu, 18 Apr 2024 09:33:01 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/pve-xpenology-dsm7/</guid>
+    <description><![CDATA[PVE安装黑群DSM7 下载最新引导arpl 新建vm cpu选host，打开NUMA 打开QEMU GA 内存4G 默认的硬盘（装完就分离此硬盘） 接上要直]]></description>
+</item><item>
+    <title>openwrt-BCM2710-compile</title>
+    <link>https://www.thy.pub/openwrt-compile/</link>
+    <pubDate>Sun, 07 Apr 2024 09:17:52 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-compile/</guid>
+    <description><![CDATA[openwrt-compile 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 #!/bin/bash proj=immortalwrt home=/home/henry ver=openwrt-23.05 nasdir=henry@10.8.0.2:/volume1/pve/images system=bcm27xx target=bcm2710 profile=rpi-3 bindir=$home/$proj/bin/targets/$system/$target factory=$proj-$system-$target-$profile-squashfs-factory sysupgrade=$proj-$system-$target-$profile-squashfs-sysupgrade timestamp=$(date +&#34;%Y%m%d&#34;) ## For the first time compile #git clone -b $ver --single-branch --filter=blob:none]]></description>
+</item><item>
+    <title>PVE开启SR-IOV</title>
+    <link>https://www.thy.pub/pve-enables-sr-iov/</link>
+    <pubDate>Fri, 05 Apr 2024 00:16:10 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/pve-enables-sr-iov/</guid>
+    <description><![CDATA[PVE开启SR-IOV 开启 IOMMU CPU 支持VT-D和VT-X，并在BIOS中打开编辑文件/etc/default/grub 修改行GRUB_CMDLI]]></description>
+</item><item>
+    <title>zerotier自建moon节点</title>
+    <link>https://www.thy.pub/zerotier-self-built-moon-node/</link>
+    <pubDate>Tue, 07 Nov 2023 14:27:54 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/zerotier-self-built-moon-node/</guid>
+    <description><![CDATA[zerotier自建moon节点 OneDrive\configs\OWV9\etc\config\zero\moons.d 1 2 3 4 5 6 7 8 9 10 11 curl -s https://install.zerotier.com/ | sudo bash sudozerotier-cli join abfd31bd47389e23 cd /var/lib/zerotier-one/ sudo zerotier-idtool initmoon identity.public &gt; moon.json nano moon.json # &#34;stableEndpoints&#34;: [ &#34;111.111.111.111/9993&#34; ] # 111.111.111.111修改]]></description>
+</item><item>
+    <title>PVE解决e1000-detect-hardware-unit-hang的问题</title>
+    <link>https://www.thy.pub/pve-troubleshoot-the-e1000-detect-hardware-unit-hang/</link>
+    <pubDate>Fri, 02 Jun 2023 12:40:55 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/pve-troubleshoot-the-e1000-detect-hardware-unit-hang/</guid>
+    <description><![CDATA[PVE解决e1000-detect-hardware-hang的问题 经常发现PVE无法PING通 论坛上的结论是关闭 tso gso gro 1 2 nano /etc/network/interfaces #找到对应的]]></description>
+</item></channel>
+</rss>

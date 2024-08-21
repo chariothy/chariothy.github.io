@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>爬虫 - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/%E7%88%AC%E8%99%AB/</link>
+        <description>爬虫 - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 21 Apr 2022 10:25:22 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/%E7%88%AC%E8%99%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>导出网站的cookie给requests和scrapy</title>
+    <link>https://www.thy.pub/export-the-cookie-of-the-website-to-requests-and-scrapy/</link>
+    <pubDate>Thu, 21 Apr 2022 10:25:22 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/export-the-cookie-of-the-website-to-requests-and-scrapy/</guid>
+    <description><![CDATA[导出网站的cookie给requests和scrapy 安装Chrome插件Edit This Cookie 设置插件在设置中将导出格式设置为： Netscape HTTP Cookie File 保存到 cookie_file = 'c:/temp/cookie.txt']]></description>
+</item></channel>
+</rss>

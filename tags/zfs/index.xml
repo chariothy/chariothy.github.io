@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Zfs - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/zfs/</link>
+        <description>Zfs - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 13 Mar 2022 23:35:33 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/zfs/" rel="self" type="application/rss+xml" /><item>
+    <title>zfs-mirror更换损坏的硬盘</title>
+    <link>https://www.thy.pub/zfs-mirror-replace-damaged-hard-drive/</link>
+    <pubDate>Sun, 13 Mar 2022 23:35:33 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/zfs-mirror-replace-damaged-hard-drive/</guid>
+    <description><![CDATA[zfs-mirror更换损坏的硬盘 救命的参考文章 终于打算要换了自从用上zfs之后就开始关心硬盘坏掉之后如何更换，今天终止有机会了。 我在zfs]]></description>
+</item><item>
+    <title>zfs修改缓存大小</title>
+    <link>https://www.thy.pub/zfs-change-cache-size/</link>
+    <pubDate>Sun, 15 Nov 2020 14:13:55 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/zfs-change-cache-size/</guid>
+    <description><![CDATA[zfs修改缓存大小nano /usr/lib/modules-load.d/zfs.conf 加入： options zfs zfs_arc_max=34359738368 如果根文件系统也使用了ZFS，你必须在每次修改该参数后更新initramfs，如下： update-initramfs –u 查看根文件]]></description>
+</item><item>
+    <title>zfs命令</title>
+    <link>https://www.thy.pub/zfs-command-remark/</link>
+    <pubDate>Sat, 11 Jan 2020 14:13:20 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/zfs-command-remark/</guid>
+    <description><![CDATA[zfs命令zpool tank=儲存池名稱 摧毀儲存池:zpool destroy tank 清除超級塊:zpool labelclear 強制清除當台裝置上所有儲存超級塊(請謹慎使用):z]]></description>
+</item></channel>
+</rss>

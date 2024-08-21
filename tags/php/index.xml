@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>PHP - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/php/</link>
+        <description>PHP - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 18 Jul 2020 09:45:43 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/php/" rel="self" type="application/rss+xml" /><item>
+    <title>Yii Composer不正确的解决方法</title>
+    <link>https://www.thy.pub/yii-composer-incorrect-solution/</link>
+    <pubDate>Sat, 18 Jul 2020 09:45:43 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/yii-composer-incorrect-solution/</guid>
+    <description><![CDATA[Yii Composer不正确的解决方法 经常提示：Loading composer repositories with package information Updating dependencies (including require-dev) Your requirements could not be resolved to an installable set of packages. 1 2 3 4 5 6 7 8 9 10 11 12 13 Problem 1 - yiisoft/yii2 2.0.12 requires bower-asset/jquery]]></description>
+</item><item>
+    <title>PHP常见坑和避免的方法</title>
+    <link>https://www.thy.pub/common-php-pits-and-ways-to-avoid-them/</link>
+    <pubDate>Sat, 18 Jul 2020 09:36:38 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/common-php-pits-and-ways-to-avoid-them/</guid>
+    <description><![CDATA[PHP常见坑和避免的方法 filesize缓存的问题可以用clearstatcache()清除缓存，且不能正确获取大于2G文件的大小 null和]]></description>
+</item><item>
+    <title>PHP Cookbook经典实例（第二版）</title>
+    <link>https://www.thy.pub/php-cookbook-classic-example-second-edition/</link>
+    <pubDate>Sat, 22 Feb 2020 14:53:20 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/php-cookbook-classic-example-second-edition/</guid>
+    <description><![CDATA[PHP Cookbook经典实例（第二版） 字符 1 2 3 4 ucfirst()、ucwords() 首字母大写 fputcsv()、fgetcsv() pac]]></description>
+</item></channel>
+</rss>

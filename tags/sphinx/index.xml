@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Sphinx - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/sphinx/</link>
+        <description>Sphinx - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 18 Jan 2020 09:20:10 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/sphinx/" rel="self" type="application/rss+xml" /><item>
+    <title>将sphinx配置为更好的实时搜索引擎</title>
+    <link>https://www.thy.pub/config-sphinx-as-a-better-real-time-search-engine/</link>
+    <pubDate>Sat, 18 Jan 2020 09:20:10 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/config-sphinx-as-a-better-real-time-search-engine/</guid>
+    <description><![CDATA[将sphinx配置为更好的实时搜索引擎 sphinx以它的简单、快速吸引着我。但它的plain增量索引有两大问题一直困扰着我： 一是增量索引只能]]></description>
+</item></channel>
+</rss>

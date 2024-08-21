@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Centos - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/centos/</link>
+        <description>Centos - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 15 Jul 2021 16:39:23 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/centos/" rel="self" type="application/rss+xml" /><item>
+    <title>阿里云ECS配置mailx</title>
+    <link>https://www.thy.pub/ecs-centos-config-mailx/</link>
+    <pubDate>Thu, 15 Jul 2021 16:39:23 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/ecs-centos-config-mailx/</guid>
+    <description><![CDATA[阿里云ECS配置mailx 由于阿里云已将25端口封了（改用465端口），所以在ECS上往外发邮件时要作相应的配置才行。 使用的是阿里云的企业邮]]></description>
+</item><item>
+    <title>阿里云ECS变yam肉鸡处理过程</title>
+    <link>https://www.thy.pub/ecs-being-hacked/</link>
+    <pubDate>Sun, 10 Jan 2021 13:38:21 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/ecs-being-hacked/</guid>
+    <description><![CDATA[阿里云ECS变yam肉鸡处理过程 修复步骤 关闭Redis： /etc/inti.d/redis* stop 关闭crontab: service crond stop 查看定期任务 crontab -l 删除定期任务 crontab -r 删除/opt/yam 删]]></description>
+</item><item>
+    <title>centos手动更新git</title>
+    <link>https://www.thy.pub/centos-manually-update-git/</link>
+    <pubDate>Sun, 05 Jan 2020 11:46:37 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/centos-manually-update-git/</guid>
+    <description><![CDATA[centos手动更新git 1 2 3 4 5 6 7 8 9 10 11 12 git --version sudo yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel asciidoc sudo yum install gcc perl-ExtUtils-MakeMaker sudo yum remove git cd ~ wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.30.0.tar.xz x git-2.30.0.tar.xz cd git-2.30.0/ make all make prefix=/usr install git --version]]></description>
+</item></channel>
+</rss>

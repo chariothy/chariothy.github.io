@@ -1,0 +1,808 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>unixbench成绩比较 - 孤独的长跑者</title><meta name="Description" content="unixbench成绩比较"><meta property="og:url" content="https://www.thy.pub/unixbench-comparison-of-results/">
+  <meta property="og:site_name" content="孤独的长跑者">
+  <meta property="og:title" content="unixbench成绩比较">
+  <meta property="og:description" content="unixbench成绩比较">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-03-02T15:20:12+08:00">
+    <meta property="article:modified_time" content="2022-03-02T15:20:12+08:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="og:image" content="https://www.thy.pub/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.thy.pub/logo.png">
+  <meta name="twitter:title" content="unixbench成绩比较">
+  <meta name="twitter:description" content="unixbench成绩比较">
+<meta name="application-name" content="孤独的长跑者">
+<meta name="apple-mobile-web-app-title" content="孤独的长跑者">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.thy.pub/unixbench-comparison-of-results/" /><link rel="prev" href="https://www.thy.pub/ubuntu-change-the-scroll-direction-of-the-touchpad/" /><link rel="next" href="https://www.thy.pub/oracle-xmlquery-tutorial-and-instance/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript>
+    
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "unixbench成绩比较",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.thy.pub\/unixbench-comparison-of-results\/"
+        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Linux","wordcount":  1916 ,
+        "url": "https:\/\/www.thy.pub\/unixbench-comparison-of-results\/","datePublished": "2022-03-02T15:20:12+08:00","dateModified": "2022-03-02T15:20:12+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "chariothy","logo": "https:\/\/www.thy.pub\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "chariothy"
+            },"description": "unixbench成绩比较"
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="选择语言" id="language-select-desktop" onchange="location = this.value;"><option value="/unixbench-comparison-of-results/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="选择语言" onchange="location = this.value;"><option value="/unixbench-comparison-of-results/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#之前的sysbench">之前的sysbench</a></li>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#成绩">成绩</a>
+      <ul>
+        <li><a href="#dedipath-vps">Dedipath VPS</a></li>
+        <li><a href="#home-pve">Home PVE</a></li>
+        <li><a href="#淘权阿里云">淘权阿里云</a></li>
+        <li><a href="#淘权测试机">淘权测试机</a></li>
+        <li><a href="#snf-wsl">SNF WSL</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">unixbench成绩比较</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-02">2022-03-02</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-03-02">2022-03-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1916 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;
+    
+
+    
+        
+
+        
+        
+            <span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读</span>
+        
+    
+
+</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#之前的sysbench">之前的sysbench</a></li>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#成绩">成绩</a>
+      <ul>
+        <li><a href="#dedipath-vps">Dedipath VPS</a></li>
+        <li><a href="#home-pve">Home PVE</a></li>
+        <li><a href="#淘权阿里云">淘权阿里云</a></li>
+        <li><a href="#淘权测试机">淘权测试机</a></li>
+        <li><a href="#snf-wsl">SNF WSL</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="unixbench成绩比较" class="headerLink">
+    <a href="#unixbench%e6%88%90%e7%bb%a9%e6%af%94%e8%be%83" class="header-mark"></a>unixbench成绩比较</h1><h2 id="之前的sysbench" class="headerLink">
+    <a href="#%e4%b9%8b%e5%89%8d%e7%9a%84sysbench" class="header-mark"></a>之前的sysbench</h2><p>之前搞了个<a href=' /sysbench-performance-remark ' >sysbench</a>，但这次的unixbench更权威。</p>
+<h2 id="安装" class="headerLink">
+    <a href="#%e5%ae%89%e8%a3%85" class="header-mark"></a>安装</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget --no-check-certificate https://github.com/teddysun/across/raw/master/unixbench.sh <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>chmod +x unixbench.sh <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>./unixbench.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="成绩" class="headerLink">
+    <a href="#%e6%88%90%e7%bb%a9" class="header-mark"></a>成绩</h2><h3 id="dedipath-vps" class="headerLink">
+    <a href="#dedipath-vps" class="header-mark"></a>Dedipath VPS</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">========================================================================</span>
+</span></span><span class="line"><span class="cl">   <span class="n">BYTE</span> <span class="n">UNIX</span> <span class="n">Benchmarks</span> <span class="p">(</span><span class="n">Version</span> <span class="mf">5.1</span><span class="o">.</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="n">System</span><span class="p">:</span> <span class="n">vps</span><span class="o">.</span><span class="n">thy</span><span class="o">.</span><span class="n">pub</span><span class="p">:</span> <span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span>
+</span></span><span class="line"><span class="cl">   <span class="ne">OS</span><span class="p">:</span> <span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span> <span class="o">--</span> <span class="mf">4.18</span><span class="o">.</span><span class="mi">0</span> <span class="o">--</span> <span class="c1">#1 SMP Thu Sep 23 18:26:47 MSK 2021</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Machine</span><span class="p">:</span> <span class="n">x86_64</span> <span class="p">(</span><span class="n">x86_64</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Language</span><span class="p">:</span> <span class="n">en_US</span><span class="o">.</span><span class="n">utf8</span> <span class="p">(</span><span class="n">charmap</span><span class="o">=</span><span class="s2">&#34;UTF-8&#34;</span><span class="p">,</span> <span class="n">collate</span><span class="o">=</span><span class="s2">&#34;UTF-8&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">CPU</span> <span class="mi">0</span><span class="p">:</span> <span class="n">Intel</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">Xeon</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">CPU</span> <span class="n">E5</span><span class="o">-</span><span class="mi">2690</span> <span class="mi">0</span> <span class="err">@</span> <span class="mf">2.90</span><span class="n">GHz</span> <span class="p">(</span><span class="mf">5799.8</span> <span class="n">bogomips</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="n">Hyper</span><span class="o">-</span><span class="n">Threading</span><span class="p">,</span> <span class="n">x86</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span> <span class="n">MMX</span><span class="p">,</span> <span class="n">Physical</span> <span class="n">Address</span> <span class="n">Ext</span><span class="p">,</span> <span class="n">SYSENTER</span><span class="o">/</span><span class="n">SYSEXIT</span><span class="p">,</span> <span class="n">SYSCALL</span><span class="o">/</span><span class="n">SYSRET</span><span class="p">,</span> <span class="n">Intel</span> <span class="n">virtualization</span>
+</span></span><span class="line"><span class="cl">   <span class="mi">14</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">56</span> <span class="n">up</span> <span class="mi">20</span> <span class="n">days</span><span class="p">,</span> <span class="mi">20</span><span class="p">:</span><span class="mi">23</span><span class="p">,</span>  <span class="mi">1</span> <span class="n">user</span><span class="p">,</span>  <span class="nb">load</span> <span class="n">average</span><span class="p">:</span> <span class="mf">1.32</span><span class="p">,</span> <span class="mf">0.38</span><span class="p">,</span> <span class="mf">0.16</span><span class="p">;</span> <span class="n">runlevel</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">------------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">Benchmark</span> <span class="n">Run</span><span class="p">:</span> <span class="n">Wed</span> <span class="n">Mar</span> <span class="mi">02</span> <span class="mi">2022</span> <span class="mi">14</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">56</span> <span class="o">-</span> <span class="mi">14</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">07</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span> <span class="n">CPU</span> <span class="ow">in</span> <span class="n">system</span><span class="p">;</span> <span class="n">running</span> <span class="mi">1</span> <span class="n">parallel</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">tests</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Dhrystone</span> <span class="mi">2</span> <span class="n">using</span> <span class="n">register</span> <span class="n">variables</span>       <span class="mf">25457490.5</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Double</span><span class="o">-</span><span class="n">Precision</span> <span class="n">Whetstone</span>                     <span class="mf">4476.9</span> <span class="n">MWIPS</span> <span class="p">(</span><span class="mf">9.4</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Execl</span> <span class="n">Throughput</span>                               <span class="mf">2155.3</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">29.5</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">1024</span> <span class="n">bufsize</span> <span class="mi">2000</span> <span class="n">maxblocks</span>        <span class="mf">311398.6</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">256</span> <span class="n">bufsize</span> <span class="mi">500</span> <span class="n">maxblocks</span>           <span class="mf">75549.5</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">4096</span> <span class="n">bufsize</span> <span class="mi">8000</span> <span class="n">maxblocks</span>        <span class="mf">792098.7</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span> <span class="n">Throughput</span>                              <span class="mf">479444.2</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span><span class="o">-</span><span class="n">based</span> <span class="n">Context</span> <span class="n">Switching</span>                 <span class="mf">101346.2</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Process</span> <span class="n">Creation</span>                               <span class="mf">5109.6</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">1</span> <span class="n">concurrent</span><span class="p">)</span>                   <span class="mf">2770.4</span> <span class="n">lpm</span>   <span class="p">(</span><span class="mf">60.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">8</span> <span class="n">concurrent</span><span class="p">)</span>                    <span class="mf">405.2</span> <span class="n">lpm</span>   <span class="p">(</span><span class="mf">60.1</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Call</span> <span class="n">Overhead</span>                         <span class="mf">323153.8</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Benchmarks</span> <span class="n">Index</span> <span class="n">Values</span>               <span class="n">BASELINE</span>       <span class="n">RESULT</span>    <span class="n">INDEX</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dhrystone</span> <span class="mi">2</span> <span class="n">using</span> <span class="n">register</span> <span class="n">variables</span>         <span class="mf">116700.0</span>   <span class="mf">25457490.5</span>   <span class="mf">2181.4</span>
+</span></span><span class="line"><span class="cl"><span class="n">Double</span><span class="o">-</span><span class="n">Precision</span> <span class="n">Whetstone</span>                       <span class="mf">55.0</span>       <span class="mf">4476.9</span>    <span class="mf">814.0</span>
+</span></span><span class="line"><span class="cl"><span class="n">Execl</span> <span class="n">Throughput</span>                                 <span class="mf">43.0</span>       <span class="mf">2155.3</span>    <span class="mf">501.2</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">1024</span> <span class="n">bufsize</span> <span class="mi">2000</span> <span class="n">maxblocks</span>          <span class="mf">3960.0</span>     <span class="mf">311398.6</span>    <span class="mf">786.4</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">256</span> <span class="n">bufsize</span> <span class="mi">500</span> <span class="n">maxblocks</span>            <span class="mf">1655.0</span>      <span class="mf">75549.5</span>    <span class="mf">456.5</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">4096</span> <span class="n">bufsize</span> <span class="mi">8000</span> <span class="n">maxblocks</span>          <span class="mf">5800.0</span>     <span class="mf">792098.7</span>   <span class="mf">1365.7</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span> <span class="n">Throughput</span>                               <span class="mf">12440.0</span>     <span class="mf">479444.2</span>    <span class="mf">385.4</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span><span class="o">-</span><span class="n">based</span> <span class="n">Context</span> <span class="n">Switching</span>                   <span class="mf">4000.0</span>     <span class="mf">101346.2</span>    <span class="mf">253.4</span>
+</span></span><span class="line"><span class="cl"><span class="n">Process</span> <span class="n">Creation</span>                                <span class="mf">126.0</span>       <span class="mf">5109.6</span>    <span class="mf">405.5</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">1</span> <span class="n">concurrent</span><span class="p">)</span>                     <span class="mf">42.4</span>       <span class="mf">2770.4</span>    <span class="mf">653.4</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">8</span> <span class="n">concurrent</span><span class="p">)</span>                      <span class="mf">6.0</span>        <span class="mf">405.2</span>    <span class="mf">675.3</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Call</span> <span class="n">Overhead</span>                          <span class="mf">15000.0</span>     <span class="mf">323153.8</span>    <span class="mf">215.4</span>
+</span></span><span class="line"><span class="cl">                                                                   <span class="o">========</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Benchmarks</span> <span class="n">Index</span> <span class="n">Score</span>                                         <span class="mf">586.1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="home-pve" class="headerLink">
+    <a href="#home-pve" class="header-mark"></a>Home PVE</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">========================================================================</span>
+</span></span><span class="line"><span class="cl">   <span class="n">BYTE</span> <span class="n">UNIX</span> <span class="n">Benchmarks</span> <span class="p">(</span><span class="n">Version</span> <span class="mf">5.1</span><span class="o">.</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="n">System</span><span class="p">:</span> <span class="n">builder</span><span class="p">:</span> <span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span>
+</span></span><span class="line"><span class="cl">   <span class="ne">OS</span><span class="p">:</span> <span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span> <span class="o">--</span> <span class="mf">4.19</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">18</span><span class="o">-</span><span class="n">amd64</span> <span class="o">--</span> <span class="c1">#1 SMP Debian 4.19.208-1 (2021-09-29)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Machine</span><span class="p">:</span> <span class="n">x86_64</span> <span class="p">(</span><span class="n">unknown</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Language</span><span class="p">:</span> <span class="n">en_US</span><span class="o">.</span><span class="n">utf8</span> <span class="p">(</span><span class="n">charmap</span><span class="o">=</span><span class="s2">&#34;ANSI_X3.4-1968&#34;</span><span class="p">,</span> <span class="n">collate</span><span class="o">=</span><span class="s2">&#34;ANSI_X3.4-1968&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">CPU</span> <span class="mi">0</span><span class="p">:</span> <span class="n">Intel</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">Xeon</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">CPU</span> <span class="n">E3</span><span class="o">-</span><span class="mi">1220</span><span class="n">L</span> <span class="n">V2</span> <span class="err">@</span> <span class="mf">2.30</span><span class="n">GHz</span> <span class="p">(</span><span class="mf">4589.6</span> <span class="n">bogomips</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="n">Hyper</span><span class="o">-</span><span class="n">Threading</span><span class="p">,</span> <span class="n">x86</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span> <span class="n">MMX</span><span class="p">,</span> <span class="n">Physical</span> <span class="n">Address</span> <span class="n">Ext</span><span class="p">,</span> <span class="n">SYSENTER</span><span class="o">/</span><span class="n">SYSEXIT</span><span class="p">,</span> <span class="n">SYSCALL</span><span class="o">/</span><span class="n">SYSRET</span><span class="p">,</span> <span class="n">Intel</span> <span class="n">virtualization</span>
+</span></span><span class="line"><span class="cl">   <span class="n">CPU</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Intel</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">Xeon</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">CPU</span> <span class="n">E3</span><span class="o">-</span><span class="mi">1220</span><span class="n">L</span> <span class="n">V2</span> <span class="err">@</span> <span class="mf">2.30</span><span class="n">GHz</span> <span class="p">(</span><span class="mf">4589.6</span> <span class="n">bogomips</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="n">Hyper</span><span class="o">-</span><span class="n">Threading</span><span class="p">,</span> <span class="n">x86</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span> <span class="n">MMX</span><span class="p">,</span> <span class="n">Physical</span> <span class="n">Address</span> <span class="n">Ext</span><span class="p">,</span> <span class="n">SYSENTER</span><span class="o">/</span><span class="n">SYSEXIT</span><span class="p">,</span> <span class="n">SYSCALL</span><span class="o">/</span><span class="n">SYSRET</span><span class="p">,</span> <span class="n">Intel</span> <span class="n">virtualization</span>
+</span></span><span class="line"><span class="cl">   <span class="n">CPU</span> <span class="mi">2</span><span class="p">:</span> <span class="n">Intel</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">Xeon</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">CPU</span> <span class="n">E3</span><span class="o">-</span><span class="mi">1220</span><span class="n">L</span> <span class="n">V2</span> <span class="err">@</span> <span class="mf">2.30</span><span class="n">GHz</span> <span class="p">(</span><span class="mf">4589.6</span> <span class="n">bogomips</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="n">Hyper</span><span class="o">-</span><span class="n">Threading</span><span class="p">,</span> <span class="n">x86</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span> <span class="n">MMX</span><span class="p">,</span> <span class="n">Physical</span> <span class="n">Address</span> <span class="n">Ext</span><span class="p">,</span> <span class="n">SYSENTER</span><span class="o">/</span><span class="n">SYSEXIT</span><span class="p">,</span> <span class="n">SYSCALL</span><span class="o">/</span><span class="n">SYSRET</span><span class="p">,</span> <span class="n">Intel</span> <span class="n">virtualization</span>
+</span></span><span class="line"><span class="cl">   <span class="mi">15</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="n">up</span> <span class="mi">6</span> <span class="n">days</span><span class="p">,</span> <span class="mi">17</span><span class="p">:</span><span class="mi">05</span><span class="p">,</span>  <span class="mi">1</span> <span class="n">user</span><span class="p">,</span>  <span class="nb">load</span> <span class="n">average</span><span class="p">:</span> <span class="mf">0.42</span><span class="p">,</span> <span class="mf">0.11</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">;</span> <span class="n">runlevel</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">------------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">Benchmark</span> <span class="n">Run</span><span class="p">:</span> <span class="err">三</span> <span class="mi">3</span><span class="err">月</span> <span class="mi">02</span> <span class="mi">2022</span> <span class="mi">15</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">-</span> <span class="mi">15</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mi">13</span>
+</span></span><span class="line"><span class="cl"><span class="mi">3</span> <span class="n">CPUs</span> <span class="ow">in</span> <span class="n">system</span><span class="p">;</span> <span class="n">running</span> <span class="mi">1</span> <span class="n">parallel</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">tests</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Dhrystone</span> <span class="mi">2</span> <span class="n">using</span> <span class="n">register</span> <span class="n">variables</span>       <span class="mf">34230248.6</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Double</span><span class="o">-</span><span class="n">Precision</span> <span class="n">Whetstone</span>                     <span class="mf">5407.5</span> <span class="n">MWIPS</span> <span class="p">(</span><span class="mf">9.3</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Execl</span> <span class="n">Throughput</span>                               <span class="mf">2828.1</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">29.9</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">1024</span> <span class="n">bufsize</span> <span class="mi">2000</span> <span class="n">maxblocks</span>        <span class="mf">381785.8</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">256</span> <span class="n">bufsize</span> <span class="mi">500</span> <span class="n">maxblocks</span>          <span class="mf">110672.5</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">4096</span> <span class="n">bufsize</span> <span class="mi">8000</span> <span class="n">maxblocks</span>       <span class="mf">1149703.1</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span> <span class="n">Throughput</span>                              <span class="mf">622884.6</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span><span class="o">-</span><span class="n">based</span> <span class="n">Context</span> <span class="n">Switching</span>                 <span class="mf">116208.5</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Process</span> <span class="n">Creation</span>                               <span class="mf">4934.0</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">1</span> <span class="n">concurrent</span><span class="p">)</span>                   <span class="mf">6292.5</span> <span class="n">lpm</span>   <span class="p">(</span><span class="mf">60.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">8</span> <span class="n">concurrent</span><span class="p">)</span>                   <span class="mf">1164.1</span> <span class="n">lpm</span>   <span class="p">(</span><span class="mf">60.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Call</span> <span class="n">Overhead</span>                         <span class="mf">417007.3</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Benchmarks</span> <span class="n">Index</span> <span class="n">Values</span>               <span class="n">BASELINE</span>       <span class="n">RESULT</span>    <span class="n">INDEX</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dhrystone</span> <span class="mi">2</span> <span class="n">using</span> <span class="n">register</span> <span class="n">variables</span>         <span class="mf">116700.0</span>   <span class="mf">34230248.6</span>   <span class="mf">2933.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Double</span><span class="o">-</span><span class="n">Precision</span> <span class="n">Whetstone</span>                       <span class="mf">55.0</span>       <span class="mf">5407.5</span>    <span class="mf">983.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Execl</span> <span class="n">Throughput</span>                                 <span class="mf">43.0</span>       <span class="mf">2828.1</span>    <span class="mf">657.7</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">1024</span> <span class="n">bufsize</span> <span class="mi">2000</span> <span class="n">maxblocks</span>          <span class="mf">3960.0</span>     <span class="mf">381785.8</span>    <span class="mf">964.1</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">256</span> <span class="n">bufsize</span> <span class="mi">500</span> <span class="n">maxblocks</span>            <span class="mf">1655.0</span>     <span class="mf">110672.5</span>    <span class="mf">668.7</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">4096</span> <span class="n">bufsize</span> <span class="mi">8000</span> <span class="n">maxblocks</span>          <span class="mf">5800.0</span>    <span class="mf">1149703.1</span>   <span class="mf">1982.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span> <span class="n">Throughput</span>                               <span class="mf">12440.0</span>     <span class="mf">622884.6</span>    <span class="mf">500.7</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span><span class="o">-</span><span class="n">based</span> <span class="n">Context</span> <span class="n">Switching</span>                   <span class="mf">4000.0</span>     <span class="mf">116208.5</span>    <span class="mf">290.5</span>
+</span></span><span class="line"><span class="cl"><span class="n">Process</span> <span class="n">Creation</span>                                <span class="mf">126.0</span>       <span class="mf">4934.0</span>    <span class="mf">391.6</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">1</span> <span class="n">concurrent</span><span class="p">)</span>                     <span class="mf">42.4</span>       <span class="mf">6292.5</span>   <span class="mf">1484.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">8</span> <span class="n">concurrent</span><span class="p">)</span>                      <span class="mf">6.0</span>       <span class="mf">1164.1</span>   <span class="mf">1940.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Call</span> <span class="n">Overhead</span>                          <span class="mf">15000.0</span>     <span class="mf">417007.3</span>    <span class="mf">278.0</span>
+</span></span><span class="line"><span class="cl">                                                                   <span class="o">========</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Benchmarks</span> <span class="n">Index</span> <span class="n">Score</span>                                         <span class="mf">832.3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="淘权阿里云" class="headerLink">
+    <a href="#%e6%b7%98%e6%9d%83%e9%98%bf%e9%87%8c%e4%ba%91" class="header-mark"></a>淘权阿里云</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">========================================================================</span>
+</span></span><span class="line"><span class="cl">   <span class="n">BYTE</span> <span class="n">UNIX</span> <span class="n">Benchmarks</span> <span class="p">(</span><span class="n">Version</span> <span class="mf">5.1</span><span class="o">.</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="n">System</span><span class="p">:</span> <span class="n">iZ23tmdyjmaZ</span><span class="p">:</span> <span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span>
+</span></span><span class="line"><span class="cl">   <span class="ne">OS</span><span class="p">:</span> <span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span> <span class="o">--</span> <span class="mf">3.10</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mf">327.4</span><span class="o">.</span><span class="mf">4.</span><span class="n">el7</span><span class="o">.</span><span class="n">x86_64</span> <span class="o">--</span> <span class="c1">#1 SMP Tue Jan 5 16:07:00 UTC 2016</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Machine</span><span class="p">:</span> <span class="n">x86_64</span> <span class="p">(</span><span class="n">x86_64</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Language</span><span class="p">:</span> <span class="n">en_US</span><span class="o">.</span><span class="n">utf8</span> <span class="p">(</span><span class="n">charmap</span><span class="o">=</span><span class="s2">&#34;UTF-8&#34;</span><span class="p">,</span> <span class="n">collate</span><span class="o">=</span><span class="s2">&#34;UTF-8&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">CPU</span> <span class="mi">0</span><span class="p">:</span> <span class="n">Intel</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">Xeon</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">CPU</span> <span class="n">E5</span><span class="o">-</span><span class="mi">2680</span> <span class="n">v3</span> <span class="err">@</span> <span class="mf">2.50</span><span class="n">GHz</span> <span class="p">(</span><span class="mf">4988.4</span> <span class="n">bogomips</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="n">Hyper</span><span class="o">-</span><span class="n">Threading</span><span class="p">,</span> <span class="n">x86</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span> <span class="n">MMX</span><span class="p">,</span> <span class="n">Physical</span> <span class="n">Address</span> <span class="n">Ext</span><span class="p">,</span> <span class="n">SYSENTER</span><span class="o">/</span><span class="n">SYSEXIT</span><span class="p">,</span> <span class="n">SYSCALL</span><span class="o">/</span><span class="n">SYSRET</span>
+</span></span><span class="line"><span class="cl">   <span class="n">CPU</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Intel</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">Xeon</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">CPU</span> <span class="n">E5</span><span class="o">-</span><span class="mi">2680</span> <span class="n">v3</span> <span class="err">@</span> <span class="mf">2.50</span><span class="n">GHz</span> <span class="p">(</span><span class="mf">4988.4</span> <span class="n">bogomips</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="n">Hyper</span><span class="o">-</span><span class="n">Threading</span><span class="p">,</span> <span class="n">x86</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span> <span class="n">MMX</span><span class="p">,</span> <span class="n">Physical</span> <span class="n">Address</span> <span class="n">Ext</span><span class="p">,</span> <span class="n">SYSENTER</span><span class="o">/</span><span class="n">SYSEXIT</span><span class="p">,</span> <span class="n">SYSCALL</span><span class="o">/</span><span class="n">SYSRET</span>
+</span></span><span class="line"><span class="cl">   <span class="mi">15</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">08</span> <span class="n">up</span> <span class="mi">156</span> <span class="n">days</span><span class="p">,</span> <span class="mi">16</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span>  <span class="mi">1</span> <span class="n">user</span><span class="p">,</span>  <span class="nb">load</span> <span class="n">average</span><span class="p">:</span> <span class="mf">0.81</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">;</span> <span class="n">runlevel</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">------------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">Benchmark</span> <span class="n">Run</span><span class="p">:</span> <span class="n">Wed</span> <span class="n">Mar</span> <span class="mi">02</span> <span class="mi">2022</span> <span class="mi">15</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">08</span> <span class="o">-</span> <span class="mi">15</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">27</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2</span> <span class="n">CPUs</span> <span class="ow">in</span> <span class="n">system</span><span class="p">;</span> <span class="n">running</span> <span class="mi">1</span> <span class="n">parallel</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">tests</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Dhrystone</span> <span class="mi">2</span> <span class="n">using</span> <span class="n">register</span> <span class="n">variables</span>       <span class="mf">28240014.3</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Double</span><span class="o">-</span><span class="n">Precision</span> <span class="n">Whetstone</span>                     <span class="mf">3613.6</span> <span class="n">MWIPS</span> <span class="p">(</span><span class="mf">9.8</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Execl</span> <span class="n">Throughput</span>                               <span class="mf">2543.7</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">29.9</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">1024</span> <span class="n">bufsize</span> <span class="mi">2000</span> <span class="n">maxblocks</span>        <span class="mf">833842.9</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">256</span> <span class="n">bufsize</span> <span class="mi">500</span> <span class="n">maxblocks</span>          <span class="mf">235774.5</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">4096</span> <span class="n">bufsize</span> <span class="mi">8000</span> <span class="n">maxblocks</span>       <span class="mf">1771595.4</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span> <span class="n">Throughput</span>                             <span class="mf">1610291.4</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span><span class="o">-</span><span class="n">based</span> <span class="n">Context</span> <span class="n">Switching</span>                  <span class="mf">52808.8</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Process</span> <span class="n">Creation</span>                               <span class="mf">6655.8</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">1</span> <span class="n">concurrent</span><span class="p">)</span>                   <span class="mf">5114.3</span> <span class="n">lpm</span>   <span class="p">(</span><span class="mf">60.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">8</span> <span class="n">concurrent</span><span class="p">)</span>                   <span class="mf">1130.4</span> <span class="n">lpm</span>   <span class="p">(</span><span class="mf">60.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Call</span> <span class="n">Overhead</span>                        <span class="mf">3044233.4</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Benchmarks</span> <span class="n">Index</span> <span class="n">Values</span>               <span class="n">BASELINE</span>       <span class="n">RESULT</span>    <span class="n">INDEX</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dhrystone</span> <span class="mi">2</span> <span class="n">using</span> <span class="n">register</span> <span class="n">variables</span>         <span class="mf">116700.0</span>   <span class="mf">28240014.3</span>   <span class="mf">2419.9</span>
+</span></span><span class="line"><span class="cl"><span class="n">Double</span><span class="o">-</span><span class="n">Precision</span> <span class="n">Whetstone</span>                       <span class="mf">55.0</span>       <span class="mf">3613.6</span>    <span class="mf">657.0</span>
+</span></span><span class="line"><span class="cl"><span class="n">Execl</span> <span class="n">Throughput</span>                                 <span class="mf">43.0</span>       <span class="mf">2543.7</span>    <span class="mf">591.6</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">1024</span> <span class="n">bufsize</span> <span class="mi">2000</span> <span class="n">maxblocks</span>          <span class="mf">3960.0</span>     <span class="mf">833842.9</span>   <span class="mf">2105.7</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">256</span> <span class="n">bufsize</span> <span class="mi">500</span> <span class="n">maxblocks</span>            <span class="mf">1655.0</span>     <span class="mf">235774.5</span>   <span class="mf">1424.6</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">4096</span> <span class="n">bufsize</span> <span class="mi">8000</span> <span class="n">maxblocks</span>          <span class="mf">5800.0</span>    <span class="mf">1771595.4</span>   <span class="mf">3054.5</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span> <span class="n">Throughput</span>                               <span class="mf">12440.0</span>    <span class="mf">1610291.4</span>   <span class="mf">1294.4</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span><span class="o">-</span><span class="n">based</span> <span class="n">Context</span> <span class="n">Switching</span>                   <span class="mf">4000.0</span>      <span class="mf">52808.8</span>    <span class="mf">132.0</span>
+</span></span><span class="line"><span class="cl"><span class="n">Process</span> <span class="n">Creation</span>                                <span class="mf">126.0</span>       <span class="mf">6655.8</span>    <span class="mf">528.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">1</span> <span class="n">concurrent</span><span class="p">)</span>                     <span class="mf">42.4</span>       <span class="mf">5114.3</span>   <span class="mf">1206.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">8</span> <span class="n">concurrent</span><span class="p">)</span>                      <span class="mf">6.0</span>       <span class="mf">1130.4</span>   <span class="mf">1884.0</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Call</span> <span class="n">Overhead</span>                          <span class="mf">15000.0</span>    <span class="mf">3044233.4</span>   <span class="mf">2029.5</span>
+</span></span><span class="line"><span class="cl">                                                                   <span class="o">========</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Benchmarks</span> <span class="n">Index</span> <span class="n">Score</span>                                        <span class="mf">1112.3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="淘权测试机" class="headerLink">
+    <a href="#%e6%b7%98%e6%9d%83%e6%b5%8b%e8%af%95%e6%9c%ba" class="header-mark"></a>淘权测试机</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">========================================================================</span>
+</span></span><span class="line"><span class="cl">   <span class="n">BYTE</span> <span class="n">UNIX</span> <span class="n">Benchmarks</span> <span class="p">(</span><span class="n">Version</span> <span class="mf">5.1</span><span class="o">.</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="n">System</span><span class="p">:</span> <span class="n">iZ23tmdyjmaZ</span><span class="p">:</span> <span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span>
+</span></span><span class="line"><span class="cl">   <span class="ne">OS</span><span class="p">:</span> <span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span> <span class="o">--</span> <span class="mf">3.10</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mf">327.4</span><span class="o">.</span><span class="mf">4.</span><span class="n">el7</span><span class="o">.</span><span class="n">x86_64</span> <span class="o">--</span> <span class="c1">#1 SMP Tue Jan 5 16:07:00 UTC 2016</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Machine</span><span class="p">:</span> <span class="n">x86_64</span> <span class="p">(</span><span class="n">x86_64</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Language</span><span class="p">:</span> <span class="n">en_US</span><span class="o">.</span><span class="n">utf8</span> <span class="p">(</span><span class="n">charmap</span><span class="o">=</span><span class="s2">&#34;UTF-8&#34;</span><span class="p">,</span> <span class="n">collate</span><span class="o">=</span><span class="s2">&#34;UTF-8&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">CPU</span> <span class="mi">0</span><span class="p">:</span> <span class="n">Intel</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">Xeon</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">CPU</span> <span class="n">E5</span><span class="o">-</span><span class="mi">2680</span> <span class="n">v3</span> <span class="err">@</span> <span class="mf">2.50</span><span class="n">GHz</span> <span class="p">(</span><span class="mf">4988.4</span> <span class="n">bogomips</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="n">Hyper</span><span class="o">-</span><span class="n">Threading</span><span class="p">,</span> <span class="n">x86</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span> <span class="n">MMX</span><span class="p">,</span> <span class="n">Physical</span> <span class="n">Address</span> <span class="n">Ext</span><span class="p">,</span> <span class="n">SYSENTER</span><span class="o">/</span><span class="n">SYSEXIT</span><span class="p">,</span> <span class="n">SYSCALL</span><span class="o">/</span><span class="n">SYSRET</span>
+</span></span><span class="line"><span class="cl">   <span class="n">CPU</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Intel</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">Xeon</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">CPU</span> <span class="n">E5</span><span class="o">-</span><span class="mi">2680</span> <span class="n">v3</span> <span class="err">@</span> <span class="mf">2.50</span><span class="n">GHz</span> <span class="p">(</span><span class="mf">4988.4</span> <span class="n">bogomips</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="n">Hyper</span><span class="o">-</span><span class="n">Threading</span><span class="p">,</span> <span class="n">x86</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span> <span class="n">MMX</span><span class="p">,</span> <span class="n">Physical</span> <span class="n">Address</span> <span class="n">Ext</span><span class="p">,</span> <span class="n">SYSENTER</span><span class="o">/</span><span class="n">SYSEXIT</span><span class="p">,</span> <span class="n">SYSCALL</span><span class="o">/</span><span class="n">SYSRET</span>
+</span></span><span class="line"><span class="cl">   <span class="mi">15</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">08</span> <span class="n">up</span> <span class="mi">156</span> <span class="n">days</span><span class="p">,</span> <span class="mi">16</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span>  <span class="mi">1</span> <span class="n">user</span><span class="p">,</span>  <span class="nb">load</span> <span class="n">average</span><span class="p">:</span> <span class="mf">0.81</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">;</span> <span class="n">runlevel</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">------------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">Benchmark</span> <span class="n">Run</span><span class="p">:</span> <span class="n">Wed</span> <span class="n">Mar</span> <span class="mi">02</span> <span class="mi">2022</span> <span class="mi">15</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">08</span> <span class="o">-</span> <span class="mi">15</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">27</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2</span> <span class="n">CPUs</span> <span class="ow">in</span> <span class="n">system</span><span class="p">;</span> <span class="n">running</span> <span class="mi">1</span> <span class="n">parallel</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">tests</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Dhrystone</span> <span class="mi">2</span> <span class="n">using</span> <span class="n">register</span> <span class="n">variables</span>       <span class="mf">28240014.3</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Double</span><span class="o">-</span><span class="n">Precision</span> <span class="n">Whetstone</span>                     <span class="mf">3613.6</span> <span class="n">MWIPS</span> <span class="p">(</span><span class="mf">9.8</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Execl</span> <span class="n">Throughput</span>                               <span class="mf">2543.7</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">29.9</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">1024</span> <span class="n">bufsize</span> <span class="mi">2000</span> <span class="n">maxblocks</span>        <span class="mf">833842.9</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">256</span> <span class="n">bufsize</span> <span class="mi">500</span> <span class="n">maxblocks</span>          <span class="mf">235774.5</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">4096</span> <span class="n">bufsize</span> <span class="mi">8000</span> <span class="n">maxblocks</span>       <span class="mf">1771595.4</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span> <span class="n">Throughput</span>                             <span class="mf">1610291.4</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span><span class="o">-</span><span class="n">based</span> <span class="n">Context</span> <span class="n">Switching</span>                  <span class="mf">52808.8</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Process</span> <span class="n">Creation</span>                               <span class="mf">6655.8</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">1</span> <span class="n">concurrent</span><span class="p">)</span>                   <span class="mf">5114.3</span> <span class="n">lpm</span>   <span class="p">(</span><span class="mf">60.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">8</span> <span class="n">concurrent</span><span class="p">)</span>                   <span class="mf">1130.4</span> <span class="n">lpm</span>   <span class="p">(</span><span class="mf">60.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Call</span> <span class="n">Overhead</span>                        <span class="mf">3044233.4</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Benchmarks</span> <span class="n">Index</span> <span class="n">Values</span>               <span class="n">BASELINE</span>       <span class="n">RESULT</span>    <span class="n">INDEX</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dhrystone</span> <span class="mi">2</span> <span class="n">using</span> <span class="n">register</span> <span class="n">variables</span>         <span class="mf">116700.0</span>   <span class="mf">28240014.3</span>   <span class="mf">2419.9</span>
+</span></span><span class="line"><span class="cl"><span class="n">Double</span><span class="o">-</span><span class="n">Precision</span> <span class="n">Whetstone</span>                       <span class="mf">55.0</span>       <span class="mf">3613.6</span>    <span class="mf">657.0</span>
+</span></span><span class="line"><span class="cl"><span class="n">Execl</span> <span class="n">Throughput</span>                                 <span class="mf">43.0</span>       <span class="mf">2543.7</span>    <span class="mf">591.6</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">1024</span> <span class="n">bufsize</span> <span class="mi">2000</span> <span class="n">maxblocks</span>          <span class="mf">3960.0</span>     <span class="mf">833842.9</span>   <span class="mf">2105.7</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">256</span> <span class="n">bufsize</span> <span class="mi">500</span> <span class="n">maxblocks</span>            <span class="mf">1655.0</span>     <span class="mf">235774.5</span>   <span class="mf">1424.6</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">4096</span> <span class="n">bufsize</span> <span class="mi">8000</span> <span class="n">maxblocks</span>          <span class="mf">5800.0</span>    <span class="mf">1771595.4</span>   <span class="mf">3054.5</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span> <span class="n">Throughput</span>                               <span class="mf">12440.0</span>    <span class="mf">1610291.4</span>   <span class="mf">1294.4</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span><span class="o">-</span><span class="n">based</span> <span class="n">Context</span> <span class="n">Switching</span>                   <span class="mf">4000.0</span>      <span class="mf">52808.8</span>    <span class="mf">132.0</span>
+</span></span><span class="line"><span class="cl"><span class="n">Process</span> <span class="n">Creation</span>                                <span class="mf">126.0</span>       <span class="mf">6655.8</span>    <span class="mf">528.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">1</span> <span class="n">concurrent</span><span class="p">)</span>                     <span class="mf">42.4</span>       <span class="mf">5114.3</span>   <span class="mf">1206.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">8</span> <span class="n">concurrent</span><span class="p">)</span>                      <span class="mf">6.0</span>       <span class="mf">1130.4</span>   <span class="mf">1884.0</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Call</span> <span class="n">Overhead</span>                          <span class="mf">15000.0</span>    <span class="mf">3044233.4</span>   <span class="mf">2029.5</span>
+</span></span><span class="line"><span class="cl">                                                                   <span class="o">========</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Benchmarks</span> <span class="n">Index</span> <span class="n">Score</span>                                        <span class="mf">1112.3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="snf-wsl" class="headerLink">
+    <a href="#snf-wsl" class="header-mark"></a>SNF WSL</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">========================================================================</span>
+</span></span><span class="line"><span class="cl">   <span class="n">BYTE</span> <span class="n">UNIX</span> <span class="n">Benchmarks</span> <span class="p">(</span><span class="n">Version</span> <span class="mf">5.1</span><span class="o">.</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="n">System</span><span class="p">:</span> <span class="n">Platform6Table</span><span class="p">:</span> <span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span>
+</span></span><span class="line"><span class="cl">   <span class="ne">OS</span><span class="p">:</span> <span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span> <span class="o">--</span> <span class="mf">4.4</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">17763</span><span class="o">-</span><span class="n">Microsoft</span> <span class="o">--</span> <span class="c1">#2268-Microsoft Thu Oct 07 16:36:00 PST 2021</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Machine</span><span class="p">:</span> <span class="n">x86_64</span> <span class="p">(</span><span class="n">x86_64</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Language</span><span class="p">:</span> <span class="n">en_US</span><span class="o">.</span><span class="n">utf8</span> <span class="p">(</span><span class="n">charmap</span><span class="o">=</span><span class="s2">&#34;UTF-8&#34;</span><span class="p">,</span> <span class="n">collate</span><span class="o">=</span><span class="s2">&#34;UTF-8&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">CPU</span> <span class="mi">0</span><span class="p">:</span> <span class="n">Intel</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">Xeon</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">CPU</span> <span class="n">E5</span><span class="o">-</span><span class="mi">2670</span> <span class="n">v3</span> <span class="err">@</span> <span class="mf">2.30</span><span class="n">GHz</span> <span class="p">(</span><span class="mf">4600.0</span> <span class="n">bogomips</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="n">x86</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span> <span class="n">MMX</span><span class="p">,</span> <span class="n">Physical</span> <span class="n">Address</span> <span class="n">Ext</span><span class="p">,</span> <span class="n">SYSENTER</span><span class="o">/</span><span class="n">SYSEXIT</span><span class="p">,</span> <span class="n">SYSCALL</span><span class="o">/</span><span class="n">SYSRET</span>
+</span></span><span class="line"><span class="cl">   <span class="n">CPU</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Intel</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">Xeon</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">CPU</span> <span class="n">E5</span><span class="o">-</span><span class="mi">2670</span> <span class="n">v3</span> <span class="err">@</span> <span class="mf">2.30</span><span class="n">GHz</span> <span class="p">(</span><span class="mf">4600.0</span> <span class="n">bogomips</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="n">x86</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span> <span class="n">MMX</span><span class="p">,</span> <span class="n">Physical</span> <span class="n">Address</span> <span class="n">Ext</span><span class="p">,</span> <span class="n">SYSENTER</span><span class="o">/</span><span class="n">SYSEXIT</span><span class="p">,</span> <span class="n">SYSCALL</span><span class="o">/</span><span class="n">SYSRET</span>
+</span></span><span class="line"><span class="cl">   <span class="n">CPU</span> <span class="mi">2</span><span class="p">:</span> <span class="n">Intel</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">Xeon</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">CPU</span> <span class="n">E5</span><span class="o">-</span><span class="mi">2670</span> <span class="n">v3</span> <span class="err">@</span> <span class="mf">2.30</span><span class="n">GHz</span> <span class="p">(</span><span class="mf">4600.0</span> <span class="n">bogomips</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="n">x86</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span> <span class="n">MMX</span><span class="p">,</span> <span class="n">Physical</span> <span class="n">Address</span> <span class="n">Ext</span><span class="p">,</span> <span class="n">SYSENTER</span><span class="o">/</span><span class="n">SYSEXIT</span><span class="p">,</span> <span class="n">SYSCALL</span><span class="o">/</span><span class="n">SYSRET</span>
+</span></span><span class="line"><span class="cl">   <span class="n">CPU</span> <span class="mi">3</span><span class="p">:</span> <span class="n">Intel</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">Xeon</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">CPU</span> <span class="n">E5</span><span class="o">-</span><span class="mi">2670</span> <span class="n">v3</span> <span class="err">@</span> <span class="mf">2.30</span><span class="n">GHz</span> <span class="p">(</span><span class="mf">4600.0</span> <span class="n">bogomips</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="n">x86</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span> <span class="n">MMX</span><span class="p">,</span> <span class="n">Physical</span> <span class="n">Address</span> <span class="n">Ext</span><span class="p">,</span> <span class="n">SYSENTER</span><span class="o">/</span><span class="n">SYSEXIT</span><span class="p">,</span> <span class="n">SYSCALL</span><span class="o">/</span><span class="n">SYSRET</span>
+</span></span><span class="line"><span class="cl">   <span class="mi">15</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">09</span> <span class="n">up</span> <span class="mi">20</span> <span class="nb">min</span><span class="p">,</span>  <span class="mi">0</span> <span class="n">users</span><span class="p">,</span>  <span class="nb">load</span> <span class="n">average</span><span class="p">:</span> <span class="mf">0.52</span><span class="p">,</span> <span class="mf">0.58</span><span class="p">,</span> <span class="mf">0.59</span><span class="p">;</span> <span class="n">runlevel</span> <span class="n">unknown</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">------------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">Benchmark</span> <span class="n">Run</span><span class="p">:</span> <span class="n">Wed</span> <span class="n">Mar</span> <span class="mi">02</span> <span class="mi">2022</span> <span class="mi">15</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">09</span> <span class="o">-</span> <span class="mi">16</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mi">24</span>
+</span></span><span class="line"><span class="cl"><span class="mi">4</span> <span class="n">CPUs</span> <span class="ow">in</span> <span class="n">system</span><span class="p">;</span> <span class="n">running</span> <span class="mi">1</span> <span class="n">parallel</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">tests</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Dhrystone</span> <span class="mi">2</span> <span class="n">using</span> <span class="n">register</span> <span class="n">variables</span>       <span class="mf">31052445.8</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Double</span><span class="o">-</span><span class="n">Precision</span> <span class="n">Whetstone</span>                     <span class="mf">4885.2</span> <span class="n">MWIPS</span> <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Execl</span> <span class="n">Throughput</span>                                 <span class="mf">63.2</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">29.8</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">1024</span> <span class="n">bufsize</span> <span class="mi">2000</span> <span class="n">maxblocks</span>         <span class="mf">75958.7</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">256</span> <span class="n">bufsize</span> <span class="mi">500</span> <span class="n">maxblocks</span>           <span class="mf">19633.3</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">4096</span> <span class="n">bufsize</span> <span class="mi">8000</span> <span class="n">maxblocks</span>        <span class="mf">238206.6</span> <span class="n">KBps</span>  <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span> <span class="n">Throughput</span>                              <span class="mf">204263.4</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span><span class="o">-</span><span class="n">based</span> <span class="n">Context</span> <span class="n">Switching</span>                  <span class="mf">30872.5</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Process</span> <span class="n">Creation</span>                                <span class="mf">469.0</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">30.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">1</span> <span class="n">concurrent</span><span class="p">)</span>                    <span class="mf">466.8</span> <span class="n">lpm</span>   <span class="p">(</span><span class="mf">60.1</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">8</span> <span class="n">concurrent</span><span class="p">)</span>                    <span class="mf">109.9</span> <span class="n">lpm</span>   <span class="p">(</span><span class="mf">60.3</span> <span class="n">s</span><span class="p">,</span> <span class="mi">2</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Call</span> <span class="n">Overhead</span>                         <span class="mf">218817.0</span> <span class="n">lps</span>   <span class="p">(</span><span class="mf">10.0</span> <span class="n">s</span><span class="p">,</span> <span class="mi">7</span> <span class="n">samples</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Benchmarks</span> <span class="n">Index</span> <span class="n">Values</span>               <span class="n">BASELINE</span>       <span class="n">RESULT</span>    <span class="n">INDEX</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dhrystone</span> <span class="mi">2</span> <span class="n">using</span> <span class="n">register</span> <span class="n">variables</span>         <span class="mf">116700.0</span>   <span class="mf">31052445.8</span>   <span class="mf">2660.9</span>
+</span></span><span class="line"><span class="cl"><span class="n">Double</span><span class="o">-</span><span class="n">Precision</span> <span class="n">Whetstone</span>                       <span class="mf">55.0</span>       <span class="mf">4885.2</span>    <span class="mf">888.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Execl</span> <span class="n">Throughput</span>                                 <span class="mf">43.0</span>         <span class="mf">63.2</span>     <span class="mf">14.7</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">1024</span> <span class="n">bufsize</span> <span class="mi">2000</span> <span class="n">maxblocks</span>          <span class="mf">3960.0</span>      <span class="mf">75958.7</span>    <span class="mf">191.8</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">256</span> <span class="n">bufsize</span> <span class="mi">500</span> <span class="n">maxblocks</span>            <span class="mf">1655.0</span>      <span class="mf">19633.3</span>    <span class="mf">118.6</span>
+</span></span><span class="line"><span class="cl"><span class="ne">File</span> <span class="n">Copy</span> <span class="mi">4096</span> <span class="n">bufsize</span> <span class="mi">8000</span> <span class="n">maxblocks</span>          <span class="mf">5800.0</span>     <span class="mf">238206.6</span>    <span class="mf">410.7</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span> <span class="n">Throughput</span>                               <span class="mf">12440.0</span>     <span class="mf">204263.4</span>    <span class="mf">164.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pipe</span><span class="o">-</span><span class="n">based</span> <span class="n">Context</span> <span class="n">Switching</span>                   <span class="mf">4000.0</span>      <span class="mf">30872.5</span>     <span class="mf">77.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Process</span> <span class="n">Creation</span>                                <span class="mf">126.0</span>        <span class="mf">469.0</span>     <span class="mf">37.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">1</span> <span class="n">concurrent</span><span class="p">)</span>                     <span class="mf">42.4</span>        <span class="mf">466.8</span>    <span class="mf">110.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Shell</span> <span class="n">Scripts</span> <span class="p">(</span><span class="mi">8</span> <span class="n">concurrent</span><span class="p">)</span>                      <span class="mf">6.0</span>        <span class="mf">109.9</span>    <span class="mf">183.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Call</span> <span class="n">Overhead</span>                          <span class="mf">15000.0</span>     <span class="mf">218817.0</span>    <span class="mf">145.9</span>
+</span></span><span class="line"><span class="cl">                                                                   <span class="o">========</span>
+</span></span><span class="line"><span class="cl"><span class="n">System</span> <span class="n">Benchmarks</span> <span class="n">Index</span> <span class="n">Score</span>                                         <span class="mf">166.4</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-03-02</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><button title="分享到 Twitter" data-sharer="twitter" data-url="https://www.thy.pub/unixbench-comparison-of-results/" data-title="unixbench成绩比较" data-hashtags="Linux"><span class="fab fa-twitter fa-fw"></span></button><button title="分享到 Facebook" data-sharer="facebook" data-url="https://www.thy.pub/unixbench-comparison-of-results/" data-hashtag="Linux"><span class="fab fa-facebook-square fa-fw"></span></button><button title="分享到 微博" data-sharer="weibo" data-url="https://www.thy.pub/unixbench-comparison-of-results/" data-title="unixbench成绩比较"><span class="fab fa-weibo fa-fw"></span></button><button title="分享到 百度" data-sharer="baidu" data-url="https://www.thy.pub/unixbench-comparison-of-results/" data-title="unixbench成绩比较"><span data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@v5.21.1/icons/baidu.svg"></span></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/ubuntu-change-the-scroll-direction-of-the-touchpad/" class="prev" rel="prev" title="ubuntu改变触摸板滚动方向"><i class="fas fa-angle-left fa-fw"></i>ubuntu改变触摸板滚动方向</a>
+            <a href="/oracle-xmlquery-tutorial-and-instance/" class="next" rel="next" title="Oracle-XMLQuery-使用教程与实例">Oracle-XMLQuery-使用教程与实例<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line"><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> • <span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span>人次</span></div><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.129.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">chariothy</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    
+        
+        <script async src=" //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+    
+
+    
+        
+            <section>
+                
+                    <span id="busuanzi_container_value_site_pv"><i class="far fa-eye fa-fw"></i>
+                        
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+
+                
+                    &nbsp;|&nbsp;              
+                
+
+                
+                    <span id="busuanzi_container_value_site_uv"><i class="fa fa-user"></i>
+                        
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+            </section>
+        
+
+        
+        
+    
+
+</div><script>
+                    if('serviceWorker' in navigator) {
+                        navigator.serviceWorker
+                            .register('/sw.min.js', { scope: '/' })
+                            .then(function(registration) {
+                            });
+                
+                        navigator.serviceWorker
+                            .ready
+                            .then(function(registration) {
+                            });
+                    }
+                </script></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["chariothy"],"clientID":"0e48b6595a9725cd9cf9","clientSecret":"d9ee702d2cbedaecf2693bee849b867325b990b1","id":"2022-03-02T15:20:12+08:00","owner":"chariothy","repo":"chariothy.github.io","title":"unixbench成绩比较"}},"data":{"desktop-header-typeit":"孤独的长跑者","mobile-header-typeit":"孤独的长跑者"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.2/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?fbbcc12eba9fd250dabc045b58df3809";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script></div>
+</body>
+
+</html>

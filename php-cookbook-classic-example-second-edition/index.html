@@ -1,0 +1,663 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>PHP Cookbook经典实例（第二版） - 孤独的长跑者</title><meta name="Description" content="PHP Cookbook经典实例（第二版）"><meta property="og:url" content="https://www.thy.pub/php-cookbook-classic-example-second-edition/">
+  <meta property="og:site_name" content="孤独的长跑者">
+  <meta property="og:title" content="PHP Cookbook经典实例（第二版）">
+  <meta property="og:description" content="PHP Cookbook经典实例（第二版）">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-02-22T14:53:20+08:00">
+    <meta property="article:modified_time" content="2020-02-22T14:53:20+08:00">
+    <meta property="article:tag" content="软件开发">
+    <meta property="article:tag" content="PHP">
+    <meta property="og:image" content="https://www.thy.pub/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.thy.pub/logo.png">
+  <meta name="twitter:title" content="PHP Cookbook经典实例（第二版）">
+  <meta name="twitter:description" content="PHP Cookbook经典实例（第二版）">
+<meta name="application-name" content="孤独的长跑者">
+<meta name="apple-mobile-web-app-title" content="孤独的长跑者">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.thy.pub/php-cookbook-classic-example-second-edition/" /><link rel="prev" href="https://www.thy.pub/improving-91-suggestions-from-python-programs/" /><link rel="next" href="https://www.thy.pub/yii2-best-practice/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript>
+    
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "PHP Cookbook经典实例（第二版）",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.thy.pub\/php-cookbook-classic-example-second-edition\/"
+        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "软件开发, PHP","wordcount":  2276 ,
+        "url": "https:\/\/www.thy.pub\/php-cookbook-classic-example-second-edition\/","datePublished": "2020-02-22T14:53:20+08:00","dateModified": "2020-02-22T14:53:20+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "chariothy","logo": "https:\/\/www.thy.pub\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "chariothy"
+            },"description": "PHP Cookbook经典实例（第二版）"
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="选择语言" id="language-select-desktop" onchange="location = this.value;"><option value="/php-cookbook-classic-example-second-edition/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="选择语言" onchange="location = this.value;"><option value="/php-cookbook-classic-example-second-edition/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#字符">字符</a></li>
+    <li><a href="#数字">数字</a></li>
+    <li><a href="#日期时间">日期时间</a></li>
+    <li><a href="#数组">数组</a></li>
+    <li><a href="#变量">变量</a></li>
+    <li><a href="#函数">函数</a></li>
+    <li><a href="#类和对象">类和对象</a></li>
+    <li><a href="#web基础">Web基础</a></li>
+    <li><a href="#访问数据库">访问数据库</a></li>
+    <li><a href="#session和数据保持">Session和数据保持</a></li>
+    <li><a href="#xml">XML</a></li>
+    <li><a href="#web自动化">Web自动化</a></li>
+    <li><a href="#安全和加密">安全和加密</a></li>
+    <li><a href="#国际化和本地化">国际化和本地化</a></li>
+    <li><a href="#错误处理故障排除和测试">错误处理、故障排除和测试</a></li>
+    <li><a href="#正则表达式">正则表达式</a></li>
+    <li><a href="#文件">文件</a></li>
+    <li><a href="#目录">目录</a></li>
+    <li><a href="#命令行php">命令行PHP</a>
+      <ul>
+        <li><a href="#命令行输入密码">命令行输入密码：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">PHP Cookbook经典实例（第二版）</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>读书笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-02-22">2020-02-22</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-02-22">2020-02-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2276 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;
+    
+
+    
+        
+
+        
+        
+            <span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读</span>
+        
+    
+
+</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#字符">字符</a></li>
+    <li><a href="#数字">数字</a></li>
+    <li><a href="#日期时间">日期时间</a></li>
+    <li><a href="#数组">数组</a></li>
+    <li><a href="#变量">变量</a></li>
+    <li><a href="#函数">函数</a></li>
+    <li><a href="#类和对象">类和对象</a></li>
+    <li><a href="#web基础">Web基础</a></li>
+    <li><a href="#访问数据库">访问数据库</a></li>
+    <li><a href="#session和数据保持">Session和数据保持</a></li>
+    <li><a href="#xml">XML</a></li>
+    <li><a href="#web自动化">Web自动化</a></li>
+    <li><a href="#安全和加密">安全和加密</a></li>
+    <li><a href="#国际化和本地化">国际化和本地化</a></li>
+    <li><a href="#错误处理故障排除和测试">错误处理、故障排除和测试</a></li>
+    <li><a href="#正则表达式">正则表达式</a></li>
+    <li><a href="#文件">文件</a></li>
+    <li><a href="#目录">目录</a></li>
+    <li><a href="#命令行php">命令行PHP</a>
+      <ul>
+        <li><a href="#命令行输入密码">命令行输入密码：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="php-cookbook经典实例第二版" class="headerLink">
+    <a href="#php-cookbook%e7%bb%8f%e5%85%b8%e5%ae%9e%e4%be%8b%e7%ac%ac%e4%ba%8c%e7%89%88" class="header-mark"></a>PHP Cookbook经典实例（第二版）</h1><h2 id="字符" class="headerLink">
+    <a href="#%e5%ad%97%e7%ac%a6" class="header-mark"></a>字符</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">ucfirst</span><span class="p">()</span><span class="nx">、ucwords</span><span class="p">()</span>     <span class="nx">首字母大写</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fputcsv</span><span class="p">()</span><span class="nx">、fgetcsv</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nx">pack</span><span class="p">()</span><span class="nx">、unpack</span><span class="p">()</span><span class="nx">、str_pad</span><span class="p">()</span><span class="nx">、str_split</span><span class="p">()</span>          <span class="nx">固定字符宽度</span>
+</span></span><span class="line"><span class="cl"><span class="nx">wordwrap</span><span class="p">()</span>               <span class="nx">文本自动换行</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="数字" class="headerLink">
+    <a href="#%e6%95%b0%e5%ad%97" class="header-mark"></a>数字</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">range</span><span class="p">()</span>          <span class="nx">生成范围</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mt_rand</span><span class="p">()</span>     <span class="nx">更好的随机</span>
+</span></span><span class="line"><span class="cl"><span class="nx">money_format</span><span class="p">()</span>    <span class="nx">（only</span> <span class="nx">unix）</span>
+</span></span><span class="line"><span class="cl"><span class="nx">BCMath（EX</span><span class="o">:</span> <span class="nx">bcadd</span><span class="p">()</span><span class="nx">）、GMP（EX</span><span class="o">:</span> <span class="nx">gmp_add</span><span class="p">()</span><span class="nx">）、big_int（EX</span><span class="o">:</span> <span class="nx">bi_add）</span>     <span class="nx">任意精度</span>
+</span></span><span class="line"><span class="cl"><span class="nx">base_convert</span><span class="p">()</span>          <span class="nx">进制转换</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="日期时间" class="headerLink">
+    <a href="#%e6%97%a5%e6%9c%9f%e6%97%b6%e9%97%b4" class="header-mark"></a>日期时间</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">localtime</span><span class="p">()</span>     <span class="nx">当地时间</span>
+</span></span><span class="line"><span class="cl"><span class="nx">checkdate</span><span class="p">()</span>     <span class="nx">验证日期是否有效</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="数组" class="headerLink">
+    <a href="#%e6%95%b0%e7%bb%84" class="header-mark"></a>数组</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">foreach迭代副本、each</span><span class="p">()</span><span class="nx">迭代本身</span>
+</span></span><span class="line"><span class="cl"><span class="nx">settype</span><span class="p">(</span><span class="nv">$items</span><span class="p">,</span> <span class="s1">&#39;array&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">array_splice</span><span class="p">()</span> <span class="nx">减小数组</span>     <span class="nx">array_pad</span><span class="p">()</span> <span class="nx">增大数组</span>
+</span></span><span class="line"><span class="cl"><span class="nx">in_array</span><span class="p">()</span>      <span class="nx">检查值</span>
+</span></span><span class="line"><span class="cl"><span class="nx">asort</span><span class="p">()</span>     <span class="nx">排序并保持索引关系</span>
+</span></span><span class="line"><span class="cl"><span class="nx">natsort</span><span class="p">()</span>     <span class="nx">自然算法排序（可识别img1、img10、img2之间的顺序为1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="nx">）</span>
+</span></span><span class="line"><span class="cl"><span class="nx">usort</span><span class="p">()</span>     <span class="nx">自定义排序</span>
+</span></span><span class="line"><span class="cl"><span class="nx">RecursiveArrayIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">iterator_to_array</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="变量" class="headerLink">
+    <a href="#%e5%8f%98%e9%87%8f" class="header-mark"></a>变量</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">list</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span><span class="nv">$b</span><span class="p">)</span><span class="o">=</span><span class="p">[</span><span class="nv">$b</span><span class="p">,</span><span class="nv">$a</span><span class="p">];</span>     <span class="nx">交换变量</span>
+</span></span><span class="line"><span class="cl"><span class="nx">shmop（EX</span><span class="o">:</span> <span class="nx">shmop_open</span><span class="p">()</span><span class="nx">）、SystemV（EX</span><span class="o">:</span> <span class="nx">shm_get_var</span><span class="p">()</span><span class="nx">）</span>  <span class="nx">共享内存在进程间共享数据（Semaphore（EX</span><span class="o">:</span> <span class="nx">sem_get</span><span class="p">()</span><span class="nx">）共享内存同步）</span>
+</span></span><span class="line"><span class="cl"><span class="nx">addslashes</span><span class="p">(</span><span class="nx">serialize</span><span class="p">())</span><span class="nx">、unserialize</span><span class="p">(</span><span class="nx">stripslashes</span><span class="p">())</span>     <span class="nx">序列化时便于数据库查询</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="函数" class="headerLink">
+    <a href="#%e5%87%bd%e6%95%b0" class="header-mark"></a>函数</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">func_get_args、func_num_args</span>     <span class="nx">可变参数</span>
+</span></span><span class="line"><span class="cl"><span class="k">list</span><span class="p">(,</span> <span class="nv">$b</span><span class="p">,</span> <span class="p">)</span> <span class="o">=</span> <span class="nx">ex_function</span><span class="p">()</span>          <span class="c1">// 跳过某些值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">call_user_func、call_user_func_array</span>
+</span></span><span class="line"><span class="cl"><span class="nx">create_function</span>     <span class="c1">// 内部使用eval，安全性不佳，不如匿名函数function() {}
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="类和对象" class="headerLink">
+    <a href="#%e7%b1%bb%e5%92%8c%e5%af%b9%e8%b1%a1" class="header-mark"></a>类和对象</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">__destruct</span><span class="p">()</span>     <span class="c1">//不能在解析器中引用另一个对象，因为PHP可能已经把那个对象删除了
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">class_implements</span>     <span class="nx">返回类的所有接口</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionClass</span>          <span class="nx">返回类的相关信息</span>
+</span></span><span class="line"><span class="cl"><span class="k">clone</span> <span class="nv">$obj</span>     <span class="nx">浅拷贝，可以用__clone</span><span class="p">()</span><span class="nx">来定制深拷贝</span>
+</span></span><span class="line"><span class="cl"><span class="nx">__call</span>          <span class="nx">可以将方法访问转交给组合类</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Reflection</span><span class="o">::</span><span class="na">export</span><span class="p">()</span>     <span class="nx">快速预览类信息</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="web基础" class="headerLink">
+    <a href="#web%e5%9f%ba%e7%a1%80" class="header-mark"></a>Web基础</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">get_browser</span><span class="p">()</span>          <span class="nx">获取浏览器信息</span>
+</span></span><span class="line"><span class="cl"><span class="nx">htmlentities</span><span class="p">()</span><span class="nx">、html_entity_decode</span><span class="p">()</span>     <span class="nx">html字符转换</span>
+</span></span><span class="line"><span class="cl"><span class="nx">file_get_contents</span><span class="p">(</span><span class="s1">&#39;php://input&#39;</span><span class="p">)</span>          <span class="nx">直接访问POST请求主体而非PHP解析后放在</span><span class="nv">$_POST中的数据</span>
+</span></span><span class="line"><span class="cl"><span class="nx">flush</span><span class="p">()</span><span class="nx">、ob_start</span><span class="p">()</span><span class="nx">、ob_end_flush</span><span class="p">()</span>     <span class="nx">刷新输出</span>
+</span></span><span class="line"><span class="cl"><span class="nx">getenv</span><span class="p">()</span><span class="nx">、putenv</span><span class="p">()</span>          <span class="nx">环境变量</span>
+</span></span><span class="line"><span class="cl"><span class="nx">apache_note</span><span class="p">()</span>          <span class="nx">与apache内部进行通信</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ctype_</span><span class="o">*</span>               <span class="nx">一系列数据验证方法</span>
+</span></span><span class="line"><span class="cl"><span class="nx">htmlentities</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>     <span class="nx">防止跨站点脚本</span>
+</span></span><span class="line"><span class="cl"><span class="nx">md5</span><span class="p">(</span><span class="nx">uniqid</span><span class="p">())</span>          <span class="nx">用token防止重复提交表单（hash</span><span class="p">(</span><span class="s1">&#39;md5&#39;</span><span class="p">,</span><span class="s1">&#39;string&#39;</span><span class="p">)</span><span class="nx">是md5速度的两倍）</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="访问数据库" class="headerLink">
+    <a href="#%e8%ae%bf%e9%97%ae%e6%95%b0%e6%8d%ae%e5%ba%93" class="header-mark"></a>访问数据库</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">PDO</span><span class="o">::</span><span class="na">quote</span><span class="p">()</span>     <span class="nx">转义引号（prepare</span><span class="p">()</span><span class="nx">和execute</span><span class="p">()</span><span class="nx">会自动转义）</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="session和数据保持" class="headerLink">
+    <a href="#session%e5%92%8c%e6%95%b0%e6%8d%ae%e4%bf%9d%e6%8c%81" class="header-mark"></a>Session和数据保持</h2><p><code>output_add_rewrite_var()</code>     将值写入url</p>
+<p><strong>预防session劫持</strong>：只允许通过cookie传递SessionID，同时生成一个url传递的session token，当请求包含sessionID和session token时才可以访问session。（P373）</p>
+<p><p class="md__image">
+    <img src='/images/php-cookbook-session-token.png' alt=""  />
+</p>
+<p class="md__image">
+    <img src='/images/php-cookbook-session-token-check.png' alt=""  />
+</p></p>
+<p>预防session重放攻击</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">ini_set</span><span class="p">(</span><span class="s1">&#39;session.use_only_cookies&#39;</span><span class="p">,</span> <span class="k">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">session_start</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;gen&#39;</span><span class="p">])</span> <span class="o">||</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;gen&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="p">(</span><span class="nx">time</span><span class="p">()</span><span class="o">-</span><span class="mi">30</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">session_regenerate_id</span><span class="p">();</span>     <span class="c1">//只要用户的授权范围改变，如成功登录后
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;gen&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">time</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="xml" class="headerLink">
+    <a href="#xml" class="header-mark"></a>XML</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">DOMDocument</span><span class="p">(</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">simplexml_load_</span><span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="nx">XMLReader</span>     <span class="nx">大型XML无法一次性全部读入内存</span>
+</span></span><span class="line"><span class="cl"><span class="nx">XPath、DOMXPath</span>     <span class="nx">直达所需的节点</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMDocument</span><span class="o">::</span><span class="na">schemaValidate、DOMDocument</span><span class="o">::</span><span class="na">relaxNGValidate</span>     <span class="nx">XML验证</span>
+</span></span><span class="line"><span class="cl"><span class="nx">iconv</span>          <span class="nx">字符集转换</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="web自动化" class="headerLink">
+    <a href="#web%e8%87%aa%e5%8a%a8%e5%8c%96" class="header-mark"></a>Web自动化</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">Tidy</span>                    <span class="nx">库，可以修复html</span>
+</span></span><span class="line"><span class="cl"><span class="nx">strip_tags</span>          <span class="nx">删除html和php标签</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="安全和加密" class="headerLink">
+    <a href="#%e5%ae%89%e5%85%a8%e5%92%8c%e5%8a%a0%e5%af%86" class="header-mark"></a>安全和加密</h2><p><p class="md__image">
+    <img src='/images/php-cookbook-security.png' alt=""  />
+</p></p>
+<h2 id="国际化和本地化" class="headerLink">
+    <a href="#%e5%9b%bd%e9%99%85%e5%8c%96%e5%92%8c%e6%9c%ac%e5%9c%b0%e5%8c%96" class="header-mark"></a>国际化和本地化</h2><ul>
+<li></li>
+</ul>
+<p><code>setlocale()、strftime() 、money_format()</code></p>
+<h2 id="错误处理故障排除和测试" class="headerLink">
+    <a href="#%e9%94%99%e8%af%af%e5%a4%84%e7%90%86%e6%95%85%e9%9a%9c%e6%8e%92%e9%99%a4%e5%92%8c%e6%b5%8b%e8%af%95" class="header-mark"></a>错误处理、故障排除和测试</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">debug_backtrace</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nx">init_get_all</span><span class="p">()</span><span class="nx">、get_cfg_var、ini_restore</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nx">auto_prepend_file</span>     <span class="p">(</span><span class="nx">在php</span><span class="o">.</span><span class="nx">ini中）设置自动加载的文件，可用于设置DEBUG常量，密码等</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="正则表达式" class="headerLink">
+    <a href="#%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-mark"></a>正则表达式</h2><p><code>preg_replace_callback()</code></p>
+<h2 id="文件" class="headerLink">
+    <a href="#%e6%96%87%e4%bb%b6" class="header-mark"></a>文件</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$php_errormsg</span>     <span class="nx">记录前一次错误信息（track_error需要为on）</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fpassthru</span><span class="p">()</span>               <span class="nx">直接读出文件内容并输出</span>
+</span></span><span class="line"><span class="cl"><span class="nx">readfile</span><span class="p">()</span>               <span class="nx">直接读取一个文件并输出到缓冲</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fgets</span><span class="p">()</span>                    <span class="nx">一次读取一行</span>
+</span></span><span class="line"><span class="cl"><span class="nx">stream_get_line</span><span class="p">()</span>     <span class="nx">从资源流里读取一行直到给定的定界符</span>
+</span></span><span class="line"><span class="cl"><span class="nx">parse_ini_file</span><span class="p">()</span>          
+</span></span><span class="line"><span class="cl"><span class="k">print</span><span class="p">()</span><span class="nx">是函数，有返回值；echo是语言结构，无返回值</span>
+</span></span><span class="line"><span class="cl"><span class="nx">escapeshellarg</span>     <span class="nx">把字符串转码为可以在</span> <span class="nx">shell</span> <span class="nx">命令里使用的参数</span>
+</span></span><span class="line"><span class="cl"><span class="nx">escapeshellcmd</span>      <span class="nx">shell</span> <span class="nx">元字符转义</span>
+</span></span><span class="line"><span class="cl"><span class="nx">popen</span><span class="p">()</span><span class="nx">、pclose</span><span class="p">()</span>     <span class="nx">打开通向程序的管道，然后用fputs写入数据或发送命令（</span><span class="nv">$php</span><span class="o">=</span><span class="nx">popen</span><span class="p">(</span><span class="s1">&#39;/usr/bin/nsupdate -k keyfile&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">);</span><span class="nx">fputs</span><span class="p">(</span><span class="nv">$ph</span><span class="p">,</span><span class="s1">&#39;update delete test.e.com A\n&#39;</span><span class="p">)</span><span class="nx">）</span>
+</span></span><span class="line"><span class="cl"><span class="nx">backtick（</span><span class="err">`</span><span class="nx">符号）</span>        <span class="nx">会执行其中的程序并返回结果</span>
+</span></span><span class="line"><span class="cl"><span class="nx">popen</span><span class="p">(</span><span class="s1">&#39;strace ls 2&gt;&amp;1&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>     <span class="nx">将标准错误重定向到标准输出</span>
+</span></span><span class="line"><span class="cl"><span class="nx">popen</span><span class="p">(</span><span class="s1">&#39;strace ls 2&gt;&amp;1 1&gt;/dev/null&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>     <span class="nx">只读取标准错误</span>
+</span></span><span class="line"><span class="cl"><span class="nx">flock</span><span class="p">()</span>                    <span class="nx">劝告式锁定（LOCK_EX排他锁，LOCK_SH共享锁；LOCK_NB锁定时不阻塞）</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fopen</span><span class="p">(</span><span class="s1">&#39;compress.zlib://lotsofdata.gz&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>     
+</span></span><span class="line"><span class="cl"><span class="nx">fopen</span><span class="p">(</span><span class="s1">&#39;compress.bzip2://lotsofdata.bz2&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>          <span class="nx">compress流封装（编译php时要使用</span><span class="o">--</span><span class="nx">withzlib和</span><span class="o">--</span><span class="nx">withbz2）</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="目录" class="headerLink">
+    <a href="#%e7%9b%ae%e5%bd%95" class="header-mark"></a>目录</h2><p><code>DirectoryIterator()</code>          遍历目录
+<p class="md__image">
+    <img src='/images/php-cookbook-dir1.png' alt=""  />
+</p>
+<p class="md__image">
+    <img src='/images/php-cookbook-dir2.png' alt=""  />
+</p></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">opendir</span><span class="p">()</span><span class="nx">、readdir</span><span class="p">()</span><span class="nx">、closedir</span><span class="p">()</span>          <span class="nx">打开目录遍历文件</span>
+</span></span><span class="line"><span class="cl"><span class="nx">smlink</span><span class="p">()</span>          <span class="nx">创建符号连接</span>
+</span></span><span class="line"><span class="cl"><span class="nx">stat</span><span class="p">()</span><span class="nx">、fstat</span><span class="p">()</span>          <span class="nx">给出文件信息（用clearstatcache</span><span class="p">()</span><span class="nx">刷新缓存结果）</span>
+</span></span><span class="line"><span class="cl"><span class="nx">lstat</span><span class="p">()</span>          <span class="nx">给出符号链接本身的信息</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><p class="md__image">
+    <img src='/images/php-cookbook-file1.png' alt=""  />
+</p>
+<p class="md__image">
+    <img src='/images/php-cookbook-file2.png' alt=""  />
+</p></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">chmod</span><span class="p">()</span><span class="nx">、chgrp</span><span class="p">()</span>          <span class="nx">相当于linux命令</span>
+</span></span><span class="line"><span class="cl"><span class="nx">FilterIterator</span>               <span class="nx">抽象类，用accept</span><span class="p">()</span><span class="nx">过滤Iterator（如DirectoryIterator）</span>
+</span></span><span class="line"><span class="cl"><span class="nx">glob</span><span class="p">()</span>                    <span class="nx">返回匹配的文件名数组（如</span><span class="o">/</span><span class="nx">folder</span><span class="cm">/**/</span><span class="o">*.</span><span class="nx">txt）</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Recursive</span><span class="o">***</span><span class="nx">Iterator</span>          <span class="nx">带递归的Iterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">RecursiveIteratorIterator</span>     <span class="nx">将RecursiveIterator扁平化</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="命令行php" class="headerLink">
+    <a href="#%e5%91%bd%e4%bb%a4%e8%a1%8cphp" class="header-mark"></a>命令行PHP</h2><p><p class="md__image">
+    <img src='/images/php-cookbook-cmd.png' alt=""  />
+</p></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">php_sapi_name</span>        <span class="nx">返回描述</span> <span class="nx">PHP</span> <span class="nx">所使用的接口类型的小写字符串。if</span><span class="p">(</span><span class="s1">&#39;cli&#39;</span><span class="o">==</span><span class="nx">php_sapi_name</span><span class="p">()</span> <span class="o">....</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="命令行输入密码" class="headerLink">
+    <a href="#%e5%91%bd%e4%bb%a4%e8%a1%8c%e8%be%93%e5%85%a5%e5%af%86%e7%a0%81" class="header-mark"></a>命令行输入密码：</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="sb">`/bin/stty -echo`</span>          <span class="c1">//关闭回显
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$password</span> <span class="o">=</span> <span class="nx">readline</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="sb">`/bin/stty echo`</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-02-22</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><button title="分享到 Twitter" data-sharer="twitter" data-url="https://www.thy.pub/php-cookbook-classic-example-second-edition/" data-title="PHP Cookbook经典实例（第二版）" data-hashtags="软件开发,PHP"><span class="fab fa-twitter fa-fw"></span></button><button title="分享到 Facebook" data-sharer="facebook" data-url="https://www.thy.pub/php-cookbook-classic-example-second-edition/" data-hashtag="软件开发"><span class="fab fa-facebook-square fa-fw"></span></button><button title="分享到 微博" data-sharer="weibo" data-url="https://www.thy.pub/php-cookbook-classic-example-second-edition/" data-title="PHP Cookbook经典实例（第二版）"><span class="fab fa-weibo fa-fw"></span></button><button title="分享到 百度" data-sharer="baidu" data-url="https://www.thy.pub/php-cookbook-classic-example-second-edition/" data-title="PHP Cookbook经典实例（第二版）"><span data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@v5.21.1/icons/baidu.svg"></span></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a>,&nbsp;<a href="/tags/php/">PHP</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/improving-91-suggestions-from-python-programs/" class="prev" rel="prev" title="改善Python程序的91个建议"><i class="fas fa-angle-left fa-fw"></i>改善Python程序的91个建议</a>
+            <a href="/yii2-best-practice/" class="next" rel="next" title="Yii2最佳实践">Yii2最佳实践<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line"><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> • <span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span>人次</span></div><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.129.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">chariothy</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    
+        
+        <script async src=" //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+    
+
+    
+        
+            <section>
+                
+                    <span id="busuanzi_container_value_site_pv"><i class="far fa-eye fa-fw"></i>
+                        
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+
+                
+                    &nbsp;|&nbsp;              
+                
+
+                
+                    <span id="busuanzi_container_value_site_uv"><i class="fa fa-user"></i>
+                        
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+            </section>
+        
+
+        
+        
+    
+
+</div><script>
+                    if('serviceWorker' in navigator) {
+                        navigator.serviceWorker
+                            .register('/sw.min.js', { scope: '/' })
+                            .then(function(registration) {
+                            });
+                
+                        navigator.serviceWorker
+                            .ready
+                            .then(function(registration) {
+                            });
+                    }
+                </script></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["chariothy"],"clientID":"0e48b6595a9725cd9cf9","clientSecret":"d9ee702d2cbedaecf2693bee849b867325b990b1","id":"2020-02-22T14:53:20+08:00","owner":"chariothy","repo":"chariothy.github.io","title":"PHP Cookbook经典实例（第二版）"}},"data":{"desktop-header-typeit":"孤独的长跑者","mobile-header-typeit":"孤独的长跑者"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.2/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?fbbcc12eba9fd250dabc045b58df3809";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script></div>
+</body>
+
+</html>

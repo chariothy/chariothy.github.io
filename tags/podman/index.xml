@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Podman - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/podman/</link>
+        <description>Podman - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 15 Jan 2021 11:50:24 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/podman/" rel="self" type="application/rss+xml" /><item>
+    <title>debian安装podman</title>
+    <link>https://www.thy.pub/install-podman-on-debian/</link>
+    <pubDate>Fri, 15 Jan 2021 11:50:24 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/install-podman-on-debian/</guid>
+    <description><![CDATA[debian安装podman 首先最好将debain升级到11debain升级到11 安装podmansudo apt install podman 安装docker-compo]]></description>
+</item></channel>
+</rss>

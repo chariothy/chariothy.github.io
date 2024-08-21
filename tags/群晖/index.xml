@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>群晖 - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/%E7%BE%A4%E6%99%96/</link>
+        <description>群晖 - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 08 Aug 2024 19:36:02 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/%E7%BE%A4%E6%99%96/" rel="self" type="application/rss+xml" /><item>
+    <title>群晖NAS上面使用Crontab</title>
+    <link>https://www.thy.pub/synology-dsm-nas-crontab/</link>
+    <pubDate>Thu, 08 Aug 2024 19:36:02 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/synology-dsm-nas-crontab/</guid>
+    <description><![CDATA[群晖NAS上面使用Crontab群晖nas默认不能直接使用crontab -e来管理计划任务 默认群晖是不允许root直接登陆的, 所以我们要先切]]></description>
+</item></channel>
+</rss>

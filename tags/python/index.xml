@@ -1,0 +1,50 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Python - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/python/</link>
+        <description>Python - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 21 Apr 2022 10:25:22 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>导出网站的cookie给requests和scrapy</title>
+    <link>https://www.thy.pub/export-the-cookie-of-the-website-to-requests-and-scrapy/</link>
+    <pubDate>Thu, 21 Apr 2022 10:25:22 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/export-the-cookie-of-the-website-to-requests-and-scrapy/</guid>
+    <description><![CDATA[导出网站的cookie给requests和scrapy 安装Chrome插件Edit This Cookie 设置插件在设置中将导出格式设置为： Netscape HTTP Cookie File 保存到 cookie_file = 'c:/temp/cookie.txt']]></description>
+</item><item>
+    <title>python生成式</title>
+    <link>https://www.thy.pub/python-list-dict-generator/</link>
+    <pubDate>Thu, 18 Jun 2020 10:01:57 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/python-list-dict-generator/</guid>
+    <description><![CDATA[python生成式 1. 列表生成式 1 [experssion for i in sequence if...] 2. 字典生成式 1 { key: value for i in sequence if...}]]></description>
+</item><item>
+    <title>python日期函数</title>
+    <link>https://www.thy.pub/python-date-time-functions/</link>
+    <pubDate>Tue, 18 Feb 2020 09:54:14 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/python-date-time-functions/</guid>
+    <description><![CDATA[python日期函数 函数 更新（2022-2-18）：频繁使用时推荐用 arrow]]></description>
+</item><item>
+    <title>python标准类库结构图</title>
+    <link>https://www.thy.pub/python-standard-lib-struct-mind-pic/</link>
+    <pubDate>Tue, 18 Feb 2020 09:53:28 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/python-standard-lib-struct-mind-pic/</guid>
+    <description><![CDATA[python标准类库结构图]]></description>
+</item><item>
+    <title>jupyter切换conda环境</title>
+    <link>https://www.thy.pub/jupyter-switch-conda-env/</link>
+    <pubDate>Tue, 18 Feb 2020 09:51:34 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/jupyter-switch-conda-env/</guid>
+    <description><![CDATA[jupyter切换conda环境 命令 1 2 3 conda install nb_conda_kernels conda create -n env_name python=3.8 ipykernel 打开jupyter notebook，选择环境 更新（2022-2-18）现在在vs]]></description>
+</item><item>
+    <title>IPython魔术函数</title>
+    <link>https://www.thy.pub/ipython-magic-functions/</link>
+    <pubDate>Tue, 18 Feb 2020 09:50:57 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/ipython-magic-functions/</guid>
+    <description><![CDATA[IPython魔术函数]]></description>
+</item></channel>
+</rss>

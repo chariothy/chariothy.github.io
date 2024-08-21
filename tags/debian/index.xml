@@ -1,0 +1,50 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Debian - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/debian/</link>
+        <description>Debian - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 28 Apr 2023 13:51:31 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/debian/" rel="self" type="application/rss+xml" /><item>
+    <title>Debian11最小化安装新系统配置</title>
+    <link>https://www.thy.pub/config-debain11-from-minimal/</link>
+    <pubDate>Fri, 28 Apr 2023 13:51:31 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/config-debain11-from-minimal/</guid>
+    <description><![CDATA[Debian最小化安装新系统配置 安装语言选择英文，时区选择上海 核对时区 1 2 3 4 timedatectl date # 24小时显示 sudo localectl set-locale LC_TIME=en_GB.UTF-8 以下操作为方便可以先切换到roots]]></description>
+</item><item>
+    <title>Debian最小化安装新系统配置</title>
+    <link>https://www.thy.pub/config-debain-from-minimal/</link>
+    <pubDate>Sat, 15 Jan 2022 13:51:31 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/config-debain-from-minimal/</guid>
+    <description><![CDATA[Debian最小化安装新系统配置 （以debian 12为例）su root 替换源 1 2 3 4 5 6 7 8 9 10 11 12 13 14 cd /etc/apt mv sources.list sources.list.bak cat &gt; sources.list &lt;&lt;EOF deb https://mirrors.ustc.edu.cn/debian/ bookworm main contrib non-free non-free-firmware deb-src https://mirrors.ustc.edu.cn/debian/ bookworm main contrib]]></description>
+</item><item>
+    <title>debian10升级debian11</title>
+    <link>https://www.thy.pub/update-debian10-to-debian11/</link>
+    <pubDate>Mon, 10 Jan 2022 11:48:50 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/update-debian10-to-debian11/</guid>
+    <description><![CDATA[debian10升级debian11 更新现有软件包apt update &amp;&amp; apt upgrade -y 删除未使用的依赖项：apt --purge autoremove 检查安装的包的一致性（正常情况下无输出）dp]]></description>
+</item><item>
+    <title>debian安装podman</title>
+    <link>https://www.thy.pub/install-podman-on-debian/</link>
+    <pubDate>Fri, 15 Jan 2021 11:50:24 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/install-podman-on-debian/</guid>
+    <description><![CDATA[debian安装podman 首先最好将debain升级到11debain升级到11 安装podmansudo apt install podman 安装docker-compo]]></description>
+</item><item>
+    <title>debian安装cups</title>
+    <link>https://www.thy.pub/install-cups-on-debian/</link>
+    <pubDate>Sun, 15 Nov 2020 12:49:37 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/install-cups-on-debian/</guid>
+    <description><![CDATA[debian安装cups (HP1106) 1 2 3 sudo apt update sudo apt install cups -y sudo nano /etc/cups/cupsd.conf 第一步：将cupsd.conf中的 Browsing Off 改为 Browsing On 第二步：将cupsd.conf中的 Listen localhost:631 改]]></description>
+</item><item>
+    <title>debian安装docker</title>
+    <link>https://www.thy.pub/install-docker-on-debian/</link>
+    <pubDate>Sun, 15 Nov 2020 11:50:24 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/install-docker-on-debian/</guid>
+    <description><![CDATA[debian安装dockersudo apt-get update https 1 2 3 4 5 6 sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ gnupg2 \ software-properties-common 官方keycurl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add - 查看sudo apt-key fingerprint 0EBFCD88 设置源 1 2]]></description>
+</item></channel>
+</rss>

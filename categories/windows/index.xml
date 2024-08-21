@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Windows - 分类 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/categories/windows/</link>
+        <description>Windows - 分类 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Aug 2024 10:28:49 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/categories/windows/" rel="self" type="application/rss+xml" /><item>
+    <title>常见工具的代理设置.</title>
+    <link>https://www.thy.pub/proxy-setting-on-windows/</link>
+    <pubDate>Fri, 09 Aug 2024 10:28:49 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/proxy-setting-on-windows/</guid>
+    <description><![CDATA[常见工具的代理设置.socks5代理转http代理可见 openwrt安装privoxy转换socks5到http代理 powershell proxy 1 2 $env:http_proxy=&#34;http://10.18.18.1:1071&#34; $env:https_proxy=&#34;http://10.18.18.1:1071&#34; scoop proxyscoop config proxy 10.18.18.1:1071 ##]]></description>
+</item><item>
+    <title>WIN11无线网卡没有电源管理选项</title>
+    <link>https://www.thy.pub/no-power-management-option-for-the-wi-n11-wireless-card/</link>
+    <pubDate>Wed, 10 Apr 2024 13:55:15 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/no-power-management-option-for-the-wi-n11-wireless-card/</guid>
+    <description><![CDATA[WIN11无线网卡没有电源管理选项reg add HKLM\System\CurrentControlSet\Control\Power /v PlatformAoAcOverride /t REG_DWORD /d 0]]></description>
+</item><item>
+    <title>WIN10无法睡眠的解决方法</title>
+    <link>https://www.thy.pub/win10-can-not-sleep-solution/</link>
+    <pubDate>Sat, 06 May 2023 09:23:55 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/win10-can-not-sleep-solution/</guid>
+    <description><![CDATA[WIN10无法睡眠的解决方法 网卡：检查是否因为网卡数据传输引起。取消允许此设备唤醒计算机，从根本上杜绝软件调用网卡引起的不睡眠。（挂机下载貌]]></description>
+</item></channel>
+</rss>

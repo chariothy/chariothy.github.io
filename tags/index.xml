@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/</link>
+        <description>Tags - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Aug 2024 15:51:31 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Openwrt</title>
+    <link>https://www.thy.pub/tags/openwrt/</link>
+    <pubDate>Fri, 09 Aug 2024 15:51:31 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/tags/openwrt/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Windows</title>
+    <link>https://www.thy.pub/tags/windows/</link>
+    <pubDate>Fri, 09 Aug 2024 10:28:49 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/tags/windows/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>代理</title>
+    <link>https://www.thy.pub/tags/%E4%BB%A3%E7%90%86/</link>
+    <pubDate>Fri, 09 Aug 2024 10:28:49 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/tags/%E4%BB%A3%E7%90%86/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>群晖</title>
+    <link>https://www.thy.pub/tags/%E7%BE%A4%E6%99%96/</link>
+    <pubDate>Thu, 08 Aug 2024 19:36:02 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/tags/%E7%BE%A4%E6%99%96/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>网口</title>
+    <link>https://www.thy.pub/tags/%E7%BD%91%E5%8F%A3/</link>
+    <pubDate>Wed, 31 Jul 2024 23:31:24 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/tags/%E7%BD%91%E5%8F%A3/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>树莓派</title>
+    <link>https://www.thy.pub/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</link>
+    <pubDate>Wed, 31 Jul 2024 22:07:20 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>网络</title>
+    <link>https://www.thy.pub/tags/%E7%BD%91%E7%BB%9C/</link>
+    <pubDate>Tue, 07 May 2024 20:16:30 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/tags/%E7%BD%91%E7%BB%9C/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Linux Disk</title>
+    <link>https://www.thy.pub/tags/linux-disk/</link>
+    <pubDate>Thu, 25 Apr 2024 19:17:19 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/tags/linux-disk/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>黑群</title>
+    <link>https://www.thy.pub/tags/%E9%BB%91%E7%BE%A4/</link>
+    <pubDate>Thu, 18 Apr 2024 09:33:01 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/tags/%E9%BB%91%E7%BE%A4/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Windows 无线网卡</title>
+    <link>https://www.thy.pub/tags/windows-%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1/</link>
+    <pubDate>Wed, 10 Apr 2024 13:55:15 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/tags/windows-%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

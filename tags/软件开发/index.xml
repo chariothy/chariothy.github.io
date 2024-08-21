@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>软件开发 - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
+        <description>软件开发 - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 22 Feb 2020 14:55:23 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/" rel="self" type="application/rss+xml" /><item>
+    <title>Yii2最佳实践</title>
+    <link>https://www.thy.pub/yii2-best-practice/</link>
+    <pubDate>Sat, 22 Feb 2020 14:55:23 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/yii2-best-practice/</guid>
+    <description><![CDATA[Yii2最佳实践 控制器： 视图： 模型： 小部件： 模块： HTTP状态码：]]></description>
+</item><item>
+    <title>PHP Cookbook经典实例（第二版）</title>
+    <link>https://www.thy.pub/php-cookbook-classic-example-second-edition/</link>
+    <pubDate>Sat, 22 Feb 2020 14:53:20 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/php-cookbook-classic-example-second-edition/</guid>
+    <description><![CDATA[PHP Cookbook经典实例（第二版） 字符 1 2 3 4 ucfirst()、ucwords() 首字母大写 fputcsv()、fgetcsv() pac]]></description>
+</item><item>
+    <title>改善Python程序的91个建议</title>
+    <link>https://www.thy.pub/improving-91-suggestions-from-python-programs/</link>
+    <pubDate>Sat, 22 Feb 2020 14:49:37 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/improving-91-suggestions-from-python-programs/</guid>
+    <description><![CDATA[改善Python程序的91个建议 P15. enumerate()的本质是生成器 1 2 3 4 5 def enumerate(seq, start=0): n = start for el in seq: yield n, el n += 1 P22. ++j不是自增运算，将被解]]></description>
+</item></channel>
+</rss>

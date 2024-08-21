@@ -1,0 +1,579 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>改善Python程序的91个建议 - 孤独的长跑者</title><meta name="Description" content="改善Python程序的91个建议"><meta property="og:url" content="https://www.thy.pub/improving-91-suggestions-from-python-programs/">
+  <meta property="og:site_name" content="孤独的长跑者">
+  <meta property="og:title" content="改善Python程序的91个建议">
+  <meta property="og:description" content="改善Python程序的91个建议">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-02-22T14:49:37+08:00">
+    <meta property="article:modified_time" content="2020-02-22T14:49:37+08:00">
+    <meta property="article:tag" content="软件开发">
+    <meta property="og:image" content="https://www.thy.pub/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.thy.pub/logo.png">
+  <meta name="twitter:title" content="改善Python程序的91个建议">
+  <meta name="twitter:description" content="改善Python程序的91个建议">
+<meta name="application-name" content="孤独的长跑者">
+<meta name="apple-mobile-web-app-title" content="孤独的长跑者">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.thy.pub/improving-91-suggestions-from-python-programs/" /><link rel="prev" href="https://www.thy.pub/omnis-history/" /><link rel="next" href="https://www.thy.pub/php-cookbook-classic-example-second-edition/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript>
+    
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "改善Python程序的91个建议",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.thy.pub\/improving-91-suggestions-from-python-programs\/"
+        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "软件开发","wordcount":  1156 ,
+        "url": "https:\/\/www.thy.pub\/improving-91-suggestions-from-python-programs\/","datePublished": "2020-02-22T14:49:37+08:00","dateModified": "2020-02-22T14:49:37+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "chariothy","logo": "https:\/\/www.thy.pub\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "chariothy"
+            },"description": "改善Python程序的91个建议"
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="选择语言" id="language-select-desktop" onchange="location = this.value;"><option value="/improving-91-suggestions-from-python-programs/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="选择语言" onchange="location = this.value;"><option value="/improving-91-suggestions-from-python-programs/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#p15-enumerate的本质是生成器">P15. enumerate()的本质是生成器</a></li>
+    <li><a href="#p22-j不是自增运算将被解释为jj的值不会变化--j同理">P22. ++j不是自增运算，将被解释为+(+j)，j的值不会变化。&ndash;j同理</a></li>
+    <li><a href="#p23-循环和异常中的else">P23. 循环和异常中的else</a></li>
+    <li><a href="#p25-tryexcept中未被except处理的异常会临时保存起来finally执行完毕后再次抛出但finally中如果">P25. try/except中未被except处理的异常会临时保存起来，finally执行完毕后再次抛出，但finally中如果：</a></li>
+    <li><a href="#p28-format函数的形式">P28. .format函数的形式：</a></li>
+    <li><a href="#p32-默认参数会被保存在函数对象的func_defaults中因此不要修改默认参数否则会影响下次使用">P32. 默认参数会被保存在函数对象的func_defaults中，因此不要修改默认参数，否则会影响下次使用</a></li>
+    <li><a href="#p34-str调用__str__面向用户repr调用__repr__面向机器">P34. str()调用__str__()，面向用户，repr()调用__repr__()，面向机器：</a></li>
+    <li><a href="#p35-classmethod和staticmethod">P35. classmethod和staticmethod</a></li>
+    <li><a href="#p36-用counter统计列表">P36. 用counter()统计列表</a></li>
+    <li><a href="#p51-使用mixin动态混入多继承">P51. 使用mixin动态混入多继承</a></li>
+    <li><a href="#p54-built-in-object">P54. built-in object</a></li>
+    <li><a href="#p55-__new__cls-args-kwagrs--主要用于类的初始化">P55. <strong>new</strong>(cls, *args, **kwagrs) # 主要用于类的初始化</a></li>
+    <li><a href="#p59-__getattribute__总会被调用而__getattr__只有在__getattribute__中引发异常">P59. <strong>getattribute</strong>()总会被调用，而__getattr__()只有在__getattribute__()中引发异常</a></li>
+    <li><a href="#p63-对象协议">P63. 对象协议</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">改善Python程序的91个建议</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>读书笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-02-22">2020-02-22</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-02-22">2020-02-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1156 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;
+    
+
+    
+        
+
+        
+        
+            <span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读</span>
+        
+    
+
+</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#p15-enumerate的本质是生成器">P15. enumerate()的本质是生成器</a></li>
+    <li><a href="#p22-j不是自增运算将被解释为jj的值不会变化--j同理">P22. ++j不是自增运算，将被解释为+(+j)，j的值不会变化。&ndash;j同理</a></li>
+    <li><a href="#p23-循环和异常中的else">P23. 循环和异常中的else</a></li>
+    <li><a href="#p25-tryexcept中未被except处理的异常会临时保存起来finally执行完毕后再次抛出但finally中如果">P25. try/except中未被except处理的异常会临时保存起来，finally执行完毕后再次抛出，但finally中如果：</a></li>
+    <li><a href="#p28-format函数的形式">P28. .format函数的形式：</a></li>
+    <li><a href="#p32-默认参数会被保存在函数对象的func_defaults中因此不要修改默认参数否则会影响下次使用">P32. 默认参数会被保存在函数对象的func_defaults中，因此不要修改默认参数，否则会影响下次使用</a></li>
+    <li><a href="#p34-str调用__str__面向用户repr调用__repr__面向机器">P34. str()调用__str__()，面向用户，repr()调用__repr__()，面向机器：</a></li>
+    <li><a href="#p35-classmethod和staticmethod">P35. classmethod和staticmethod</a></li>
+    <li><a href="#p36-用counter统计列表">P36. 用counter()统计列表</a></li>
+    <li><a href="#p51-使用mixin动态混入多继承">P51. 使用mixin动态混入多继承</a></li>
+    <li><a href="#p54-built-in-object">P54. built-in object</a></li>
+    <li><a href="#p55-__new__cls-args-kwagrs--主要用于类的初始化">P55. <strong>new</strong>(cls, *args, **kwagrs) # 主要用于类的初始化</a></li>
+    <li><a href="#p59-__getattribute__总会被调用而__getattr__只有在__getattribute__中引发异常">P59. <strong>getattribute</strong>()总会被调用，而__getattr__()只有在__getattribute__()中引发异常</a></li>
+    <li><a href="#p63-对象协议">P63. 对象协议</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="改善python程序的91个建议" class="headerLink">
+    <a href="#%e6%94%b9%e5%96%84python%e7%a8%8b%e5%ba%8f%e7%9a%8491%e4%b8%aa%e5%bb%ba%e8%ae%ae" class="header-mark"></a>改善Python程序的91个建议</h1><h2 id="p15-enumerate的本质是生成器" class="headerLink">
+    <a href="#p15-enumerate%e7%9a%84%e6%9c%ac%e8%b4%a8%e6%98%af%e7%94%9f%e6%88%90%e5%99%a8" class="header-mark"></a>P15. enumerate()的本质是生成器</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">n</span> <span class="o">=</span> <span class="n">start</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">yield</span> <span class="n">n</span><span class="p">,</span> <span class="n">el</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="p22-j不是自增运算将被解释为jj的值不会变化--j同理" class="headerLink">
+    <a href="#p22-j%e4%b8%8d%e6%98%af%e8%87%aa%e5%a2%9e%e8%bf%90%e7%ae%97%e5%b0%86%e8%a2%ab%e8%a7%a3%e9%87%8a%e4%b8%bajj%e7%9a%84%e5%80%bc%e4%b8%8d%e4%bc%9a%e5%8f%98%e5%8c%96--j%e5%90%8c%e7%90%86" class="header-mark"></a>P22. ++j不是自增运算，将被解释为+(+j)，j的值不会变化。&ndash;j同理</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="o">++</span><span class="n">j</span>  <span class="c1"># j的值不会变化，因此为死循环（i+=1）</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="p23-循环和异常中的else" class="headerLink">
+    <a href="#p23-%e5%be%aa%e7%8e%af%e5%92%8c%e5%bc%82%e5%b8%b8%e4%b8%ad%e7%9a%84else" class="header-mark"></a>P23. 循环和异常中的else</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">i</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span>
+</span></span><span class="line"><span class="cl">     <span class="k">else</span><span class="p">:</span> <span class="c1"># 循环正常结束和循环条件不成立时被执行（break中断时不执行）</span>
+</span></span><span class="line"><span class="cl">         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> is a prime num.&#39;</span><span class="p">)</span>       
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">excep</span> <span class="n">DBError</span><span class="p">:</span>    
+</span></span><span class="line"><span class="cl">    <span class="n">db</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span> <span class="c1"># 无异常时执行</span>
+</span></span><span class="line"><span class="cl">    <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>    
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="p25-tryexcept中未被except处理的异常会临时保存起来finally执行完毕后再次抛出但finally中如果" class="headerLink">
+    <a href="#p25-tryexcept%e4%b8%ad%e6%9c%aa%e8%a2%abexcept%e5%a4%84%e7%90%86%e7%9a%84%e5%bc%82%e5%b8%b8%e4%bc%9a%e4%b8%b4%e6%97%b6%e4%bf%9d%e5%ad%98%e8%b5%b7%e6%9d%a5finally%e6%89%a7%e8%a1%8c%e5%ae%8c%e6%af%95%e5%90%8e%e5%86%8d%e6%ac%a1%e6%8a%9b%e5%87%ba%e4%bd%86finally%e4%b8%ad%e5%a6%82%e6%9e%9c" class="header-mark"></a>P25. try/except中未被except处理的异常会临时保存起来，finally执行完毕后再次抛出，但finally中如果：</h2><p>有新的异常，或者执行了return或者break，临时保存的异常将丢失。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">raise</span> <span class="n">IndexEror</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="ne">NameError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Name error&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">break</span>
+</span></span><span class="line"><span class="cl"><span class="k">finally</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Finally&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span>        
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="p28-format函数的形式" class="headerLink">
+    <a href="#p28-format%e5%87%bd%e6%95%b0%e7%9a%84%e5%bd%a2%e5%bc%8f" class="header-mark"></a>P28. .format函数的形式：</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="p">[[</span><span class="n">填充符</span><span class="p">]</span> <span class="n">对齐方式</span><span class="p">][</span><span class="n">符号</span><span class="p">][</span><span class="c1">#][0][宽度][,][.精确度][转换类型]</span>
+</span></span><span class="line"><span class="cl">    <span class="o">|</span>        <span class="o">|</span>      <span class="o">|</span>                      <span class="o">|</span>       <span class="o">|</span><span class="n">______</span> <span class="n">c</span><span class="o">/</span><span class="n">s</span><span class="o">/</span><span class="n">r</span><span class="o">/</span><span class="n">d</span><span class="o">/</span><span class="n">u</span><span class="o">/</span><span class="n">o</span><span class="o">/</span><span class="n">x</span><span class="o">/</span><span class="n">e</span><span class="o">/</span><span class="n">f</span><span class="o">/</span><span class="n">g</span>
+</span></span><span class="line"><span class="cl">    <span class="o">|</span>        <span class="o">|</span>      <span class="o">|</span>                      <span class="o">|</span><span class="n">_____数字</span>
+</span></span><span class="line"><span class="cl">    <span class="o">|</span>        <span class="o">|</span>      <span class="o">|</span><span class="n">_______</span> <span class="o">+/-/</span><span class="n">空格</span>
+</span></span><span class="line"><span class="cl">    <span class="o">|</span>        <span class="o">|</span><span class="n">______</span> <span class="o">&lt;/&gt;/=/^</span>
+</span></span><span class="line"><span class="cl">    <span class="o">|</span><span class="n">___</span> <span class="n">除</span><span class="s1">&#39;{&#39;</span><span class="n">和</span><span class="s1">&#39;}&#39;</span><span class="n">之外的任意字符</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;Num </span><span class="si">{0:,}</span><span class="s1"> hex is: </span><span class="si">{0:#x}</span><span class="s1">, oct is </span><span class="si">{0:#o}</span><span class="s1">, Num {+1:&lt;20}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">123</span><span class="p">,</span> <span class="o">-</span><span class="mi">123</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;Max is </span><span class="si">{max:0.3f}</span><span class="s1">, min is </span><span class="si">{min:0.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mf">12.5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;X:</span><span class="si">{0[0]}</span><span class="s1">,Y:</span><span class="si">{0[1]}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s1">&#39;Name=</span><span class="si">{self.name}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>    
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="p32-默认参数会被保存在函数对象的func_defaults中因此不要修改默认参数否则会影响下次使用" class="headerLink">
+    <a href="#p32-%e9%bb%98%e8%ae%a4%e5%8f%82%e6%95%b0%e4%bc%9a%e8%a2%ab%e4%bf%9d%e5%ad%98%e5%9c%a8%e5%87%bd%e6%95%b0%e5%af%b9%e8%b1%a1%e7%9a%84func_defaults%e4%b8%ad%e5%9b%a0%e6%ad%a4%e4%b8%8d%e8%a6%81%e4%bf%ae%e6%94%b9%e9%bb%98%e8%ae%a4%e5%8f%82%e6%95%b0%e5%90%a6%e5%88%99%e4%bc%9a%e5%bd%b1%e5%93%8d%e4%b8%8b%e6%ac%a1%e4%bd%bf%e7%94%a8" class="header-mark"></a>P32. 默认参数会被保存在函数对象的func_defaults中，因此不要修改默认参数，否则会影响下次使用</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">func1</span><span class="p">(</span><span class="nb">list</span><span class="o">=</span><span class="p">[]):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">list</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>上面的函数每次调用后list都会添加1，影响下面使用。</p>
+<h2 id="p34-str调用__str__面向用户repr调用__repr__面向机器" class="headerLink">
+    <a href="#p34-str%e8%b0%83%e7%94%a8__str__%e9%9d%a2%e5%90%91%e7%94%a8%e6%88%b7repr%e8%b0%83%e7%94%a8__repr__%e9%9d%a2%e5%90%91%e6%9c%ba%e5%99%a8" class="header-mark"></a>P34. str()调用__str__()，面向用户，repr()调用__repr__()，面向机器：</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">a</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># &#39;2020-01-01&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">repr</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># &#39;datetime.date(2020, 1, 1)&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="p35-classmethod和staticmethod" class="headerLink">
+    <a href="#p35-classmethod%e5%92%8cstaticmethod" class="header-mark"></a>P35. classmethod和staticmethod</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Fruit</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">instance_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span> <span class="c1"># self为实例，隐式传入</span>
+</span></span><span class="line"><span class="cl">        <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@staticmethod</span>    
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">static_method</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">Fruit</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@classmethod</span>    
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">class_method</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>     <span class="c1"># cls为类，隐式传入</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>        
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl"><span class="c1"># 需要用classmethod的例子        </span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Orange</span><span class="p">(</span><span class="n">Fruit</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>  <span class="c1"># 继承的class_method中，如果换成static_method</span>
+</span></span><span class="line"><span class="cl">          <span class="c1"># 则返回的不是Orange实例，而是Fruit实例</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="p36-用counter统计列表" class="headerLink">
+    <a href="#p36-%e7%94%a8counter%e7%bb%9f%e8%ae%a1%e5%88%97%e8%a1%a8" class="header-mark"></a>P36. 用counter()统计列表</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">Counter</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>   <span class="c1"># Counter({&#39;a&#39;: 2, 1: 2, &#39;b&#39;: 1, 0: 1})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="p51-使用mixin动态混入多继承" class="headerLink">
+    <a href="#p51-%e4%bd%bf%e7%94%a8mixin%e5%8a%a8%e6%80%81%e6%b7%b7%e5%85%a5%e5%a4%9a%e7%bb%a7%e6%89%bf" class="header-mark"></a>P51. 使用mixin动态混入多继承</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">People</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">make_tea</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">get_teapot</span><span class="p">()</span> <span class="c1"># get_teapot() 未定义，留在子类中定义</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 但也可以使用mixin，先定义一些含get_teapot的类：</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">UseSimpleTeapot</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_teapot</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="k">pass</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 现在可以mixin，因为每个类都有个__bases__，是所有基类的元组</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">simple_tea_people</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">people</span> <span class="o">=</span> <span class="n">People</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">people</span><span class="o">.</span><span class="vm">__bases__</span> <span class="o">+=</span> <span class="p">(</span><span class="n">UseSimpleTeapot</span><span class="p">,</span> <span class="p">)</span>        
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="p54-built-in-object" class="headerLink">
+    <a href="#p54-built-in-object" class="header-mark"></a>P54. built-in object</h2><p><p class="md__image">
+    <img src='/images/py-91-built-in.png' alt=""  />
+</p></p>
+<h2 id="p55-__new__cls-args-kwagrs--主要用于类的初始化" class="headerLink">
+    <a href="#p55-__new__cls-args-kwagrs--%e4%b8%bb%e8%a6%81%e7%94%a8%e4%ba%8e%e7%b1%bb%e7%9a%84%e5%88%9d%e5%a7%8b%e5%8c%96" class="header-mark"></a>P55. <strong>new</strong>(cls, *args, **kwagrs) # 主要用于类的初始化</h2><pre><code>  __init__(self, *args, **kwagrs) # 主要用于实例的初始化
+</code></pre>
+<h2 id="p59-__getattribute__总会被调用而__getattr__只有在__getattribute__中引发异常" class="headerLink">
+    <a href="#p59-__getattribute__%e6%80%bb%e4%bc%9a%e8%a2%ab%e8%b0%83%e7%94%a8%e8%80%8c__getattr__%e5%8f%aa%e6%9c%89%e5%9c%a8__getattribute__%e4%b8%ad%e5%bc%95%e5%8f%91%e5%bc%82%e5%b8%b8" class="header-mark"></a>P59. <strong>getattribute</strong>()总会被调用，而__getattr__()只有在__getattribute__()中引发异常</h2><p>的情况下才会被调用。</p>
+<h2 id="p63-对象协议" class="headerLink">
+    <a href="#p63-%e5%af%b9%e8%b1%a1%e5%8d%8f%e8%ae%ae" class="header-mark"></a>P63. 对象协议</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="fm">__str__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__repr__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__int__</span><span class="p">()</span> <span class="o">/</span> <span class="n">__long__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__float__</span><span class="p">()</span> <span class="o">/</span> <span class="n">__nonzero__</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">__cmp__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__eq__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__ne__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__lt__</span><span class="p">()</span>  <span class="o">/</span> <span class="fm">__gt__</span><span class="p">()</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><p class="md__image">
+    <img src='/images/py-91-obj-protocol.png' alt=""  />
+</p></p>
+<p>所有运算符都可以有反运算符：方法前面加r，</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="fm">__sub__</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="fm">__rsub__</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="fm">__len__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__getitem__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__setitem__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__delitem__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__reversed__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__contains__</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl"><span class="fm">__call__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__hash__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__enter__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__exit__</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl"><span class="fm">__getattr__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__setattr__</span><span class="p">()</span> <span class="o">/</span> <span class="fm">__delattr__</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-02-22</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><button title="分享到 Twitter" data-sharer="twitter" data-url="https://www.thy.pub/improving-91-suggestions-from-python-programs/" data-title="改善Python程序的91个建议" data-hashtags="软件开发"><span class="fab fa-twitter fa-fw"></span></button><button title="分享到 Facebook" data-sharer="facebook" data-url="https://www.thy.pub/improving-91-suggestions-from-python-programs/" data-hashtag="软件开发"><span class="fab fa-facebook-square fa-fw"></span></button><button title="分享到 微博" data-sharer="weibo" data-url="https://www.thy.pub/improving-91-suggestions-from-python-programs/" data-title="改善Python程序的91个建议"><span class="fab fa-weibo fa-fw"></span></button><button title="分享到 百度" data-sharer="baidu" data-url="https://www.thy.pub/improving-91-suggestions-from-python-programs/" data-title="改善Python程序的91个建议"><span data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@v5.21.1/icons/baidu.svg"></span></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/omnis-history/" class="prev" rel="prev" title="Omnis历史"><i class="fas fa-angle-left fa-fw"></i>Omnis历史</a>
+            <a href="/php-cookbook-classic-example-second-edition/" class="next" rel="next" title="PHP Cookbook经典实例（第二版）">PHP Cookbook经典实例（第二版）<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line"><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> • <span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span>人次</span></div><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.129.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">chariothy</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    
+        
+        <script async src=" //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+    
+
+    
+        
+            <section>
+                
+                    <span id="busuanzi_container_value_site_pv"><i class="far fa-eye fa-fw"></i>
+                        
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+
+                
+                    &nbsp;|&nbsp;              
+                
+
+                
+                    <span id="busuanzi_container_value_site_uv"><i class="fa fa-user"></i>
+                        
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+            </section>
+        
+
+        
+        
+    
+
+</div><script>
+                    if('serviceWorker' in navigator) {
+                        navigator.serviceWorker
+                            .register('/sw.min.js', { scope: '/' })
+                            .then(function(registration) {
+                            });
+                
+                        navigator.serviceWorker
+                            .ready
+                            .then(function(registration) {
+                            });
+                    }
+                </script></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["chariothy"],"clientID":"0e48b6595a9725cd9cf9","clientSecret":"d9ee702d2cbedaecf2693bee849b867325b990b1","id":"2020-02-22T14:49:37+08:00","owner":"chariothy","repo":"chariothy.github.io","title":"改善Python程序的91个建议"}},"data":{"desktop-header-typeit":"孤独的长跑者","mobile-header-typeit":"孤独的长跑者"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.2/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?fbbcc12eba9fd250dabc045b58df3809";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script></div>
+</body>
+
+</html>

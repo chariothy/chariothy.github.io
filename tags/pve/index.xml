@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>PVE - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/pve/</link>
+        <description>PVE - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 Apr 2024 00:16:10 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/pve/" rel="self" type="application/rss+xml" /><item>
+    <title>PVE开启SR-IOV</title>
+    <link>https://www.thy.pub/pve-enables-sr-iov/</link>
+    <pubDate>Fri, 05 Apr 2024 00:16:10 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/pve-enables-sr-iov/</guid>
+    <description><![CDATA[PVE开启SR-IOV 开启 IOMMU CPU 支持VT-D和VT-X，并在BIOS中打开编辑文件/etc/default/grub 修改行GRUB_CMDLI]]></description>
+</item><item>
+    <title>PVE解决e1000-detect-hardware-unit-hang的问题</title>
+    <link>https://www.thy.pub/pve-troubleshoot-the-e1000-detect-hardware-unit-hang/</link>
+    <pubDate>Fri, 02 Jun 2023 12:40:55 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/pve-troubleshoot-the-e1000-detect-hardware-unit-hang/</guid>
+    <description><![CDATA[PVE解决e1000-detect-hardware-hang的问题 经常发现PVE无法PING通 论坛上的结论是关闭 tso gso gro 1 2 nano /etc/network/interfaces #找到对应的]]></description>
+</item><item>
+    <title>PVE解决inbound丢包问题</title>
+    <link>https://www.thy.pub/pve-solves-the-inbound-packet-loss-problem/</link>
+    <pubDate>Thu, 01 Jun 2023 08:35:44 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/pve-solves-the-inbound-packet-loss-problem/</guid>
+    <description><![CDATA[PVE解决inbound丢包问题 最近经常收到netdata的警告邮件 netdata inbound packet 查了github之后找到的解决方案sudo install llpdap #安装在pve的ho]]></description>
+</item><item>
+    <title>PVE-OPENWRT-VLAN组网</title>
+    <link>https://www.thy.pub/pve-openwrt-vlan-dual-wan/</link>
+    <pubDate>Thu, 14 Apr 2022 14:12:53 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/pve-openwrt-vlan-dual-wan/</guid>
+    <description><![CDATA[PVE-OPENWRT-VLAN组网 需求 访问外网从电信家宽走，SNF内网从LAN走 snfchina.com和snf.com从SNF解析，其它]]></description>
+</item><item>
+    <title>PVE黑群单盘扩容方案</title>
+    <link>https://www.thy.pub/pve-dsm-single-disk-dilatation/</link>
+    <pubDate>Sun, 19 Dec 2021 11:04:54 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/pve-dsm-single-disk-dilatation/</guid>
+    <description><![CDATA[PVE黑群单盘扩容方案 1. 老硬盘500GB， 新硬盘3TB 2. 在SATA口和电源线充足的情况下，应该先上新硬盘，重建RAID 1，等数据复制完之后再]]></description>
+</item><item>
+    <title>pve灾难故障恢复</title>
+    <link>https://www.thy.pub/pve-recovery-from-disaster/</link>
+    <pubDate>Sun, 15 Aug 2021 16:06:35 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/pve-recovery-from-disaster/</guid>
+    <description><![CDATA[pve灾难故障恢复（以恢复/usr为例） (记录在一次pve中rm /usr -R之后) 先脱离集群（集群内机器都需要脱群，否则单独工作时仍会出错） 集群机]]></description>
+</item><item>
+    <title>pve中安装openwrt</title>
+    <link>https://www.thy.pub/install-openwrt-kvm-on-pve/</link>
+    <pubDate>Mon, 12 Jul 2021 14:08:01 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/install-openwrt-kvm-on-pve/</guid>
+    <description><![CDATA[创建虚拟机要点 General中开机自启动要勾上 OS中 不使用任何介质 BIOS中使用默认SeaBIOS (如果要用UEFI启动需要导入EFI镜像)]]></description>
+</item><item>
+    <title>在pve中向zfs中导入openwrt-img</title>
+    <link>https://www.thy.pub/import-openwrt-kvm-image-pve-zfs/</link>
+    <pubDate>Sun, 11 Apr 2021 17:40:45 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/import-openwrt-kvm-image-pve-zfs/</guid>
+    <description><![CDATA[pve zfs 先将编译好的raw img（不要选EFI的，实测UEFI无法启动。原始img+pve seabios成功启动）上传到local(pve)下的]]></description>
+</item><item>
+    <title>UPS直通DSM并通知QNAP与PVE</title>
+    <link>https://www.thy.pub/bypass-ups-pve-dsm/</link>
+    <pubDate>Mon, 11 Jan 2021 14:12:03 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/bypass-ups-pve-dsm/</guid>
+    <description><![CDATA[UPS直通DSM并通知QNAP与PVE PVE: DSM QNAP PVE -&gt; CONSOLE 1 2 3 4 apt install nut -y nano /etc/nut/nut.conf MODE=netclient nano /etc/nut/upsmon.conf 在MONITOR小节加入 1 MONITOR ups@10.8.0.2 1 upsmon pass slave systemctl start nut-client &amp;&amp; systemctl enable nut-client upsc ups@10.8.0.2 # 应该显]]></description>
+</item><item>
+    <title>pve acme部署Let&#39;s crypt证书</title>
+    <link>https://www.thy.pub/issue-ssl-cert-using-acme-on-pve/</link>
+    <pubDate>Thu, 08 Oct 2020 10:54:10 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/issue-ssl-cert-using-acme-on-pve/</guid>
+    <description><![CDATA[PVE acme部署Let&rsquo;s crypt证书cd ~ 安装脚本curl https://get.acme.sh | sh cd .acme.sh 申请证书 （会定期自动申请新证书）export DP_Id=&quot;174377&quot;; export DP_Key=&quot;e3a766b6fdf83a1a39dd5caea80daa25&quot;; ./acme.sh --issue --dns dns_dp]]></description>
+</item></channel>
+</rss>

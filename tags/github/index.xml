@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Github - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/github/</link>
+        <description>Github - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 21 Dec 2023 15:17:02 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/github/" rel="self" type="application/rss+xml" /><item>
+    <title>github问题</title>
+    <link>https://www.thy.pub/github-issues/</link>
+    <pubDate>Thu, 21 Dec 2023 15:17:02 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/github-issues/</guid>
+    <description><![CDATA[github问题 kex_exchange_identification 1 2 3 4 5 6 kex_exchange_identification: Connection closed by remote host Connection closed by 20.205.243.166 port 22 fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists. From stackoverflow.com : For fixing the issues add the Hostname for Git on ~/.ssh/config, 1 2 3 Host github.com Hostname ssh.github.com Port 443]]></description>
+</item></channel>
+</rss>

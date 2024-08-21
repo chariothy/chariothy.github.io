@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Linux - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/linux/</link>
+        <description>Linux - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 28 Apr 2023 13:51:31 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>Debian11最小化安装新系统配置</title>
+    <link>https://www.thy.pub/config-debain11-from-minimal/</link>
+    <pubDate>Fri, 28 Apr 2023 13:51:31 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/config-debain11-from-minimal/</guid>
+    <description><![CDATA[Debian最小化安装新系统配置 安装语言选择英文，时区选择上海 核对时区 1 2 3 4 timedatectl date # 24小时显示 sudo localectl set-locale LC_TIME=en_GB.UTF-8 以下操作为方便可以先切换到roots]]></description>
+</item><item>
+    <title>RT-AC3100更新梅林系统</title>
+    <link>https://www.thy.pub/upgrade-firmware-for-asus-rt-ac3100/</link>
+    <pubDate>Sat, 15 Oct 2022 12:09:06 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/upgrade-firmware-for-asus-rt-ac3100/</guid>
+    <description><![CDATA[RT-AC3100更新梅林系统 不要更新官方的梅林系统，否则会失去koolshare软件中心 KoolShare固件地址：https://koo]]></description>
+</item><item>
+    <title>手动安装tmux</title>
+    <link>https://www.thy.pub/manually-install-tmux/</link>
+    <pubDate>Fri, 22 Apr 2022 10:17:38 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/manually-install-tmux/</guid>
+    <description><![CDATA[手动安装tmux 手动更（4声）新centos 7 下yum安装的版本才到2.3，debain 10下才到2.8，而官方目前已经到了3.2 步骤 1 2 3]]></description>
+</item><item>
+    <title>zfs-mirror更换损坏的硬盘</title>
+    <link>https://www.thy.pub/zfs-mirror-replace-damaged-hard-drive/</link>
+    <pubDate>Sun, 13 Mar 2022 23:35:33 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/zfs-mirror-replace-damaged-hard-drive/</guid>
+    <description><![CDATA[zfs-mirror更换损坏的硬盘 救命的参考文章 终于打算要换了自从用上zfs之后就开始关心硬盘坏掉之后如何更换，今天终止有机会了。 我在zfs]]></description>
+</item><item>
+    <title>unixbench成绩比较</title>
+    <link>https://www.thy.pub/unixbench-comparison-of-results/</link>
+    <pubDate>Wed, 02 Mar 2022 15:20:12 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/unixbench-comparison-of-results/</guid>
+    <description><![CDATA[unixbench成绩比较 之前的sysbench之前搞了个sysbench，但这次的unixbench更权威。 安装 1 2 3 wget --no-check-certificate https://github.com/teddysun/across/raw/master/unixbench.sh &amp;&amp; \ chmod +x unixbench.sh &amp;&amp; \]]></description>
+</item><item>
+    <title>ubuntu改变触摸板滚动方向</title>
+    <link>https://www.thy.pub/ubuntu-change-the-scroll-direction-of-the-touchpad/</link>
+    <pubDate>Thu, 24 Feb 2022 10:42:56 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/ubuntu-change-the-scroll-direction-of-the-touchpad/</guid>
+    <description><![CDATA[ubuntu改变触摸板滚动方向 这是在优麒麟中的经验，ubuntu一样 优麒麟安装完之后，改变触摸板双指的滚动方向和Windows是相反的 用dc]]></description>
+</item><item>
+    <title>Debian最小化安装新系统配置</title>
+    <link>https://www.thy.pub/config-debain-from-minimal/</link>
+    <pubDate>Sat, 15 Jan 2022 13:51:31 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/config-debain-from-minimal/</guid>
+    <description><![CDATA[Debian最小化安装新系统配置 （以debian 12为例）su root 替换源 1 2 3 4 5 6 7 8 9 10 11 12 13 14 cd /etc/apt mv sources.list sources.list.bak cat &gt; sources.list &lt;&lt;EOF deb https://mirrors.ustc.edu.cn/debian/ bookworm main contrib non-free non-free-firmware deb-src https://mirrors.ustc.edu.cn/debian/ bookworm main contrib]]></description>
+</item><item>
+    <title>debian10升级debian11</title>
+    <link>https://www.thy.pub/update-debian10-to-debian11/</link>
+    <pubDate>Mon, 10 Jan 2022 11:48:50 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/update-debian10-to-debian11/</guid>
+    <description><![CDATA[debian10升级debian11 更新现有软件包apt update &amp;&amp; apt upgrade -y 删除未使用的依赖项：apt --purge autoremove 检查安装的包的一致性（正常情况下无输出）dp]]></description>
+</item><item>
+    <title>阿里云ECS配置mailx</title>
+    <link>https://www.thy.pub/ecs-centos-config-mailx/</link>
+    <pubDate>Thu, 15 Jul 2021 16:39:23 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/ecs-centos-config-mailx/</guid>
+    <description><![CDATA[阿里云ECS配置mailx 由于阿里云已将25端口封了（改用465端口），所以在ECS上往外发邮件时要作相应的配置才行。 使用的是阿里云的企业邮]]></description>
+</item><item>
+    <title>openwrt安装tinyproxy</title>
+    <link>https://www.thy.pub/install-tinyproxy-on-openwrt/</link>
+    <pubDate>Thu, 15 Apr 2021 11:56:08 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/install-tinyproxy-on-openwrt/</guid>
+    <description><![CDATA[opkg update opkg install tinyproxy luci-app-tinyproxy filtering allowed clients - add : 127.0.0.1 add : 10.8.9.0/24 allowed connect ports - filter port : 0 (这里不能填入0，否则则配置文件会增加ConnectPort = &lsquo;0&rsquo;]]></description>
+</item></channel>
+</rss>

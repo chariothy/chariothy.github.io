@@ -1,0 +1,595 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>将sphinx配置为更好的实时搜索引擎 - 孤独的长跑者</title><meta name="Description" content="将sphinx配置为更好的实时搜索引擎"><meta property="og:url" content="https://www.thy.pub/config-sphinx-as-a-better-real-time-search-engine/">
+  <meta property="og:site_name" content="孤独的长跑者">
+  <meta property="og:title" content="将sphinx配置为更好的实时搜索引擎">
+  <meta property="og:description" content="将sphinx配置为更好的实时搜索引擎">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-01-18T09:20:10+08:00">
+    <meta property="article:modified_time" content="2020-01-18T09:20:10+08:00">
+    <meta property="article:tag" content="Database">
+    <meta property="article:tag" content="Sphinx">
+    <meta property="og:image" content="https://www.thy.pub/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.thy.pub/logo.png">
+  <meta name="twitter:title" content="将sphinx配置为更好的实时搜索引擎">
+  <meta name="twitter:description" content="将sphinx配置为更好的实时搜索引擎">
+<meta name="application-name" content="孤独的长跑者">
+<meta name="apple-mobile-web-app-title" content="孤独的长跑者">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.thy.pub/config-sphinx-as-a-better-real-time-search-engine/" /><link rel="prev" href="https://www.thy.pub/zfs-command-remark/" /><link rel="next" href="https://www.thy.pub/convertible-invested-investment-magic-book/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript>
+    
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "将sphinx配置为更好的实时搜索引擎",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.thy.pub\/config-sphinx-as-a-better-real-time-search-engine\/"
+        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Database, Sphinx","wordcount":  1819 ,
+        "url": "https:\/\/www.thy.pub\/config-sphinx-as-a-better-real-time-search-engine\/","datePublished": "2020-01-18T09:20:10+08:00","dateModified": "2020-01-18T09:20:10+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "chariothy","logo": "https:\/\/www.thy.pub\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "chariothy"
+            },"description": "将sphinx配置为更好的实时搜索引擎"
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="选择语言" id="language-select-desktop" onchange="location = this.value;"><option value="/config-sphinx-as-a-better-real-time-search-engine/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="选择语言" onchange="location = this.value;"><option value="/config-sphinx-as-a-better-real-time-search-engine/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#sphinx以它的简单快速吸引着我但它的plain增量索引有两大问题一直困扰着我">sphinx以它的简单、快速吸引着我。但它的plain增量索引有两大问题一直困扰着我：</a></li>
+    <li><a href="#sphinx也实现了一个rt实时索引可以在生产环境中使用但是它也有几个缺点">sphinx也实现了一个rt（实时）索引，可以在生产环境中使用。但是，它也有几个缺点：</a></li>
+    <li><a href="#简而言之">简而言之</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">将sphinx配置为更好的实时搜索引擎</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw"></i>软件开发</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-18">2020-01-18</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-01-18">2020-01-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1819 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;
+    
+
+    
+        
+
+        
+        
+            <span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读</span>
+        
+    
+
+</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#sphinx以它的简单快速吸引着我但它的plain增量索引有两大问题一直困扰着我">sphinx以它的简单、快速吸引着我。但它的plain增量索引有两大问题一直困扰着我：</a></li>
+    <li><a href="#sphinx也实现了一个rt实时索引可以在生产环境中使用但是它也有几个缺点">sphinx也实现了一个rt（实时）索引，可以在生产环境中使用。但是，它也有几个缺点：</a></li>
+    <li><a href="#简而言之">简而言之</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="将sphinx配置为更好的实时搜索引擎" class="headerLink">
+    <a href="#%e5%b0%86sphinx%e9%85%8d%e7%bd%ae%e4%b8%ba%e6%9b%b4%e5%a5%bd%e7%9a%84%e5%ae%9e%e6%97%b6%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e" class="header-mark"></a>将sphinx配置为更好的实时搜索引擎</h1><h2 id="sphinx以它的简单快速吸引着我但它的plain增量索引有两大问题一直困扰着我" class="headerLink">
+    <a href="#sphinx%e4%bb%a5%e5%ae%83%e7%9a%84%e7%ae%80%e5%8d%95%e5%bf%ab%e9%80%9f%e5%90%b8%e5%bc%95%e7%9d%80%e6%88%91%e4%bd%86%e5%ae%83%e7%9a%84plain%e5%a2%9e%e9%87%8f%e7%b4%a2%e5%bc%95%e6%9c%89%e4%b8%a4%e5%a4%a7%e9%97%ae%e9%a2%98%e4%b8%80%e7%9b%b4%e5%9b%b0%e6%89%b0%e7%9d%80%e6%88%91" class="header-mark"></a>sphinx以它的简单、快速吸引着我。但它的plain增量索引有两大问题一直困扰着我：</h2><ul>
+<li>一是增量索引只能定时创建，必须会造成数据到主索引时存在一个时间差，而且经测试，增量索引merge到主索引时还经常会被阻塞一段时间（&ndash;rotate）；</li>
+<li>二是在增量索引中无法对字符串属性进行修改UPDATE，所以发布的物品修改了名称就甭想搜索到了。</li>
+</ul>
+<h2 id="sphinx也实现了一个rt实时索引可以在生产环境中使用但是它也有几个缺点" class="headerLink">
+    <a href="#sphinx%e4%b9%9f%e5%ae%9e%e7%8e%b0%e4%ba%86%e4%b8%80%e4%b8%aart%e5%ae%9e%e6%97%b6%e7%b4%a2%e5%bc%95%e5%8f%af%e4%bb%a5%e5%9c%a8%e7%94%9f%e4%ba%a7%e7%8e%af%e5%a2%83%e4%b8%ad%e4%bd%bf%e7%94%a8%e4%bd%86%e6%98%af%e5%ae%83%e4%b9%9f%e6%9c%89%e5%87%a0%e4%b8%aa%e7%bc%ba%e7%82%b9" class="header-mark"></a>sphinx也实现了一个rt（实时）索引，可以在生产环境中使用。但是，它也有几个缺点：</h2><ul>
+<li>搜索性能差很多，见下图：</li>
+</ul>
+<p><p class="md__image">
+    <img src='/images/sphinx-index-perf.jpg' alt=""  />
+</p></p>
+<p>红色为rt索引，蓝色为plain索引。</p>
+<p>主要差距来自于rt实时索引在超出rt_mem_limit 之后就会将内存中的内容RAM CHUNK写入磁盘块DISK CHUNK，当多次写入磁盘块后，每次搜索的结果都需要从多个磁盘块中读取，然后再合并结果。当然这可以通过加大rt_mem_limit来解决：</p>
+<ul>
+<li>
+<p>如果加大了rt_mem_limit，那么rt索引会在内存中保留大量数据，为了从崩溃中恢复，可能需要flush加binlog获取更好的恢复效果，然而大数据量flush时会有些卡顿。</p>
+</li>
+<li>
+<p>高频的DELETE/REPLACE会引起碎片，当然可以用OPTIMIZE命令来整理。</p>
+</li>
+</ul>
+<p><p class="md__image">
+    <img src='/images/sphinx-qps.png' alt=""  />
+</p></p>
+<p>但OPTIMIZE不但需要大量IO，也需要大量CPU时间，因为它需要读取多个CHUNK，然后再合并结果。</p>
+<ul>
+<li>一旦修改了数据库表结构，那要修改rt索引中的数据也是比较麻烦的，需要手工修改。</li>
+</ul>
+<p>综上所述，纯使用sphinx的rt索引还是比较娇贵的。我一直想把rt索引的实时和可修改字符串优势与plain索引的快速创建优势结合起来，经过不断查看官方文档，我找到了一个兼顾两者优点的方案。</p>
+<h2 id="简而言之" class="headerLink">
+    <a href="#%e7%ae%80%e8%80%8c%e8%a8%80%e4%b9%8b" class="header-mark"></a>简而言之</h2><p>就是：创一个每日定时任务，在夜里创建全量plain索引，然后将全量索引TRUNCATE，同时将plain索引ATTACH 到rt实时索引，随后只在rt索引中搜索和修改（在修改DB中的数据后）。</p>
+<p>这样做的优点我们最后来看。下面先用实例来演示一遍&mdash;&mdash;&mdash;&mdash;&mdash;：</p>
+<p>假设我们有一个求购表，叫ask_buy，简化的表结构为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">CREATETABLE</span><span class="w"> </span><span class="o">`</span><span class="n">ask_buy</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="nb">INT</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">NOTNULL</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="o">`</span><span class="n">title</span><span class="o">`</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="k">NOTNULL</span><span class="p">,</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="o">`</span><span class="n">deleted</span><span class="o">`</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">NOTNULLDEFAULT</span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">PRIMARYKEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">),</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">)</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">COMMENT</span><span class="o">=</span><span class="s1">&#39;求购&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">COLLATE</span><span class="o">=</span><span class="s1">&#39;utf8_general_ci&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">ask_buy</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="nb">INT</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="o">`</span><span class="n">title</span><span class="o">`</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="o">`</span><span class="n">deleted</span><span class="o">`</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">COMMENT</span><span class="o">=</span><span class="s1">&#39;求购&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">COLLATE</span><span class="o">=</span><span class="s1">&#39;utf8_general_ci&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>首先我们创建一个全量plain索引（片断）：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">source</span><span class="w"> </span><span class="n">ask_buy_src</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">type</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="n">mysql</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sql_host</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">localhost</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sql_user</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sql_pass</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sql_db</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="n">taoquan</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sql_port</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="mi">3306</span><span class="w">  </span><span class="o">#</span><span class="w"> </span><span class="n">optional</span><span class="p">,</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">3306</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sql_query_pre</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">NAMES</span><span class="w"> </span><span class="n">utf8</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sql_query_pre</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">SESSION</span><span class="w"> </span><span class="n">query_cache_type</span><span class="o">=</span><span class="k">OFF</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sql_query</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">deleted</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">t_ask_buy</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">sql_attr_uint</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">deleted</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sql_field_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">title</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sql_query_post_index</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">search_counter</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;ask_buy&#39;</span><span class="p">,</span><span class="k">MAX</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">ask_buy</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sql_ranged_throttle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">index</span><span class="w"> </span><span class="n">ask_buy</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">type</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="n">plain</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">source</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="n">ask_buy_src</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">path</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">sphinx</span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">ask_buy</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">docinfo</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">extern</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dict</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="n">keywords</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">mlock</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">morphology</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="k">none</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">min_word_len</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">ngram_len</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">ngram_chars</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">U</span><span class="o">+</span><span class="mi">3000</span><span class="p">..</span><span class="n">U</span><span class="o">+</span><span class="mi">2</span><span class="n">FA1F</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">html_strip</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">index</span><span class="w"> </span><span class="n">rt_ask_buy</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">{</span><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">type</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="n">rt</span><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">path</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">sphinx</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">rt_ask_buy</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">rt_mem_limit</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="mi">512</span><span class="n">M</span><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">rt_field</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="n">title</span><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">rt_attr_uint</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">deleted</span><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="w">   
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">source</span><span class="w"> </span><span class="n">ask_buy_src</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">type</span><span class="w">			</span><span class="o">=</span><span class="w"> </span><span class="n">mysql</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">sql_host</span><span class="w">		</span><span class="o">=</span><span class="w"> </span><span class="n">localhost</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">sql_user</span><span class="w">		</span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">sql_pass</span><span class="w">		</span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">sql_db</span><span class="w">			</span><span class="o">=</span><span class="w"> </span><span class="n">taoquan</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">sql_port</span><span class="w">		</span><span class="o">=</span><span class="w"> </span><span class="mi">3306</span><span class="w">	</span><span class="o">#</span><span class="w"> </span><span class="n">optional</span><span class="p">,</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">3306</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">sql_query_pre</span><span class="w">		</span><span class="o">=</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">NAMES</span><span class="w"> </span><span class="n">utf8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">sql_query_pre</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">SESSION</span><span class="w"> </span><span class="n">query_cache_type</span><span class="o">=</span><span class="k">OFF</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">sql_query</span><span class="w">		</span><span class="o">=</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">deleted</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">t_ask_buy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">sql_attr_uint</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">deleted</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">sql_field_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">title</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">sql_query_post_index</span><span class="w">	</span><span class="o">=</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">search_counter</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;ask_buy&#39;</span><span class="p">,</span><span class="k">MAX</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">ask_buy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">sql_ranged_throttle</span><span class="w">	</span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">index</span><span class="w"> </span><span class="n">ask_buy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">type</span><span class="w">			</span><span class="o">=</span><span class="w"> </span><span class="n">plain</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">source</span><span class="w">			</span><span class="o">=</span><span class="w"> </span><span class="n">ask_buy_src</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">path</span><span class="w">			</span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">sphinx</span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">ask_buy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">docinfo</span><span class="w">			</span><span class="o">=</span><span class="w"> </span><span class="n">extern</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dict</span><span class="w">			</span><span class="o">=</span><span class="w"> </span><span class="n">keywords</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">mlock</span><span class="w">			</span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">morphology</span><span class="w">		</span><span class="o">=</span><span class="w"> </span><span class="k">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">min_word_len</span><span class="w">		</span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">ngram_len</span><span class="w">		</span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">ngram_chars</span><span class="w">		</span><span class="o">=</span><span class="w"> </span><span class="n">U</span><span class="o">+</span><span class="mi">3000</span><span class="p">..</span><span class="n">U</span><span class="o">+</span><span class="mi">2</span><span class="n">FA1F</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">html_strip</span><span class="w">		</span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">index</span><span class="w"> </span><span class="n">rt_ask_buy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">type</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="n">rt</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">path</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">sphinx</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">rt_ask_buy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">rt_mem_limit</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="mi">512</span><span class="n">M</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">rt_field</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="n">title</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">rt_attr_uint</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">deleted</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="w"> 
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>然后创建一个脚本index.sh来创建plain全量索引并ATTACH到rt索引：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash  
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>/usr/local/sphinx/bin/indexer goods --rotate --all &gt;&gt; /usr/local/sphinx/var/log/index_rt.log  
+</span></span><span class="line"><span class="cl">mysql -P <span class="m">9306</span> -h 127.0.0.1 -e<span class="s2">&#34;TRUNCATE RTINDEX rt_ask_buy;ATTACH INDEX ask_buy TO RTINDEX rt_ask_buy;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#!/bin/bash</span>
+</span></span><span class="line"><span class="cl">/usr/local/sphinx/bin/indexer goods --rotate --all &gt;&gt; /usr/local/sphinx/var/log/index_rt.log
+</span></span><span class="line"><span class="cl">mysql -P <span class="m">9306</span> -h 127.0.0.1 -e<span class="s2">&#34;TRUNCATE RTINDEX rt_ask_buy;ATTACH INDEX ask_buy TO RTINDEX rt_ask_buy;&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>然后在每天夜里2点30创建：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">30 2 * * * sudo ~/index.sh  
+</span></span><span class="line"><span class="cl">30 2 * * * sudo ~/index.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>最后来检验结果了：</li>
+</ul>
+<p><strong>优点：</strong></p>
+<ol>
+<li>这样rt索引就无需定期flush到磁盘，因为即便它丢失了也可以直接进行重建，而且重建后还没有碎片。</li>
+<li>还测试了，如果修改了表结构，只要修改sphinx配置文件，然后重启searchd进程，最后再执行index.sh即可。</li>
+<li>如果sphinx崩溃，只需要再执行index.sh即可，无需从binlog或dump中恢复到rt索引，直接从数据源重建索引的速度是很快的：</li>
+</ol>
+<p><p class="md__image">
+    <img src='/images/sphinx-rebuild-docs-per-sec.png' alt=""  />
+</p></p>
+<ol>
+<li>这种方案的检索速度比plain方案相当，因为全量索引的DISK CHUNK只有一个，而只要rt_mem_limit设置合理，每天新增的DISK CHUNK也不会很多，这样在一两个CHUNK之间合并，速度只比纯plain方案略低。参考下图的2048M(5+1)，重点不在2048M，而在后面的5+1，即5个DISK CHUNK+1个RAM CHUNK。</li>
+</ol>
+<p><p class="md__image">
+    <img src='/images/sphinx-qps-blend.png' alt=""  />
+</p></p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-01-18</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><button title="分享到 Twitter" data-sharer="twitter" data-url="https://www.thy.pub/config-sphinx-as-a-better-real-time-search-engine/" data-title="将sphinx配置为更好的实时搜索引擎" data-hashtags="Database,Sphinx"><span class="fab fa-twitter fa-fw"></span></button><button title="分享到 Facebook" data-sharer="facebook" data-url="https://www.thy.pub/config-sphinx-as-a-better-real-time-search-engine/" data-hashtag="Database"><span class="fab fa-facebook-square fa-fw"></span></button><button title="分享到 微博" data-sharer="weibo" data-url="https://www.thy.pub/config-sphinx-as-a-better-real-time-search-engine/" data-title="将sphinx配置为更好的实时搜索引擎"><span class="fab fa-weibo fa-fw"></span></button><button title="分享到 百度" data-sharer="baidu" data-url="https://www.thy.pub/config-sphinx-as-a-better-real-time-search-engine/" data-title="将sphinx配置为更好的实时搜索引擎"><span data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@v5.21.1/icons/baidu.svg"></span></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/database/">Database</a>,&nbsp;<a href="/tags/sphinx/">Sphinx</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/zfs-command-remark/" class="prev" rel="prev" title="zfs命令"><i class="fas fa-angle-left fa-fw"></i>zfs命令</a>
+            <a href="/convertible-invested-investment-magic-book/" class="next" rel="next" title="可转债投资魔法书">可转债投资魔法书<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line"><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> • <span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span>人次</span></div><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.129.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">chariothy</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    
+        
+        <script async src=" //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+    
+
+    
+        
+            <section>
+                
+                    <span id="busuanzi_container_value_site_pv"><i class="far fa-eye fa-fw"></i>
+                        
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+
+                
+                    &nbsp;|&nbsp;              
+                
+
+                
+                    <span id="busuanzi_container_value_site_uv"><i class="fa fa-user"></i>
+                        
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+            </section>
+        
+
+        
+        
+    
+
+</div><script>
+                    if('serviceWorker' in navigator) {
+                        navigator.serviceWorker
+                            .register('/sw.min.js', { scope: '/' })
+                            .then(function(registration) {
+                            });
+                
+                        navigator.serviceWorker
+                            .ready
+                            .then(function(registration) {
+                            });
+                    }
+                </script></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["chariothy"],"clientID":"0e48b6595a9725cd9cf9","clientSecret":"d9ee702d2cbedaecf2693bee849b867325b990b1","id":"2020-01-18T09:20:10+08:00","owner":"chariothy","repo":"chariothy.github.io","title":"将sphinx配置为更好的实时搜索引擎"}},"data":{"desktop-header-typeit":"孤独的长跑者","mobile-header-typeit":"孤独的长跑者"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.2/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?fbbcc12eba9fd250dabc045b58df3809";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script></div>
+</body>
+
+</html>

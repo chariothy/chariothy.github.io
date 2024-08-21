@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Vba - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/vba/</link>
+        <description>Vba - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 11 Jul 2021 16:14:44 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/vba/" rel="self" type="application/rss+xml" /><item>
+    <title>Word宏手动双面打印</title>
+    <link>https://www.thy.pub/word-vba-dual-print/</link>
+    <pubDate>Sun, 11 Jul 2021 16:14:44 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/word-vba-dual-print/</guid>
+    <description><![CDATA[Word宏手动双面打印 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 Sub DualPrint() Dim answer]]></description>
+</item></channel>
+</rss>

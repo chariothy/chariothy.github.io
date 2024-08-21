@@ -1,0 +1,57 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Database - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/database/</link>
+        <description>Database - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 04 Mar 2022 12:28:57 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/database/" rel="self" type="application/rss+xml" /><item>
+    <title>Oracle-XMLQuery-使用教程与实例</title>
+    <link>https://www.thy.pub/oracle-xmlquery-tutorial-and-instance/</link>
+    <pubDate>Fri, 04 Mar 2022 12:28:57 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/oracle-xmlquery-tutorial-and-instance/</guid>
+    <description><![CDATA[Oracle-XMLQuery-使用教程与实例 2023-6-1更新 更全面的文档可以看 Oracle XMLDB Query综合示例 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17]]></description>
+</item><item>
+    <title>Oracle-XMLTable-使用教程与实例</title>
+    <link>https://www.thy.pub/oracle-xmltable-tutorial-examples/</link>
+    <pubDate>Sat, 23 Jan 2021 14:13:24 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/oracle-xmltable-tutorial-examples/</guid>
+    <description><![CDATA[Oracle-XMLTable-使用教程与实例 从Oracle 10g开始甲骨文公司新增了XQuery和XMLTable两个功能作为处理XML的]]></description>
+</item><item>
+    <title>如何在SQLServer中处理亿万级别的数据(历史数据)</title>
+    <link>https://www.thy.pub/how-to-handle-billion-rows-in-sqlserver/</link>
+    <pubDate>Mon, 10 Aug 2020 09:30:28 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/how-to-handle-billion-rows-in-sqlserver/</guid>
+    <description><![CDATA[如何在SQLServer中处理亿万级别的数据(历史数据) 可以按以下方面进行 去掉表的所有索引 用SqlBulkCopy进行插入 分表或者分区，减少]]></description>
+</item><item>
+    <title>字段是否用JSON</title>
+    <link>https://www.thy.pub/what-kind-of-fields-are-suitable-for-json-types/</link>
+    <pubDate>Sat, 18 Apr 2020 09:34:19 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/what-kind-of-fields-are-suitable-for-json-types/</guid>
+    <description><![CDATA[哪些字段适合用JSON，哪些字段不适合用JSON 适合用JSON的 数据不常修改 数据基本不用作查询、统计，仅做存储 数据格式易变，或不确定 没有进一]]></description>
+</item><item>
+    <title>事务提交大量sql与合并提交大量sql效率对比</title>
+    <link>https://www.thy.pub/comparision-between-commit-one-by-one-and-all-in-one/</link>
+    <pubDate>Sat, 18 Apr 2020 09:33:12 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/comparision-between-commit-one-by-one-and-all-in-one/</guid>
+    <description><![CDATA[事务提交大量sql与合并提交大量sql效率对比 事务提交5000条update，耗时：13.79 秒，内存占用：17.88 MB（大量时间消耗在Q]]></description>
+</item><item>
+    <title>将sphinx配置为更好的实时搜索引擎</title>
+    <link>https://www.thy.pub/config-sphinx-as-a-better-real-time-search-engine/</link>
+    <pubDate>Sat, 18 Jan 2020 09:20:10 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/config-sphinx-as-a-better-real-time-search-engine/</guid>
+    <description><![CDATA[将sphinx配置为更好的实时搜索引擎 sphinx以它的简单、快速吸引着我。但它的plain增量索引有两大问题一直困扰着我： 一是增量索引只能]]></description>
+</item><item>
+    <title>设计数据库时字段命名、类型和长度建议</title>
+    <link>https://www.thy.pub/best-practice-when-design-database-column-name-type-length/</link>
+    <pubDate>Wed, 08 Jan 2020 09:32:09 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/best-practice-when-design-database-column-name-type-length/</guid>
+    <description><![CDATA[设计数据库时字段命名、类型和长度建议 对于任何字段长度都不应该过于小气,否则未知的变化会造成前后台都要修改 对于开关型字段建议number(1,]]></description>
+</item></channel>
+</rss>

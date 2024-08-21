@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Ssh - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/ssh/</link>
+        <description>Ssh - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 11 Jan 2020 11:10:00 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/ssh/" rel="self" type="application/rss+xml" /><item>
+    <title>SSH隧道配置</title>
+    <link>https://www.thy.pub/ssh-usage-remark/</link>
+    <pubDate>Sat, 11 Jan 2020 11:10:00 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/ssh-usage-remark/</guid>
+    <description><![CDATA[-f 表示在后台运行 示例 socks 8888 -&gt; tqsit -&gt; (ow 路由)（IPV4可翻，IPV6不可翻，因为tq没有ipv6）ssh -D 8888 -p 41322 vagrant@tq.thy.pub -N socks 8888 -&gt; csnas 直出（IPV4/6不可]]></description>
+</item></channel>
+</rss>

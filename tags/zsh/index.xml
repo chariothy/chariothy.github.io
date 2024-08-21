@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Zsh - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/zsh/</link>
+        <description>Zsh - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 11 Jan 2021 14:14:31 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/zsh/" rel="self" type="application/rss+xml" /><item>
+    <title>zsh配置</title>
+    <link>https://www.thy.pub/zsh-config-remark/</link>
+    <pubDate>Mon, 11 Jan 2021 14:14:31 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/zsh-config-remark/</guid>
+    <description><![CDATA[ZSH 配置 安装zshsudo apt install zsh 或者 sudo yum install zsh 安装oh-my-zshwget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh 手动安装插件 1 2 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 运行 zsh 激活 zsh插件管理 安]]></description>
+</item></channel>
+</rss>

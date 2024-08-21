@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Alpine - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/alpine/</link>
+        <description>Alpine - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 11 Apr 2021 13:43:56 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/alpine/" rel="self" type="application/rss+xml" /><item>
+    <title>alpine命令简介</title>
+    <link>https://www.thy.pub/alpine-command-remark/</link>
+    <pubDate>Sun, 11 Apr 2021 13:43:56 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/alpine-command-remark/</guid>
+    <description><![CDATA[alpine命令简介 Alpine Linux 包管理－apk包管理命令 apk &ndash;help apk update apk upgrade #升级软件 apk add openssh openntp vim apk add &ndash;no-cache mysql-client apk add docker &ndash;update-cache &ndash;repository http://mirrors.ustc.edu.cn/alpine/v3.8/main/ &ndash;allow-untrusted apk add asterisk=1.6.0.21-r0 apk add &lsquo;asterisk&lt;1.6.1&rsquo; apk add &lsquo;asterisk&gt;1.6.1&rsquo; apk del openssh openntp vim apk add &ndash;upgrade busybox #]]></description>
+</item><item>
+    <title>LXC容器Alpine新系统配置</title>
+    <link>https://www.thy.pub/config-alpine-on-lxc-from-minimal/</link>
+    <pubDate>Sun, 10 Jan 2021 13:55:15 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/config-alpine-on-lxc-from-minimal/</guid>
+    <description><![CDATA[LXC容器Alpine新系统配置 （以alpine 12为例） 替换源sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories apk update &amp;&amp; apk upgrade 安装scpapk add openssh-client 安装时区设置apk add tzdata 复制上海时区]]></description>
+</item></channel>
+</rss>

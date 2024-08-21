@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Git - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/git/</link>
+        <description>Git - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 15 Feb 2022 18:45:16 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/git/" rel="self" type="application/rss+xml" /><item>
+    <title>hugo和vscode结合写博客</title>
+    <link>https://www.thy.pub/combine-hugo-with-vscode/</link>
+    <pubDate>Tue, 15 Feb 2022 18:45:16 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/combine-hugo-with-vscode/</guid>
+    <description><![CDATA[hugo和vscode结合写博客 博客的事情说来话长 其实我挺懒的，可活久了总有些东西要记下来，大致经历了这些过程 Everest，用了挺久的时间]]></description>
+</item><item>
+    <title>GIT文件重命名字母大小写的问题</title>
+    <link>https://www.thy.pub/git-rename-file-case/</link>
+    <pubDate>Mon, 05 Jun 2017 09:16:12 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/git-rename-file-case/</guid>
+    <description><![CDATA[GIT文件重命名字母大小写的问题 当把项目中的一个文件名改变了大小写如SphinxQl改为SphinQL，那么pull的时候，git会不知所措]]></description>
+</item></channel>
+</rss>

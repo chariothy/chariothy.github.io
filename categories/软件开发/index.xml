@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>软件开发 - 分类 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
+        <description>软件开发 - 分类 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 13 May 2022 11:36:09 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/" rel="self" type="application/rss+xml" /><item>
+    <title>Omnis经验备忘</title>
+    <link>https://www.thy.pub/omnis-experience-memo/</link>
+    <pubDate>Fri, 13 May 2022 11:36:09 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/omnis-experience-memo/</guid>
+    <description><![CDATA[Omnis经验备忘 语言基础 #F只能存0,1,kTrue,kFalse这四种值，可以与数值直接相加 几种CRUD返回值：. 原生的$update,]]></description>
+</item><item>
+    <title>AX基础知识备忘</title>
+    <link>https://www.thy.pub/ax-basic-knowledge-memorandum/</link>
+    <pubDate>Fri, 13 May 2022 11:32:00 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/ax-basic-knowledge-memorandum/</guid>
+    <description><![CDATA[AX基础知识备忘 X++数据类型]]></description>
+</item><item>
+    <title>导出网站的cookie给requests和scrapy</title>
+    <link>https://www.thy.pub/export-the-cookie-of-the-website-to-requests-and-scrapy/</link>
+    <pubDate>Thu, 21 Apr 2022 10:25:22 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/export-the-cookie-of-the-website-to-requests-and-scrapy/</guid>
+    <description><![CDATA[导出网站的cookie给requests和scrapy 安装Chrome插件Edit This Cookie 设置插件在设置中将导出格式设置为： Netscape HTTP Cookie File 保存到 cookie_file = 'c:/temp/cookie.txt']]></description>
+</item><item>
+    <title>Oracle-XMLQuery-使用教程与实例</title>
+    <link>https://www.thy.pub/oracle-xmlquery-tutorial-and-instance/</link>
+    <pubDate>Fri, 04 Mar 2022 12:28:57 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/oracle-xmlquery-tutorial-and-instance/</guid>
+    <description><![CDATA[Oracle-XMLQuery-使用教程与实例 2023-6-1更新 更全面的文档可以看 Oracle XMLDB Query综合示例 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17]]></description>
+</item><item>
+    <title>Omnis逗号分隔符及编码</title>
+    <link>https://www.thy.pub/omnis-comma-separator-and-encoding/</link>
+    <pubDate>Wed, 22 Dec 2021 14:47:11 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/omnis-comma-separator-and-encoding/</guid>
+    <description><![CDATA[Omnis逗号分隔符及编码 $clib.$prefs.$userexportdelimiter 只要显式设置$userexportdelimiter就不用担心在Omnis其它地方改写此设定值，需要担心的是Ex]]></description>
+</item><item>
+    <title>Oracle-XMLTable-使用教程与实例</title>
+    <link>https://www.thy.pub/oracle-xmltable-tutorial-examples/</link>
+    <pubDate>Sat, 23 Jan 2021 14:13:24 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/oracle-xmltable-tutorial-examples/</guid>
+    <description><![CDATA[Oracle-XMLTable-使用教程与实例 从Oracle 10g开始甲骨文公司新增了XQuery和XMLTable两个功能作为处理XML的]]></description>
+</item><item>
+    <title>如何在SQLServer中处理亿万级别的数据(历史数据)</title>
+    <link>https://www.thy.pub/how-to-handle-billion-rows-in-sqlserver/</link>
+    <pubDate>Mon, 10 Aug 2020 09:30:28 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/how-to-handle-billion-rows-in-sqlserver/</guid>
+    <description><![CDATA[如何在SQLServer中处理亿万级别的数据(历史数据) 可以按以下方面进行 去掉表的所有索引 用SqlBulkCopy进行插入 分表或者分区，减少]]></description>
+</item><item>
+    <title>Yii Composer不正确的解决方法</title>
+    <link>https://www.thy.pub/yii-composer-incorrect-solution/</link>
+    <pubDate>Sat, 18 Jul 2020 09:45:43 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/yii-composer-incorrect-solution/</guid>
+    <description><![CDATA[Yii Composer不正确的解决方法 经常提示：Loading composer repositories with package information Updating dependencies (including require-dev) Your requirements could not be resolved to an installable set of packages. 1 2 3 4 5 6 7 8 9 10 11 12 13 Problem 1 - yiisoft/yii2 2.0.12 requires bower-asset/jquery]]></description>
+</item><item>
+    <title>PHP常见坑和避免的方法</title>
+    <link>https://www.thy.pub/common-php-pits-and-ways-to-avoid-them/</link>
+    <pubDate>Sat, 18 Jul 2020 09:36:38 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/common-php-pits-and-ways-to-avoid-them/</guid>
+    <description><![CDATA[PHP常见坑和避免的方法 filesize缓存的问题可以用clearstatcache()清除缓存，且不能正确获取大于2G文件的大小 null和]]></description>
+</item><item>
+    <title>python生成式</title>
+    <link>https://www.thy.pub/python-list-dict-generator/</link>
+    <pubDate>Thu, 18 Jun 2020 10:01:57 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/python-list-dict-generator/</guid>
+    <description><![CDATA[python生成式 1. 列表生成式 1 [experssion for i in sequence if...] 2. 字典生成式 1 { key: value for i in sequence if...}]]></description>
+</item></channel>
+</rss>

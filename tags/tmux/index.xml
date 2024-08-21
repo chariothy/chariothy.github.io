@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tmux - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/tmux/</link>
+        <description>Tmux - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 22 Apr 2022 10:17:38 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/tmux/" rel="self" type="application/rss+xml" /><item>
+    <title>手动安装tmux</title>
+    <link>https://www.thy.pub/manually-install-tmux/</link>
+    <pubDate>Fri, 22 Apr 2022 10:17:38 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/manually-install-tmux/</guid>
+    <description><![CDATA[手动安装tmux 手动更（4声）新centos 7 下yum安装的版本才到2.3，debain 10下才到2.8，而官方目前已经到了3.2 步骤 1 2 3]]></description>
+</item><item>
+    <title>tmux配置</title>
+    <link>https://www.thy.pub/tmux-config-remark/</link>
+    <pubDate>Fri, 15 Jan 2021 14:11:17 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/tmux-config-remark/</guid>
+    <description><![CDATA[1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 set -g mouse on set -g default-command /bin/zsh set -g default-terminal &#34;screen-256color&#34; #set-option -ga terminal-overrides &#34;,*256col*:Tc&#34; set -g @sidebar-tree-command &#39;tree -C -L 2 -a&#39; set -g terminal-overrides &#39;xterm*:smcup@:rmcup@&#39; #set -g @plugin &#39;tmux-plugins/tpm&#39; #set -g @plugin &#39;tmux-plugins/tmux-sensible&#39; #set -g @plugin &#39;tmux-plugins/tmux-resurrect&#39; #set -g @plugin &#39;tmux-plugins/tmux-sidebar&#39; # To copy, left click and drag]]></description>
+</item></channel>
+</rss>

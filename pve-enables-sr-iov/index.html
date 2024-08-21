@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>PVE开启SR-IOV - 孤独的长跑者</title><meta name="Description" content="PVE开启SR-IOV"><meta property="og:url" content="https://www.thy.pub/pve-enables-sr-iov/">
+  <meta property="og:site_name" content="孤独的长跑者">
+  <meta property="og:title" content="PVE开启SR-IOV">
+  <meta property="og:description" content="PVE开启SR-IOV">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-04-05T00:16:10+08:00">
+    <meta property="article:modified_time" content="2024-04-05T00:16:10+08:00">
+    <meta property="article:tag" content="PVE">
+    <meta property="article:tag" content="SR-IOV">
+    <meta property="og:image" content="https://www.thy.pub/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.thy.pub/logo.png">
+  <meta name="twitter:title" content="PVE开启SR-IOV">
+  <meta name="twitter:description" content="PVE开启SR-IOV">
+<meta name="application-name" content="孤独的长跑者">
+<meta name="apple-mobile-web-app-title" content="孤独的长跑者">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.thy.pub/pve-enables-sr-iov/" /><link rel="prev" href="https://www.thy.pub/github-issues/" /><link rel="next" href="https://www.thy.pub/openwrt-feeds/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript>
+    
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "PVE开启SR-IOV",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.thy.pub\/pve-enables-sr-iov\/"
+        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "PVE, SR-IOV","wordcount":  1119 ,
+        "url": "https:\/\/www.thy.pub\/pve-enables-sr-iov\/","datePublished": "2024-04-05T00:16:10+08:00","dateModified": "2024-04-05T00:16:10+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "chariothy","logo": "https:\/\/www.thy.pub\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "chariothy"
+            },"description": "PVE开启SR-IOV"
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="选择语言" id="language-select-desktop" onchange="location = this.value;"><option value="/pve-enables-sr-iov/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="选择语言" onchange="location = this.value;"><option value="/pve-enables-sr-iov/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#开启-iommu">开启 IOMMU</a>
+      <ul>
+        <li><a href="#cpu-支持vt-d和vt-x并在bios中打开">CPU 支持VT-D和VT-X，并在BIOS中打开</a></li>
+      </ul>
+    </li>
+    <li><a href="#开启sr-iov">开启SR-IOV</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">PVE开启SR-IOV</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>Linux</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-04-05">2024-04-05</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-04-05">2024-04-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1119 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;
+    
+
+    
+        
+
+        
+        
+            <span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读</span>
+        
+    
+
+</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#开启-iommu">开启 IOMMU</a>
+      <ul>
+        <li><a href="#cpu-支持vt-d和vt-x并在bios中打开">CPU 支持VT-D和VT-X，并在BIOS中打开</a></li>
+      </ul>
+    </li>
+    <li><a href="#开启sr-iov">开启SR-IOV</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="pve开启sr-iov" class="headerLink">
+    <a href="#pve%e5%bc%80%e5%90%afsr-iov" class="header-mark"></a>PVE开启SR-IOV</h1><h2 id="开启-iommu" class="headerLink">
+    <a href="#%e5%bc%80%e5%90%af-iommu" class="header-mark"></a>开启 IOMMU</h2><h3 id="cpu-支持vt-d和vt-x并在bios中打开" class="headerLink">
+    <a href="#cpu-%e6%94%af%e6%8c%81vt-d%e5%92%8cvt-x%e5%b9%b6%e5%9c%a8bios%e4%b8%ad%e6%89%93%e5%bc%80" class="header-mark"></a>CPU 支持VT-D和VT-X，并在BIOS中打开</h3><p>编辑文件/etc/default/grub
+修改行GRUB_CMDLINE_LINUX_DEFAULT=&ldquo;quiet&rdquo;
+使其为GRUB_CMDLINE_LINUX_DEFAULT=&ldquo;quiet intel_iommu=on iommu=pt&rdquo;</p>
+<p>update-grub</p>
+<p>dmesg | grep -e DMAR -e IOMMU</p>
+<p>DMAR: IOMMU enabled</p>
+<p>vi /etc/modules</p>
+<p>vfio
+vfio_iommu_type1
+vfio_pci
+vfio_virqfd</p>
+<p>update-initramfs -u -k all</p>
+<p>cat /etc/kernel/cmdline</p>
+<p>root=ZFS=rpool/ROOT/pve-1 boot=zfs quiet intel_iommu=on iommu=pt</p>
+<p>reboot</p>
+<h2 id="开启sr-iov" class="headerLink">
+    <a href="#%e5%bc%80%e5%90%afsr-iov" class="header-mark"></a>开启SR-IOV</h2><p>打开 /etc/default/grub 文件,在GRUB_CMDLINE_LINUX_DEFAULT行添加以下内容
+pci=assign-busses是因为部署SR IOV的时候报错”write error: Cannot allocate memory“</p>
+<p>编辑文件/etc/default/grub
+修改行GRUB_CMDLINE_LINUX_DEFAULT=&ldquo;quiet&rdquo;
+使其为GRUB_CMDLINE_LINUX_DEFAULT=&ldquo;quiet intel_iommu=on iommu=pt pci=assign-busses pcie_acs_override=downstream&rdquo;</p>
+<p>cat /etc/kernel/cmdline</p>
+<p>root=ZFS=rpool/ROOT/pve-1 boot=zfs quiet intel_iommu=on iommu=pt pci=assign-busses pcie_acs_override=downstream</p>
+<p>cat /sys/bus/pci/devices/0000:01:00.1/sriov_totalvfs</p>
+<p>echo 7 &gt; /sys/class/net/ens3f1/device/sriov_numvfs</p>
+<p>vi /etc/systemd/system/sriov.service</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>Unit<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Description</span><span class="o">=</span>Script to <span class="nb">enable</span> SR-IOV on boot
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Service<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Type</span><span class="o">=</span>simple
+</span></span><span class="line"><span class="cl"><span class="c1">#start SR-IOV</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/echo 7 &gt; /sys/class/net/ens3f0/device/sriov_numvfs&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/echo 7 &gt; /sys/class/net/ens3f1/device/sriov_numvfs&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#set VF MAC</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000:02:10.0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set dev ens3f0 vf 0 mac 08:08:00:00:00:00&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000:02:10.4</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set dev ens3f0 vf 1 mac 08:08:00:00:00:01&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000:02:11.0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set dev ens3f0 vf 2 mac 08:08:00:00:00:02&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000:02:11.4</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set dev ens3f0 vf 3 mac 08:08:00:00:00:03&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000:02:12.0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set dev ens3f0 vf 4 mac 08:08:00:00:00:04&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000:02:12.4</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set dev ens3f0 vf 5 mac 08:08:00:09:00:05&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000:02:13.0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set dev ens3f0 vf 6 vlan 9 mac 08:08:00:09:00:06&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000:02:10.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#ExecStartPre=/usr/bin/bash -c &#39;/usr/bin/ip link set dev ens3f1 vf 0 mac 08:08:00:00:01:00&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000:02:10.5</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#ExecStartPre=/usr/bin/bash -c &#39;/usr/bin/ip link set dev ens3f1 vf 1 mac 08:08:00:00:01:01&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000:02:11.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#ExecStartPre=/usr/bin/bash -c &#39;/usr/bin/ip link set dev ens3f1 vf 2 mac 08:08:00:00:01:02&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000:02:11.5</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#ExecStartPre=/usr/bin/bash -c &#39;/usr/bin/ip link set dev ens3f1 vf 3 mac 08:08:00:00:01:03&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000:02:12.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#ExecStartPre=/usr/bin/bash -c &#39;/usr/bin/ip link set dev ens3f1 vf 4 mac 08:08:00:00:01:04&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000:02:12.5</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#ExecStartPre=/usr/bin/bash -c &#39;/usr/bin/ip link set dev ens3f1 vf 5 mac 08:08:00:09:01:05&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000:02:13.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#ExecStartPre=/usr/bin/bash -c &#39;/usr/bin/ip link set dev ens3f1 vf 6 vlan 9 mac 08:08:00:09:01:06&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#set PF up</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set ens3f0 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set ens3f1 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#set VF up</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set ens3f0v0 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set ens3f0v1 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set ens3f0v2 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set ens3f0v3 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set ens3f0v4 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set ens3f0v5 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;/usr/bin/ip link set ens3f0v6 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ExecStartPre=/usr/bin/bash -c &#39;/usr/bin/ip link set ens3f1v0 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ExecStartPre=/usr/bin/bash -c &#39;/usr/bin/ip link set ens3f1v1 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ExecStartPre=/usr/bin/bash -c &#39;/usr/bin/ip link set ens3f1v2 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ExecStartPre=/usr/bin/bash -c &#39;/usr/bin/ip link set ens3f1v3 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ExecStartPre=/usr/bin/bash -c &#39;/usr/bin/ip link set ens3f1v4 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ExecStartPre=/usr/bin/bash -c &#39;/usr/bin/ip link set ens3f1v5 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ExecStartPre=/usr/bin/bash -c &#39;/usr/bin/ip link set ens3f1v6 up&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#ExecStart=/usr/bin/bash -c &#39;/usr/bin/ip addr add 10.8.0.222/24 dev ens3f1v4&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Restart</span><span class="o">=</span>on-failure
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Install<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>systemctl daemon-reload
+systemctl enable sriov.service
+reboot</p>
+<p>dmesg | grep ens<em>f</em></p>
+<p>0000:02:10.0 ens3f0v0 08:08:00:00:00:00 10.8.0.249  - wan0
+0000:02:10.4 ens3f0v1 08:08:00:00:00:01
+0000:02:11.0 ens3f0v2 08:08:00:00:00:02 10.8.0.2    - dsm
+0000:02:11.4 ens3f0v3 08:08:00:00:00:03
+0000:02:12.0 ens3f0v4 08:08:00:00:00:04
+0000:02:12.4 ens3f0v5 08:08:00:09:00:05
+0000:02:13.0 ens3f0v6 08:08:00:09:00:06
+0000:02:10.1 ens3f1v0 08:08:00:00:01:00 10.8.0.253  - gw
+0000:02:10.5 ens3f1v1 08:08:00:00:01:01
+0000:02:11.1 ens3f1v2 08:08:00:00:01:02
+0000:02:11.5 ens3f1v3 08:08:00:00:01:03
+0000:02:12.1 ens3f1v4 08:08:00:00:01:04 10.8.0.222  - backup manage of pve
+0000:02:12.5 ens3f1v5 08:08:00:09:01:05 10.8.9.1    - lan9
+0000:02:13.1 ens3f1v6 08:08:00:09:01:06 10.8.9.2    - dsm</p>
+<p>直通PIC网卡时，注意不要勾选All Functions，勾了All Functions以后所以的VF都会被分配到这一个虚拟机里。</p>
+<p>nano /etc/network/interfaces</p>
+<p>auto ens16
+iface ens16 inet dhcp</p>
+<p>带vlan9的vf直通到openwrt9（含vmbr0.9）中会导致无法访问外网，因为两个vlan9冲突，删除vf后也没用，最后只能恢复备份。
+经测试，成功方案为：从openwrt9中删除vmbr0.9，直接用vlan9的vf做lan，而且这样还可以给vlan9的AP做dhcp网关（之前vmbr0.9的无法分配IP）。</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-04-05</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><button title="分享到 Twitter" data-sharer="twitter" data-url="https://www.thy.pub/pve-enables-sr-iov/" data-title="PVE开启SR-IOV" data-hashtags="PVE,SR-IOV"><span class="fab fa-twitter fa-fw"></span></button><button title="分享到 Facebook" data-sharer="facebook" data-url="https://www.thy.pub/pve-enables-sr-iov/" data-hashtag="PVE"><span class="fab fa-facebook-square fa-fw"></span></button><button title="分享到 微博" data-sharer="weibo" data-url="https://www.thy.pub/pve-enables-sr-iov/" data-title="PVE开启SR-IOV"><span class="fab fa-weibo fa-fw"></span></button><button title="分享到 百度" data-sharer="baidu" data-url="https://www.thy.pub/pve-enables-sr-iov/" data-title="PVE开启SR-IOV"><span data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@v5.21.1/icons/baidu.svg"></span></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/pve/">PVE</a>,&nbsp;<a href="/tags/sr-iov/">SR-IOV</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/github-issues/" class="prev" rel="prev" title="github问题"><i class="fas fa-angle-left fa-fw"></i>github问题</a>
+            <a href="/openwrt-feeds/" class="next" rel="next" title="openwrt-feeds">openwrt-feeds<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line"><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> • <span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span>人次</span></div><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.129.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">chariothy</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    
+        
+        <script async src=" //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+    
+
+    
+        
+            <section>
+                
+                    <span id="busuanzi_container_value_site_pv"><i class="far fa-eye fa-fw"></i>
+                        
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+
+                
+                    &nbsp;|&nbsp;              
+                
+
+                
+                    <span id="busuanzi_container_value_site_uv"><i class="fa fa-user"></i>
+                        
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+            </section>
+        
+
+        
+        
+    
+
+</div><script>
+                    if('serviceWorker' in navigator) {
+                        navigator.serviceWorker
+                            .register('/sw.min.js', { scope: '/' })
+                            .then(function(registration) {
+                            });
+                
+                        navigator.serviceWorker
+                            .ready
+                            .then(function(registration) {
+                            });
+                    }
+                </script></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["chariothy"],"clientID":"0e48b6595a9725cd9cf9","clientSecret":"d9ee702d2cbedaecf2693bee849b867325b990b1","id":"2024-04-05T00:16:10+08:00","owner":"chariothy","repo":"chariothy.github.io","title":"PVE开启SR-IOV"}},"data":{"desktop-header-typeit":"孤独的长跑者","mobile-header-typeit":"孤独的长跑者"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.2/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?fbbcc12eba9fd250dabc045b58df3809";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script></div>
+</body>
+
+</html>

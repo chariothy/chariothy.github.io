@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>黑群 - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/%E9%BB%91%E7%BE%A4/</link>
+        <description>黑群 - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 18 Apr 2024 09:33:01 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/%E9%BB%91%E7%BE%A4/" rel="self" type="application/rss+xml" /><item>
+    <title>PVE安装黑群DSM7</title>
+    <link>https://www.thy.pub/pve-xpenology-dsm7/</link>
+    <pubDate>Thu, 18 Apr 2024 09:33:01 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/pve-xpenology-dsm7/</guid>
+    <description><![CDATA[PVE安装黑群DSM7 下载最新引导arpl 新建vm cpu选host，打开NUMA 打开QEMU GA 内存4G 默认的硬盘（装完就分离此硬盘） 接上要直]]></description>
+</item></channel>
+</rss>

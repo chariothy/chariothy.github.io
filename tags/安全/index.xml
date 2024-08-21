@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>安全 - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/%E5%AE%89%E5%85%A8/</link>
+        <description>安全 - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 Jan 2021 13:38:21 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/%E5%AE%89%E5%85%A8/" rel="self" type="application/rss+xml" /><item>
+    <title>阿里云ECS变yam肉鸡处理过程</title>
+    <link>https://www.thy.pub/ecs-being-hacked/</link>
+    <pubDate>Sun, 10 Jan 2021 13:38:21 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/ecs-being-hacked/</guid>
+    <description><![CDATA[阿里云ECS变yam肉鸡处理过程 修复步骤 关闭Redis： /etc/inti.d/redis* stop 关闭crontab: service crond stop 查看定期任务 crontab -l 删除定期任务 crontab -r 删除/opt/yam 删]]></description>
+</item></channel>
+</rss>

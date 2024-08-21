@@ -1,0 +1,537 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>hugo和vscode结合写博客 - 孤独的长跑者</title><meta name="Description" content="hugo和vscode结合写博客"><meta property="og:url" content="https://www.thy.pub/combine-hugo-with-vscode/">
+  <meta property="og:site_name" content="孤独的长跑者">
+  <meta property="og:title" content="hugo和vscode结合写博客">
+  <meta property="og:description" content="hugo和vscode结合写博客">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-02-15T18:45:16+08:00">
+    <meta property="article:modified_time" content="2022-02-15T18:45:16+08:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Git">
+    <meta property="og:image" content="https://www.thy.pub/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.thy.pub/logo.png">
+  <meta name="twitter:title" content="hugo和vscode结合写博客">
+  <meta name="twitter:description" content="hugo和vscode结合写博客">
+<meta name="application-name" content="孤独的长跑者">
+<meta name="apple-mobile-web-app-title" content="孤独的长跑者">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.thy.pub/combine-hugo-with-vscode/" /><link rel="prev" href="https://www.thy.pub/config-debain-from-minimal/" /><link rel="next" href="https://www.thy.pub/vagrant-use-samba-share-folder/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript>
+    
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "hugo和vscode结合写博客",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.thy.pub\/combine-hugo-with-vscode\/"
+        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "hugo, git","wordcount":  1872 ,
+        "url": "https:\/\/www.thy.pub\/combine-hugo-with-vscode\/","datePublished": "2022-02-15T18:45:16+08:00","dateModified": "2022-02-15T18:45:16+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "chariothy","logo": "https:\/\/www.thy.pub\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "chariothy"
+            },"description": "hugo和vscode结合写博客"
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="选择语言" id="language-select-desktop" onchange="location = this.value;"><option value="/combine-hugo-with-vscode/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="选择语言" onchange="location = this.value;"><option value="/combine-hugo-with-vscode/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#博客的事情说来话长">博客的事情说来话长</a>
+      <ul>
+        <li><a href="#其实我挺懒的可活久了总有些东西要记下来大致经历了这些过程">其实我挺懒的，可活久了总有些东西要记下来，大致经历了这些过程</a></li>
+      </ul>
+    </li>
+    <li><a href="#世事难两全hugo---vscode">世事难两全，hugo &lt;-&gt; vscode</a>
+      <ul>
+        <li><a href="#hugo的图片url地址">hugo的图片url地址</a></li>
+        <li><a href="#hugo的render-hook">hugo的render hook</a></li>
+        <li><a href="#hugo的引用链接地址">hugo的引用链接地址</a></li>
+      </ul>
+    </li>
+    <li><a href="#不够完美之处">不够完美之处</a></li>
+    <li><a href="#vscode的snippet">vscode的snippet</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">hugo和vscode结合写博客</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-15">2022-02-15</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-02-15">2022-02-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1872 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;
+    
+
+    
+        
+
+        
+        
+            <span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读</span>
+        
+    
+
+</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#博客的事情说来话长">博客的事情说来话长</a>
+      <ul>
+        <li><a href="#其实我挺懒的可活久了总有些东西要记下来大致经历了这些过程">其实我挺懒的，可活久了总有些东西要记下来，大致经历了这些过程</a></li>
+      </ul>
+    </li>
+    <li><a href="#世事难两全hugo---vscode">世事难两全，hugo &lt;-&gt; vscode</a>
+      <ul>
+        <li><a href="#hugo的图片url地址">hugo的图片url地址</a></li>
+        <li><a href="#hugo的render-hook">hugo的render hook</a></li>
+        <li><a href="#hugo的引用链接地址">hugo的引用链接地址</a></li>
+      </ul>
+    </li>
+    <li><a href="#不够完美之处">不够完美之处</a></li>
+    <li><a href="#vscode的snippet">vscode的snippet</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="hugo和vscode结合写博客" class="headerLink">
+    <a href="#hugo%e5%92%8cvscode%e7%bb%93%e5%90%88%e5%86%99%e5%8d%9a%e5%ae%a2" class="header-mark"></a>hugo和vscode结合写博客</h1><h2 id="博客的事情说来话长" class="headerLink">
+    <a href="#%e5%8d%9a%e5%ae%a2%e7%9a%84%e4%ba%8b%e6%83%85%e8%af%b4%e6%9d%a5%e8%af%9d%e9%95%bf" class="header-mark"></a>博客的事情说来话长</h2><h3 id="其实我挺懒的可活久了总有些东西要记下来大致经历了这些过程" class="headerLink">
+    <a href="#%e5%85%b6%e5%ae%9e%e6%88%91%e6%8c%ba%e6%87%92%e7%9a%84%e5%8f%af%e6%b4%bb%e4%b9%85%e4%ba%86%e6%80%bb%e6%9c%89%e4%ba%9b%e4%b8%9c%e8%a5%bf%e8%a6%81%e8%ae%b0%e4%b8%8b%e6%9d%a5%e5%a4%a7%e8%87%b4%e7%bb%8f%e5%8e%86%e4%ba%86%e8%bf%99%e4%ba%9b%e8%bf%87%e7%a8%8b" class="header-mark"></a>其实我挺懒的，可活久了总有些东西要记下来，大致经历了这些过程</h3><ol>
+<li>
+<p>Everest，用了挺久的时间，挺好用的，尤其是Web Clip插件好用，唯一的缺陷就是app太臃肿。不过后来它收费了，我就不用了。</p>
+</li>
+<li>
+<p>有道，之后盯上了免费的有道，都忘了当时怎么迁移文章的了，当文章迁移结束后才发现有道的导出就是个坑，于是打算整个基于文件的记录系统，博客不博客无所谓，首选markdown</p>
+</li>
+<li>
+<p>vscode，选了很多写markdown之后发现vscode自带的就挺好用，支持预览，我又用gitea自建了一个git系统，支持markdown在网页直接当预览效果。不用github是因为图片等资源有时候会被挡住。</p>
+</li>
+<li>
+<p>hugo，程序员最能折腾了，在gitea中访问博客太土了，于是找这个表态网站生成器，希望一直这么用下去</p>
+</li>
+</ol>
+<h2 id="世事难两全hugo---vscode" class="headerLink">
+    <a href="#%e4%b8%96%e4%ba%8b%e9%9a%be%e4%b8%a4%e5%85%a8hugo---vscode" class="header-mark"></a>世事难两全，hugo &lt;-&gt; vscode</h2><p>参考链接： <a href=' https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks '  target="_blank" rel="noopener">render hook</a></p>
+<h3 id="hugo的图片url地址" class="headerLink">
+    <a href="#hugo%e7%9a%84%e5%9b%be%e7%89%87url%e5%9c%b0%e5%9d%80" class="header-mark"></a>hugo的图片url地址</h3><ol>
+<li>我在vscode中写markdown时喜欢在当前目录下建一个目录img，然后将文件放在其中</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">project
+</span></span><span class="line"><span class="cl">│   sample.md
+</span></span><span class="line"><span class="cl">└───img
+</span></span><span class="line"><span class="cl">│   │   sample.png
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后我就可以在文章中加入 <code>![sample](img/sample.png)</code> ，这样就可以在预览中实时看到图片。</p>
+<ol start="2">
+<li>但是hugo生成的图片url却是这样的</li>
+</ol>
+<p><code>&lt;img src=&quot;img/sample.png&quot;&gt;</code>, 这就导致绝对url为 <code>https://&lt;domain&gt;/sample/img/sample.png</code>，而这是无法访问的</p>
+<ol start="3">
+<li>解决办法</li>
+</ol>
+<p>好在hugo提供了一些hook来支持自定义生成方式，但还是要稍微写点脚本。</p>
+<h3 id="hugo的render-hook" class="headerLink">
+    <a href="#hugo%e7%9a%84render-hook" class="header-mark"></a>hugo的render hook</h3><ol>
+<li>render-image</li>
+</ol>
+<p>在 <code>&lt;project&gt;\layouts\_default\_markup</code>目录中新建render-image.html，在其中加上</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;md__image&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;{{ replace .Destination &#34;img/&#34; &#34;/images/&#34; | safeURL }}&#39;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;{{ .Text }}&#34;</span> <span class="err">{{</span> <span class="na">with</span> <span class="err">.</span><span class="na">Title</span><span class="err">}}</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ . }}&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>意思就是将生成的img的url中的 img/ 替换成 /images/，后面我们会将图片放到这里。</p>
+<ol start="2">
+<li>批处理</li>
+</ol>
+<p>因为穷，所以用了公司的笔记本写东西，因此这里是windows的批处理，其它系统的自行搞一个吧，其实bash更简单</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">@ECHO OFF
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> <span class="nv">proj</span><span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> %proj%
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 删除上次生成的public文件</span>
+</span></span><span class="line"><span class="cl">rd public /s /q
+</span></span><span class="line"><span class="cl"><span class="c1"># 重新生成</span>
+</span></span><span class="line"><span class="cl">hugo -D<span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 复制img下的图片到images下</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> content
+</span></span><span class="line"><span class="cl"><span class="k">for</span> /R %%x in <span class="o">(</span>img<span class="se">\*</span><span class="o">)</span> <span class="k">do</span> copy <span class="s2">&#34;%%x&#34;</span> <span class="s2">&#34;..\public\images\&#34;
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>部署，完成</li>
+</ol>
+<h3 id="hugo的引用链接地址" class="headerLink">
+    <a href="#hugo%e7%9a%84%e5%bc%95%e7%94%a8%e9%93%be%e6%8e%a5%e5%9c%b0%e5%9d%80" class="header-mark"></a>hugo的引用链接地址</h3><ol>
+<li>render-link</li>
+</ol>
+<p>文章之间难免有相互引用，之前我的文章名都是用中文名来命名的，比如我在ref.md文章中引用了 <code>[示例](示例.md)</code>，这样在vscode中点击就能跳转到相应文章，gitea也支持这种格式。</p>
+<p>但到了hugo中生成的url就成了<code>&lt;a href=&quot;示例.md&quot;&gt;示例&lt;/a&gt;</code>，这根本没法跳转了。因为实际上是<code>https://&lt;domain&gt;/ref/示例.md</code></p>
+<p>而且由于要对url友好，我将链接修改成了 :slug 而不是 :file ，这样hugo就更找不到地址了。</p>
+<p>方法还是用hugo的hook，解决方案是在markdown的link之后加上引用文章的slug作为title ：<code>[示例](示例.md &quot;sample&quot;)</code>
+在 <code>&lt;project&gt;\layouts\_default\_markup</code>目录中新建render-link.html，在其中加上</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;{{ if strings.HasSuffix .Destination &#34;.md&#34; }} /{{ .Title | safeURL }} {{ else }} {{ .Destination | safeURL }} {{ end }}&#39;</span> <span class="err">{{</span> <span class="na">if</span> <span class="na">strings</span><span class="err">.</span><span class="na">HasPrefix</span> <span class="err">.</span><span class="na">Destination</span> <span class="err">&#34;</span><span class="na">https</span><span class="err">&#34;</span> <span class="err">}}</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;noopener&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>{{ .Text | safeHTML }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>意思就是</p>
+<pre><code>- 如果是md结尾的目的文件，则用记录在Title中的slug生成相对链接
+- 否则直接用链接
+</code></pre>
+<p>这样hugo中生成的url就成了<code>&lt;a href=&quot;/sample&quot;&gt;示例&lt;/a&gt;</code>，绝对url是<code>https://&lt;domain&gt;/sample</code></p>
+<h2 id="不够完美之处" class="headerLink">
+    <a href="#%e4%b8%8d%e5%a4%9f%e5%ae%8c%e7%be%8e%e4%b9%8b%e5%a4%84" class="header-mark"></a>不够完美之处</h2><p>这样会带来两个小小的麻烦</p>
+<ol>
+<li>部署之前要运行刚才的脚本，不过我整个部署都是写在一个脚本中，所以这不是问题</li>
+<li>引用链接中要加上slug作为Title，这个嘛习惯就好。</li>
+</ol>
+<h2 id="vscode的snippet" class="headerLink">
+    <a href="#vscode%e7%9a%84snippet" class="header-mark"></a>vscode的snippet</h2><p>尽管hugo new可以用预设的模板生成front matter，但还是习惯用vscode，何况还有那么多的旧文件，于是自建了一个片段：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;Blog post frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	  <span class="nt">&#34;prefix&#34;</span><span class="p">:</span> <span class="s2">&#34;fmc&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	  <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;Creates frontmatter for Hugo articles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	  <span class="nt">&#34;body&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;---&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;title: ${TM_FILENAME_BASE}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;description: ${TM_FILENAME_BASE}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;author: chariothy&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;draft: false&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;date: ${2:${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}+0800}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;categories:&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;- ${3:${TM_DIRECTORY/^.+\\\\(.*)\\\\(.*)$/$1-$2/}}&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;tags:&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;- ${4}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;keywords:&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;- ${5}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;slug: ${6}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;---&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;# ${TM_FILENAME_BASE}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;$0&#34;</span>
+</span></span><span class="line"><span class="cl">	  <span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>对本文就会生成：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">hugo和vscode结合写博客</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l">hugo和vscode结合写博客</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l">chariothy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2022-02-15T18:45:16</span><span class="m">+0800</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">categories</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">IT备忘</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">tags</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">git</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">keywords</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">blog</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">vscode</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">markdown</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">slug</span><span class="p">:</span><span class="w"> </span><span class="l">combine-hugo-with-vscode</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># hugo和vscode结合写博客</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>这样hugo和vscode就相安无事了，用vscode来写作，用hugo来生成。</p>
+<p>您要是有更好的想法请一定要留言哦！</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-02-15</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><button title="分享到 Twitter" data-sharer="twitter" data-url="https://www.thy.pub/combine-hugo-with-vscode/" data-title="hugo和vscode结合写博客" data-hashtags="hugo,git"><span class="fab fa-twitter fa-fw"></span></button><button title="分享到 Facebook" data-sharer="facebook" data-url="https://www.thy.pub/combine-hugo-with-vscode/" data-hashtag="hugo"><span class="fab fa-facebook-square fa-fw"></span></button><button title="分享到 微博" data-sharer="weibo" data-url="https://www.thy.pub/combine-hugo-with-vscode/" data-title="hugo和vscode结合写博客"><span class="fab fa-weibo fa-fw"></span></button><button title="分享到 百度" data-sharer="baidu" data-url="https://www.thy.pub/combine-hugo-with-vscode/" data-title="hugo和vscode结合写博客"><span data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@v5.21.1/icons/baidu.svg"></span></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/git/">Git</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/config-debain-from-minimal/" class="prev" rel="prev" title="Debian最小化安装新系统配置"><i class="fas fa-angle-left fa-fw"></i>Debian最小化安装新系统配置</a>
+            <a href="/vagrant-use-samba-share-folder/" class="next" rel="next" title="Vagrant使用samba共享文件夹">Vagrant使用samba共享文件夹<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line"><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> • <span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span>人次</span></div><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.129.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">chariothy</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    
+        
+        <script async src=" //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+    
+
+    
+        
+            <section>
+                
+                    <span id="busuanzi_container_value_site_pv"><i class="far fa-eye fa-fw"></i>
+                        
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+
+                
+                    &nbsp;|&nbsp;              
+                
+
+                
+                    <span id="busuanzi_container_value_site_uv"><i class="fa fa-user"></i>
+                        
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+            </section>
+        
+
+        
+        
+    
+
+</div><script>
+                    if('serviceWorker' in navigator) {
+                        navigator.serviceWorker
+                            .register('/sw.min.js', { scope: '/' })
+                            .then(function(registration) {
+                            });
+                
+                        navigator.serviceWorker
+                            .ready
+                            .then(function(registration) {
+                            });
+                    }
+                </script></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["chariothy"],"clientID":"0e48b6595a9725cd9cf9","clientSecret":"d9ee702d2cbedaecf2693bee849b867325b990b1","id":"2022-02-15T18:45:16+08:00","owner":"chariothy","repo":"chariothy.github.io","title":"hugo和vscode结合写博客"}},"data":{"desktop-header-typeit":"孤独的长跑者","mobile-header-typeit":"孤独的长跑者"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.2/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?fbbcc12eba9fd250dabc045b58df3809";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script></div>
+</body>
+
+</html>

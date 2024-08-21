@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>IT备忘 - 分类 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/categories/it%E5%A4%87%E5%BF%98/</link>
+        <description>IT备忘 - 分类 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 07 May 2024 20:16:30 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/categories/it%E5%A4%87%E5%BF%98/" rel="self" type="application/rss+xml" /><item>
+    <title>TPLINK的AP无法连接</title>
+    <link>https://www.thy.pub/tplink-ap-connot-connect/</link>
+    <pubDate>Tue, 07 May 2024 20:16:30 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/tplink-ap-connot-connect/</guid>
+    <description><![CDATA[TPLINK的AP无法连接突然发现4个AP中有两个无法连接（管理），查资料后发现是因为AP无法在DHCP获取IP。 因为我的TPLINK路由器]]></description>
+</item><item>
+    <title>openwrt-BCM2710-compile</title>
+    <link>https://www.thy.pub/openwrt-compile/</link>
+    <pubDate>Sun, 07 Apr 2024 09:17:52 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-compile/</guid>
+    <description><![CDATA[openwrt-compile 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 #!/bin/bash proj=immortalwrt home=/home/henry ver=openwrt-23.05 nasdir=henry@10.8.0.2:/volume1/pve/images system=bcm27xx target=bcm2710 profile=rpi-3 bindir=$home/$proj/bin/targets/$system/$target factory=$proj-$system-$target-$profile-squashfs-factory sysupgrade=$proj-$system-$target-$profile-squashfs-sysupgrade timestamp=$(date +&#34;%Y%m%d&#34;) ## For the first time compile #git clone -b $ver --single-branch --filter=blob:none]]></description>
+</item><item>
+    <title>github问题</title>
+    <link>https://www.thy.pub/github-issues/</link>
+    <pubDate>Thu, 21 Dec 2023 15:17:02 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/github-issues/</guid>
+    <description><![CDATA[github问题 kex_exchange_identification 1 2 3 4 5 6 kex_exchange_identification: Connection closed by remote host Connection closed by 20.205.243.166 port 22 fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists. From stackoverflow.com : For fixing the issues add the Hostname for Git on ~/.ssh/config, 1 2 3 Host github.com Hostname ssh.github.com Port 443]]></description>
+</item><item>
+    <title>Debian11最小化安装新系统配置</title>
+    <link>https://www.thy.pub/config-debain11-from-minimal/</link>
+    <pubDate>Fri, 28 Apr 2023 13:51:31 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/config-debain11-from-minimal/</guid>
+    <description><![CDATA[Debian最小化安装新系统配置 安装语言选择英文，时区选择上海 核对时区 1 2 3 4 timedatectl date # 24小时显示 sudo localectl set-locale LC_TIME=en_GB.UTF-8 以下操作为方便可以先切换到roots]]></description>
+</item><item>
+    <title>RT-AC3100更新梅林系统</title>
+    <link>https://www.thy.pub/upgrade-firmware-for-asus-rt-ac3100/</link>
+    <pubDate>Sat, 15 Oct 2022 12:09:06 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/upgrade-firmware-for-asus-rt-ac3100/</guid>
+    <description><![CDATA[RT-AC3100更新梅林系统 不要更新官方的梅林系统，否则会失去koolshare软件中心 KoolShare固件地址：https://koo]]></description>
+</item><item>
+    <title>nginx全局变量对照表</title>
+    <link>https://www.thy.pub/nginx-global-variable-control-table/</link>
+    <pubDate>Mon, 16 May 2022 14:20:35 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/nginx-global-variable-control-table/</guid>
+    <description><![CDATA[nginx全局变量对照表 变量 含义 remote_addr 客户端ip,如：192.168.4.2 binary_remote_addr 客户端ip（二进制) remote_port 客户端port，如：50472 remote_user 已经经过Au]]></description>
+</item><item>
+    <title>硬盘分区类型标志</title>
+    <link>https://www.thy.pub/hard-disk-partition-type-logo/</link>
+    <pubDate>Fri, 13 May 2022 16:53:43 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/hard-disk-partition-type-logo/</guid>
+    <description><![CDATA[硬盘分区类型标志]]></description>
+</item><item>
+    <title>手动安装tmux</title>
+    <link>https://www.thy.pub/manually-install-tmux/</link>
+    <pubDate>Fri, 22 Apr 2022 10:17:38 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/manually-install-tmux/</guid>
+    <description><![CDATA[手动安装tmux 手动更（4声）新centos 7 下yum安装的版本才到2.3，debain 10下才到2.8，而官方目前已经到了3.2 步骤 1 2 3]]></description>
+</item><item>
+    <title>在WindowsServer2019安装WindowsStore</title>
+    <link>https://www.thy.pub/install-windows-store-in-windows-server-2019/</link>
+    <pubDate>Tue, 29 Mar 2022 16:36:47 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/install-windows-store-in-windows-server-2019/</guid>
+    <description><![CDATA[在Windows Server 2019安装Windows Store Why其实只是为了安装 Snip &amp; Sketch （截图和草图），在Windows下面目前还没有找到能取代它的工具：]]></description>
+</item><item>
+    <title>通过zerotier转发dns解析到openwrt</title>
+    <link>https://www.thy.pub/forward-dns-to-openwrt-through-zerotier/</link>
+    <pubDate>Sun, 27 Mar 2022 22:59:19 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/forward-dns-to-openwrt-through-zerotier/</guid>
+    <description><![CDATA[通过zerotier转发dns解析到openwrt 原因家里的dhcp中已经有了各个设备的静态地址和名称，但在公司没法使用，都要用IP地址。 因]]></description>
+</item></channel>
+</rss>

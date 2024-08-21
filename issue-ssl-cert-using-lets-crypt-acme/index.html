@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>Let&#39;s crypt ACME泛域名证书 - 孤独的长跑者</title><meta name="Description" content="Let&#39;s crypt ACME泛域名证书"><meta property="og:url" content="https://www.thy.pub/issue-ssl-cert-using-lets-crypt-acme/">
+  <meta property="og:site_name" content="孤独的长跑者">
+  <meta property="og:title" content="Let&#39;s crypt ACME泛域名证书">
+  <meta property="og:description" content="Let&#39;s crypt ACME泛域名证书">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-08-08T11:54:10+08:00">
+    <meta property="article:modified_time" content="2020-08-08T11:54:10+08:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Ssl">
+    <meta property="og:image" content="https://www.thy.pub/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.thy.pub/logo.png">
+  <meta name="twitter:title" content="Let&#39;s crypt ACME泛域名证书">
+  <meta name="twitter:description" content="Let&#39;s crypt ACME泛域名证书">
+<meta name="application-name" content="孤独的长跑者">
+<meta name="apple-mobile-web-app-title" content="孤独的长跑者">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.thy.pub/issue-ssl-cert-using-lets-crypt-acme/" /><link rel="prev" href="https://www.thy.pub/yii-composer-incorrect-solution/" /><link rel="next" href="https://www.thy.pub/how-to-handle-billion-rows-in-sqlserver/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript>
+    
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Let's crypt ACME泛域名证书",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.thy.pub\/issue-ssl-cert-using-lets-crypt-acme\/"
+        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Linux, ssl","wordcount":  320 ,
+        "url": "https:\/\/www.thy.pub\/issue-ssl-cert-using-lets-crypt-acme\/","datePublished": "2020-08-08T11:54:10+08:00","dateModified": "2020-08-08T11:54:10+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "chariothy","logo": "https:\/\/www.thy.pub\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "chariothy"
+            },"description": "Let's crypt ACME泛域名证书"
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="选择语言" id="language-select-desktop" onchange="location = this.value;"><option value="/issue-ssl-cert-using-lets-crypt-acme/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="选择语言" onchange="location = this.value;"><option value="/issue-ssl-cert-using-lets-crypt-acme/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装脚本">安装脚本</a></li>
+    <li><a href="#更改默认-ca">更改默认 CA</a></li>
+    <li><a href="#申请证书-会定期自动申请新证书">申请证书 （会定期自动申请新证书）</a></li>
+    <li><a href="#安装证书-会在定期自动申请新证书后自动安装">安装证书 （会在定期自动申请新证书后自动安装）</a></li>
+    <li><a href="#自动更新">自动更新</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Let&#39;s crypt ACME泛域名证书</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-08-08">2020-08-08</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-08-08">2020-08-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 320 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;
+    
+
+    
+        
+
+        
+        
+            <span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读</span>
+        
+    
+
+</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装脚本">安装脚本</a></li>
+    <li><a href="#更改默认-ca">更改默认 CA</a></li>
+    <li><a href="#申请证书-会定期自动申请新证书">申请证书 （会定期自动申请新证书）</a></li>
+    <li><a href="#安装证书-会在定期自动申请新证书后自动安装">安装证书 （会在定期自动申请新证书后自动安装）</a></li>
+    <li><a href="#自动更新">自动更新</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="lets-crypt-使用acme为dnspod泛域名申请证书" class="headerLink">
+    <a href="#lets-crypt-%e4%bd%bf%e7%94%a8acme%e4%b8%badnspod%e6%b3%9b%e5%9f%9f%e5%90%8d%e7%94%b3%e8%af%b7%e8%af%81%e4%b9%a6" class="header-mark"></a>Let&rsquo;s crypt 使用ACME为dnspod泛域名申请证书</h1><p><code>cd ~</code></p>
+<h2 id="安装脚本" class="headerLink">
+    <a href="#%e5%ae%89%e8%a3%85%e8%84%9a%e6%9c%ac" class="header-mark"></a>安装脚本</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">su root #否则后面没有权限重启nginx
+</span></span><span class="line"><span class="cl">curl https://get.acme.sh | sh -s email=chariothy@gmail.com
+</span></span><span class="line"><span class="cl">cd .acme.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="更改默认-ca" class="headerLink">
+    <a href="#%e6%9b%b4%e6%94%b9%e9%bb%98%e8%ae%a4-ca" class="header-mark"></a>更改默认 CA</h2><p>(现在应该不需要了，现在换成了Zerossl)
+<code>./acme.sh --set-default-ca --server letsencrypt</code></p>
+<h2 id="申请证书-会定期自动申请新证书" class="headerLink">
+    <a href="#%e7%94%b3%e8%af%b7%e8%af%81%e4%b9%a6-%e4%bc%9a%e5%ae%9a%e6%9c%9f%e8%87%aa%e5%8a%a8%e7%94%b3%e8%af%b7%e6%96%b0%e8%af%81%e4%b9%a6" class="header-mark"></a>申请证书 （会定期自动申请新证书）</h2><p><code>export DP_Id=&quot;174377&quot;; export DP_Key=&quot;e3a766b6fdf83a1a39dd5caea80daa25&quot;; ./acme.sh --issue --dns dns_dp -d thy.pub -d *.thy.pub</code></p>
+<p>(不能加&ndash;nginx， 因为这是http方式，目前只支持dns方式)</p>
+<h2 id="安装证书-会在定期自动申请新证书后自动安装" class="headerLink">
+    <a href="#%e5%ae%89%e8%a3%85%e8%af%81%e4%b9%a6-%e4%bc%9a%e5%9c%a8%e5%ae%9a%e6%9c%9f%e8%87%aa%e5%8a%a8%e7%94%b3%e8%af%b7%e6%96%b0%e8%af%81%e4%b9%a6%e5%90%8e%e8%87%aa%e5%8a%a8%e5%ae%89%e8%a3%85" class="header-mark"></a>安装证书 （会在定期自动申请新证书后自动安装）</h2><p>apt安装的nginx</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">acme</span><span class="o">.</span><span class="n">sh</span> <span class="o">--</span><span class="n">install</span><span class="o">-</span><span class="n">cert</span> <span class="o">-</span><span class="n">d</span> <span class="n">thy</span><span class="o">.</span><span class="n">pub</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">key</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">cert</span><span class="o">/</span><span class="n">thy</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">key</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">fullchain</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">cert</span><span class="o">/</span><span class="n">thy</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">fullchain</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">cert</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">cert</span><span class="o">/</span><span class="n">thy</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">cert</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">ca</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">cert</span><span class="o">/</span><span class="n">thy</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">ca</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">reloadcmd</span> <span class="s2">&#34;sudo systemctl force-reload nginx&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>docker安装的nginx</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">acme</span><span class="o">.</span><span class="n">sh</span> <span class="o">--</span><span class="n">install</span><span class="o">-</span><span class="n">cert</span> <span class="o">-</span><span class="n">d</span> <span class="n">thy</span><span class="o">.</span><span class="n">pub</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">key</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">cert</span><span class="o">/</span><span class="n">thy</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">key</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">fullchain</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">cert</span><span class="o">/</span><span class="n">thy</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">fullchain</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">cert</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">cert</span><span class="o">/</span><span class="n">thy</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">cert</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">ca</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">cert</span><span class="o">/</span><span class="n">thy</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">ca</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">reloadcmd</span> <span class="s2">&#34;docker restart ng&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果需要彻底重启</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">acme</span><span class="o">.</span><span class="n">sh</span> <span class="o">--</span><span class="n">install</span><span class="o">-</span><span class="n">cert</span> <span class="o">-</span><span class="n">d</span> <span class="n">thy</span><span class="o">.</span><span class="n">pub</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">key</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">cert</span><span class="o">/</span><span class="n">thy</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">key</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">fullchain</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">cert</span><span class="o">/</span><span class="n">thy</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">fullchain</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">cert</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">cert</span><span class="o">/</span><span class="n">thy</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">cert</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">ca</span><span class="o">-</span><span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">cert</span><span class="o">/</span><span class="n">thy</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">ca</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">reloadcmd</span> <span class="s2">&#34;reboot&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="自动更新" class="headerLink">
+    <a href="#%e8%87%aa%e5%8a%a8%e6%9b%b4%e6%96%b0" class="header-mark"></a>自动更新</h2><p><code>.acme.sh/acme.sh  --upgrade  --auto-upgrade</code></p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-08-08</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><button title="分享到 Twitter" data-sharer="twitter" data-url="https://www.thy.pub/issue-ssl-cert-using-lets-crypt-acme/" data-title="Let&#39;s crypt ACME泛域名证书" data-hashtags="Linux,ssl"><span class="fab fa-twitter fa-fw"></span></button><button title="分享到 Facebook" data-sharer="facebook" data-url="https://www.thy.pub/issue-ssl-cert-using-lets-crypt-acme/" data-hashtag="Linux"><span class="fab fa-facebook-square fa-fw"></span></button><button title="分享到 微博" data-sharer="weibo" data-url="https://www.thy.pub/issue-ssl-cert-using-lets-crypt-acme/" data-title="Let&#39;s crypt ACME泛域名证书"><span class="fab fa-weibo fa-fw"></span></button><button title="分享到 百度" data-sharer="baidu" data-url="https://www.thy.pub/issue-ssl-cert-using-lets-crypt-acme/" data-title="Let&#39;s crypt ACME泛域名证书"><span data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@v5.21.1/icons/baidu.svg"></span></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/ssl/">Ssl</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/yii-composer-incorrect-solution/" class="prev" rel="prev" title="Yii Composer不正确的解决方法"><i class="fas fa-angle-left fa-fw"></i>Yii Composer不正确的解决方法</a>
+            <a href="/how-to-handle-billion-rows-in-sqlserver/" class="next" rel="next" title="如何在SQLServer中处理亿万级别的数据(历史数据)">如何在SQLServer中处理亿万级别的数据(历史数据)<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line"><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> • <span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span>人次</span></div><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.129.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">chariothy</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    
+        
+        <script async src=" //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+    
+
+    
+        
+            <section>
+                
+                    <span id="busuanzi_container_value_site_pv"><i class="far fa-eye fa-fw"></i>
+                        
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+
+                
+                    &nbsp;|&nbsp;              
+                
+
+                
+                    <span id="busuanzi_container_value_site_uv"><i class="fa fa-user"></i>
+                        
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+            </section>
+        
+
+        
+        
+    
+
+</div><script>
+                    if('serviceWorker' in navigator) {
+                        navigator.serviceWorker
+                            .register('/sw.min.js', { scope: '/' })
+                            .then(function(registration) {
+                            });
+                
+                        navigator.serviceWorker
+                            .ready
+                            .then(function(registration) {
+                            });
+                    }
+                </script></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["chariothy"],"clientID":"0e48b6595a9725cd9cf9","clientSecret":"d9ee702d2cbedaecf2693bee849b867325b990b1","id":"2020-08-08T11:54:10+08:00","owner":"chariothy","repo":"chariothy.github.io","title":"Let's crypt ACME泛域名证书"}},"data":{"desktop-header-typeit":"孤独的长跑者","mobile-header-typeit":"孤独的长跑者"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.2/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?fbbcc12eba9fd250dabc045b58df3809";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script></div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Ssl - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/ssl/</link>
+        <description>Ssl - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 08 Oct 2020 10:54:10 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/ssl/" rel="self" type="application/rss+xml" /><item>
+    <title>pve acme部署Let&#39;s crypt证书</title>
+    <link>https://www.thy.pub/issue-ssl-cert-using-acme-on-pve/</link>
+    <pubDate>Thu, 08 Oct 2020 10:54:10 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/issue-ssl-cert-using-acme-on-pve/</guid>
+    <description><![CDATA[PVE acme部署Let&rsquo;s crypt证书cd ~ 安装脚本curl https://get.acme.sh | sh cd .acme.sh 申请证书 （会定期自动申请新证书）export DP_Id=&quot;174377&quot;; export DP_Key=&quot;e3a766b6fdf83a1a39dd5caea80daa25&quot;; ./acme.sh --issue --dns dns_dp]]></description>
+</item><item>
+    <title>Let&#39;s crypt ACME泛域名证书</title>
+    <link>https://www.thy.pub/issue-ssl-cert-using-lets-crypt-acme/</link>
+    <pubDate>Sat, 08 Aug 2020 11:54:10 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/issue-ssl-cert-using-lets-crypt-acme/</guid>
+    <description><![CDATA[Let&rsquo;s crypt 使用ACME为dnspod泛域名申请证书cd ~ 安装脚本 1 2 3 su root #否则后面没有权限重启nginx curl https://get.acme.sh | sh -s email=chariothy@gmail.com cd .acme.sh 更改默认 CA(现在应该不]]></description>
+</item></channel>
+</rss>

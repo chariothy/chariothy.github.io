@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Linux Disk - 标签 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/tags/linux-disk/</link>
+        <description>Linux Disk - 标签 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 25 Apr 2024 19:17:19 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/linux-disk/" rel="self" type="application/rss+xml" /><item>
+    <title>挂载raid1的其中一块盘</title>
+    <link>https://www.thy.pub/mount-one-disk-of-raid1/</link>
+    <pubDate>Thu, 25 Apr 2024 19:17:19 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/mount-one-disk-of-raid1/</guid>
+    <description><![CDATA[挂载raid1的其中一块盘直接挂载会报错 sudo mount /dev/sdf3 /volume1/sync/old mount: /volume1/sync/old: unknown filesystem type &rsquo;linux_raid_member'. 需要先组装成软raid1 sudo mdadm --assemble --run /dev/md6 /dev/sdf3 然后再挂载软raid1 sudo mount /dev/md6 /volume1/sync/old]]></description>
+</item></channel>
+</rss>
