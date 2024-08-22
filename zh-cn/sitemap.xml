@@ -39,11 +39,11 @@
             <loc>https://www.thy.pub/tags/%E4%BB%A3%E7%90%86/</loc><lastmod>2024-08-09T10:28:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://www.thy.pub/tags/%E7%BE%A4%E6%99%96/</loc><lastmod>2024-08-08T19:36:02&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://www.thy.pub/synology-dsm-nas-crontab/</loc><lastmod>2024-08-08T19:36:02&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://www.thy.pub/openwrt-config-lan-multi-ip/</loc><lastmod>2024-07-31T23:31:24&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://www.thy.pub/tags/%E7%BD%91%E5%8F%A3/</loc><lastmod>2024-07-31T23:31:24&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://www.thy.pub/openwrt-compile-usb-share-network-android/</loc><lastmod>2024-07-31T23:00:10&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://www.thy.pub/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</loc><lastmod>2024-07-31T22:07:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://www.thy.pub/raspberry-3b-openwrt/</loc><lastmod>2024-07-31T22:07:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://www.thy.pub/openwrt-config-lan-multi-ip/</loc><lastmod>2024-07-31T23:31:24&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://www.thy.pub/tags/%E7%BD%91%E5%8F%A3/</loc><lastmod>2024-07-31T23:31:24&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://www.thy.pub/openwrt-compile-usb-share-network-android/</loc><lastmod>2024-07-31T23:00:10&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://www.thy.pub/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</loc><lastmod>2024-07-31T22:07:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://www.thy.pub/raspberry-3b-openwrt/</loc><lastmod>2024-07-31T22:07:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://www.thy.pub/categories/it%E5%A4%87%E5%BF%98/</loc><lastmod>2024-05-07T20:16:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/tplink-ap-connot-connect/</loc><lastmod>2024-05-07T20:16:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/tags/%E7%BD%91%E7%BB%9C/</loc><lastmod>2024-05-07T20:16:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -55,6 +55,8 @@
             <loc>https://www.thy.pub/no-power-management-option-for-the-wi-n11-wireless-card/</loc><lastmod>2024-04-10T13:55:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/tags/windows-%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1/</loc><lastmod>2024-04-10T13:55:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/openwrt-compile/</loc><lastmod>2024-04-07T09:17:52&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.thy.pub/openwrt-menuconfig-bcm2710/</loc><lastmod>2024-04-07T09:17:52&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.thy.pub/tags/%E6%A0%91%E8%8E%93%E6%B4%BE3b&#43;/</loc><lastmod>2024-04-07T09:17:52&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/openwrt-feeds/</loc><lastmod>2024-04-07T09:06:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/tags/pve/</loc><lastmod>2024-04-05T00:16:10&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/pve-enables-sr-iov/</loc><lastmod>2024-04-05T00:16:10&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -97,6 +99,7 @@
             <loc>https://www.thy.pub/forward-dns-to-openwrt-through-zerotier/</loc><lastmod>2022-03-27T22:59:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/shenzhou-netcom-government-edition-win10-settings/</loc><lastmod>2022-03-23T11:07:24&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/openwrt-compile/</loc><lastmod>2022-03-17T12:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.thy.pub/openwrt-menuconfig-x86/</loc><lastmod>2022-03-17T12:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/tags/zfs/</loc><lastmod>2022-03-13T23:35:33&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/zfs-mirror-replace-damaged-hard-drive/</loc><lastmod>2022-03-13T23:35:33&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/tags/database/</loc><lastmod>2022-03-04T12:28:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -116,6 +119,8 @@
             <loc>https://www.thy.pub/auto-invest-by-assessment/</loc><lastmod>2021-12-15T12:35:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/tags/%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2/</loc><lastmod>2021-12-15T12:35:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/categories/%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2/</loc><lastmod>2021-12-15T12:35:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.thy.pub/tags/%E6%9C%BA%E5%9C%BA/</loc><lastmod>2021-12-15T10:19:05&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.thy.pub/proxy-experience/</loc><lastmod>2021-12-15T10:19:05&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/tags/excel/</loc><lastmod>2021-10-11T11:22:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/excelcnv-parameters/</loc><lastmod>2021-10-11T11:22:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/p1106-manually-dual-print/</loc><lastmod>2021-08-17T11:14:04&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -223,4 +228,6 @@
                     hreflang="zh-cn"
                     href="https://www.thy.pub/series/"
                     /></url><url>
-            <loc>https://www.thy.pub/about/</loc><lastmod>2022-02-15T18:43:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>https://www.thy.pub/about/</loc><lastmod>2022-02-15T18:43:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.thy.pub/tags/%E4%BA%91%E4%B8%BB%E6%9C%BA-vps/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.thy.pub/vps-experience/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

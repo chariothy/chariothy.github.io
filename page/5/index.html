@@ -140,6 +140,20 @@
         alt="/images/profile.jpg"
         title="/images/profile.jpg" height="100"   width="100" ></a></div><h1 class="home-title">欢迎来到我的博客</h1><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/chariothy" title="GitHub" target="_blank" rel="noopener noreferrer me"><span class="fab fa-github-alt fa-fw"></span></a><a href="mailto:chariothy@gmail.com" title="Email" rel=" me"><span class="far fa-envelope fa-fw"></span></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreferrer me"><span class="fas fa-rss fa-fw"></span></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/openwrt-compile/">openwrt-x86-compile</a>
+    </h1><div class="post-meta">
+        <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-03-17">2022-03-17</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a>&nbsp;<a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>Linux</a></span></div><div class="content">openwrt-compile 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 #!/bin/bash proj=immortalwrt home=/home/henry ver=openwrt-23.05 nasdir=henry@10.8.0.2:/volume1/pve/images system=x86 target=64 profile=generic bindir=$home/$proj/bin/targets/$system/$target combined=$proj-$system-$target-$profile-squashfs-combined-efi timestamp=$(date +&#34;%Y%m%d&#34;) ## For the first time compile #git clone -b $ver --single-branch --filter=blob:none https://github.com/immortalwrt/immortalwrt cd</div><div class="post-footer">
+        <a href="/openwrt-compile/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/openwrt/">Openwrt</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/openwrt-menuconfig-x86/">openwrt-x86-menuconfig</a>
+    </h1><div class="post-meta">
+        <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-03-17">2022-03-17</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">openwrt-menuconfig 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69</div><div class="post-footer">
+        <a href="/openwrt-menuconfig-x86/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/openwrt/">Openwrt</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/zfs-mirror-replace-damaged-hard-drive/">zfs-mirror更换损坏的硬盘</a>
     </h1><div class="post-meta">
         <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
@@ -181,20 +195,6 @@
         </span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-02-15">2022-02-15</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">hugo和vscode结合写博客 博客的事情说来话长 其实我挺懒的，可活久了总有些东西要记下来，大致经历了这些过程 Everest，用了挺久的时间</div><div class="post-footer">
         <a href="/combine-hugo-with-vscode/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/git/">Git</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/config-debain-from-minimal/">Debian最小化安装新系统配置</a>
-    </h1><div class="post-meta">
-        <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
-        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-01-15">2022-01-15</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">Debian最小化安装新系统配置 （以debian 12为例）su root 替换源 1 2 3 4 5 6 7 8 9 10 11 12 13 14 cd /etc/apt mv sources.list sources.list.bak cat &gt; sources.list &lt;&lt;EOF deb https://mirrors.ustc.edu.cn/debian/ bookworm main contrib non-free non-free-firmware deb-src https://mirrors.ustc.edu.cn/debian/ bookworm main contrib</div><div class="post-footer">
-        <a href="/config-debain-from-minimal/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/debian/">Debian</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/update-debian10-to-debian11/">debian10升级debian11</a>
-    </h1><div class="post-meta">
-        <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
-        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-01-10">2022-01-10</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">debian10升级debian11 更新现有软件包apt update &amp;&amp; apt upgrade -y 删除未使用的依赖项：apt --purge autoremove 检查安装的包的一致性（正常情况下无输出）dp</div><div class="post-footer">
-        <a href="/update-debian10-to-debian11/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/debian/">Debian</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

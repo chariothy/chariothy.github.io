@@ -19,6 +19,13 @@
     </author><guid>https://www.thy.pub/openwrt-compile/</guid>
     <description><![CDATA[openwrt-compile 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 #!/bin/bash proj=immortalwrt home=/home/henry ver=openwrt-23.05 nasdir=henry@10.8.0.2:/volume1/pve/images system=bcm27xx target=bcm2710 profile=rpi-3 bindir=$home/$proj/bin/targets/$system/$target factory=$proj-$system-$target-$profile-squashfs-factory sysupgrade=$proj-$system-$target-$profile-squashfs-sysupgrade timestamp=$(date +&#34;%Y%m%d&#34;) ## For the first time compile #git clone -b $ver --single-branch --filter=blob:none]]></description>
 </item><item>
+    <title>openwrt-BCM2710-menuconfig</title>
+    <link>https://www.thy.pub/openwrt-menuconfig-bcm2710/</link>
+    <pubDate>Sun, 07 Apr 2024 09:17:52 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-menuconfig-bcm2710/</guid>
+    <description><![CDATA[openwrt-menuconfig 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 Target system - BCM27XX Subtarget - BCM2710 Target]]></description>
+</item><item>
     <title>github问题</title>
     <link>https://www.thy.pub/github-issues/</link>
     <pubDate>Thu, 21 Dec 2023 15:17:02 &#43;0800</pubDate><author>
@@ -67,12 +74,5 @@
         <name>chariothy</name>
     </author><guid>https://www.thy.pub/install-windows-store-in-windows-server-2019/</guid>
     <description><![CDATA[在Windows Server 2019安装Windows Store Why其实只是为了安装 Snip &amp; Sketch （截图和草图），在Windows下面目前还没有找到能取代它的工具：]]></description>
-</item><item>
-    <title>通过zerotier转发dns解析到openwrt</title>
-    <link>https://www.thy.pub/forward-dns-to-openwrt-through-zerotier/</link>
-    <pubDate>Sun, 27 Mar 2022 22:59:19 &#43;0800</pubDate><author>
-        <name>chariothy</name>
-    </author><guid>https://www.thy.pub/forward-dns-to-openwrt-through-zerotier/</guid>
-    <description><![CDATA[通过zerotier转发dns解析到openwrt 原因家里的dhcp中已经有了各个设备的静态地址和名称，但在公司没法使用，都要用IP地址。 因]]></description>
 </item></channel>
 </rss>

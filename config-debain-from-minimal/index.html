@@ -416,7 +416,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">smtp.163.com:15050506668@163.com:plain-password 	# 它的结构为&lt;163的SMTP服务器地址&gt;:&lt;发件人邮箱地址&gt;:&lt;邮箱授权码&gt;
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">smtp.163.com:phone@163.com:plain-password 	# 它的结构为&lt;163的SMTP服务器地址&gt;:&lt;发件人邮箱地址&gt;:&lt;邮箱授权码&gt;
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="配置etcemail-addresses" class="headerLink">
@@ -426,8 +426,8 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root: 15050506668@163.com			# 否则系统会告诉你发件人帐号与发件人不符合
-</span></span><span class="line"><span class="cl">henry: 15050506668@163.com
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root: phone@163.com			# 否则系统会告诉你发件人帐号与发件人不符合
+</span></span><span class="line"><span class="cl">henry: phone@163.com
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>systemctl restart exim4.service</code></p>
@@ -474,10 +474,10 @@
 </span></span><span class="line"><span class="cl">certutil -L -d /etc/pki/nssdb/
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">cat &gt;&gt; /etc/mail.rc &lt;&lt;EOF
-</span></span><span class="line"><span class="cl">set from=15050506668@163.com
+</span></span><span class="line"><span class="cl">set from=phone@163.com
 </span></span><span class="line"><span class="cl">set smtp=smtps://smtp.163.com:465
-</span></span><span class="line"><span class="cl">set smtp-auth-user=15050506668@163.com
-</span></span><span class="line"><span class="cl">set smtp-auth-password=Jlj770808
+</span></span><span class="line"><span class="cl">set smtp-auth-user=phone@163.com
+</span></span><span class="line"><span class="cl">set smtp-auth-password=password
 </span></span><span class="line"><span class="cl">set smtp-auth=login
 </span></span><span class="line"><span class="cl">set ssl-verify=ignore
 </span></span><span class="line"><span class="cl">set nss-config-dir=/etc/pki/nssdb

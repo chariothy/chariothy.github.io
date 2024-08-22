@@ -140,6 +140,27 @@
         alt="/images/profile.jpg"
         title="/images/profile.jpg" height="100"   width="100" ></a></div><h1 class="home-title">欢迎来到我的博客</h1><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/chariothy" title="GitHub" target="_blank" rel="noopener noreferrer me"><span class="fab fa-github-alt fa-fw"></span></a><a href="mailto:chariothy@gmail.com" title="Email" rel=" me"><span class="far fa-envelope fa-fw"></span></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreferrer me"><span class="fas fa-rss fa-fw"></span></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/zsh-config-remark/">zsh配置</a>
+    </h1><div class="post-meta">
+        <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-01-11">2021-01-11</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">ZSH 配置 安装zshsudo apt install zsh 或者 sudo yum install zsh 安装oh-my-zshwget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh 手动安装插件 1 2 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 运行 zsh 激活 zsh插件管理 安</div><div class="post-footer">
+        <a href="/zsh-config-remark/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/zsh/">Zsh</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/bypass-ups-pve-dsm/">UPS直通DSM并通知QNAP与PVE</a>
+    </h1><div class="post-meta">
+        <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-01-11">2021-01-11</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">UPS直通DSM并通知QNAP与PVE PVE: DSM QNAP PVE -&gt; CONSOLE 1 2 3 4 apt install nut -y nano /etc/nut/nut.conf MODE=netclient nano /etc/nut/upsmon.conf 在MONITOR小节加入 1 MONITOR ups@10.8.0.2 1 upsmon pass slave systemctl start nut-client &amp;&amp; systemctl enable nut-client upsc ups@10.8.0.2 # 应该显</div><div class="post-footer">
+        <a href="/bypass-ups-pve-dsm/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/pve/">PVE</a>,&nbsp;<a href="/tags/dsm/">Dsm</a>,&nbsp;<a href="/tags/ups/">Ups</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/config-alpine-on-lxc-from-minimal/">LXC容器Alpine新系统配置</a>
+    </h1><div class="post-meta">
+        <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-01-10">2021-01-10</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">LXC容器Alpine新系统配置 （以alpine 12为例） 替换源sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories apk update &amp;&amp; apk upgrade 安装scpapk add openssh-client 安装时区设置apk add tzdata 复制上海时区</div><div class="post-footer">
+        <a href="/config-alpine-on-lxc-from-minimal/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/alpine/">Alpine</a>,&nbsp;<a href="/tags/lxc/">Lxc</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/ecs-being-hacked/">阿里云ECS变yam肉鸡处理过程</a>
     </h1><div class="post-meta">
         <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
@@ -174,27 +195,6 @@
         </span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-11-15">2020-11-15</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">debian安装dockersudo apt-get update https 1 2 3 4 5 6 sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ gnupg2 \ software-properties-common 官方keycurl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add - 查看sudo apt-key fingerprint 0EBFCD88 设置源 1 2</div><div class="post-footer">
         <a href="/install-docker-on-debian/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/debian/">Debian</a>,&nbsp;<a href="/tags/docker/">Docker</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/migrate-data-of-docker/">docker迁移数据目录</a>
-    </h1><div class="post-meta">
-        <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
-        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-11-13">2020-11-13</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">docker迁移数据目录 Docker的数据目录在/var/lib/docker下，往往需要大量空间，迁移过程：sudo mkdir /home/docker sudo rsync -aP /var/lib/docker/ /home/docker sudo nano /etc/docker/daemon.json 1</div><div class="post-footer">
-        <a href="/migrate-data-of-docker/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/docker/">Docker</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/install-openwrt-on-esxi/">Esxi安装OpenWrt</a>
-    </h1><div class="post-meta">
-        <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
-        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-11-11">2020-11-11</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">Esxi安装openwrt 备份配置 编译OpenWrt 复制、转换镜像```bash cd ~/lede-master/bin/targets/x86/64/ scp ./openwrt-x86-64-generic-squashfs-combined-efi.vmdk root@10.88.8.6:/vmfs/volumes/5bf77725-a7c09212-6981-d4ae529aa1d7/os/ ssh root@10.88.8.6 cd /vmfs/volumes/5bf77725-a7c09212-6981-d4ae529aa1d7/os/ # 转换thin模式 vmkfstools -i openwrt-x86-64-generic-squashfs-combined-efi.vmdk openwrt-`date +%Y%m%d`-thin.vmdk -d thin # 扩容（主</div><div class="post-footer">
-        <a href="/install-openwrt-on-esxi/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/openwrt/">Openwrt</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/corolla-bulb-specification/">花冠EX全车灯泡规格总结</a>
-    </h1><div class="post-meta">
-        <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
-        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-10-17">2020-10-17</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"><i class="far fa-folder fa-fw"></i>生活随笔</a></span></div><div class="content">花冠EX全车灯泡规格总结 位置 型号 功率 备注 近光灯 9006 或HB4 55W 远光灯 9005或HB3 60W 前雾灯 H3 55W 示宽灯&lt;小火&gt; W5W 5W 无色泡 前转向灯 PY21W 21W</div><div class="post-footer">
-        <a href="/corolla-bulb-specification/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E8%8A%B1%E5%86%A0/">花冠</a>,&nbsp;<a href="/tags/%E6%B1%BD%E8%BD%A6/">汽车</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

@@ -40,12 +40,19 @@
     </author><guid>https://www.thy.pub/openwrt-compile/</guid>
     <description><![CDATA[openwrt-compile 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 #!/bin/bash proj=immortalwrt home=/home/henry ver=openwrt-23.05 nasdir=henry@10.8.0.2:/volume1/pve/images system=bcm27xx target=bcm2710 profile=rpi-3 bindir=$home/$proj/bin/targets/$system/$target factory=$proj-$system-$target-$profile-squashfs-factory sysupgrade=$proj-$system-$target-$profile-squashfs-sysupgrade timestamp=$(date +&#34;%Y%m%d&#34;) ## For the first time compile #git clone -b $ver --single-branch --filter=blob:none]]></description>
 </item><item>
+    <title>openwrt-BCM2710-menuconfig</title>
+    <link>https://www.thy.pub/openwrt-menuconfig-bcm2710/</link>
+    <pubDate>Sun, 07 Apr 2024 09:17:52 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-menuconfig-bcm2710/</guid>
+    <description><![CDATA[openwrt-menuconfig 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 Target system - BCM27XX Subtarget - BCM2710 Target]]></description>
+</item><item>
     <title>openwrt-feeds</title>
     <link>https://www.thy.pub/openwrt-feeds/</link>
     <pubDate>Sun, 07 Apr 2024 09:06:15 &#43;0800</pubDate><author>
         <name>chariothy</name>
     </author><guid>https://www.thy.pub/openwrt-feeds/</guid>
-    <description><![CDATA[-penwrt-feedssrc-git packages https://github.com/coolsnowwolf/packages src-git luci https://github.com/coolsnowwolf/luci src-git routing https://git.openwrt.org/feed/routing.git src-git telephony https://git.openwrt.org/feed/telephony.git src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main]]></description>
+    <description><![CDATA[openwrt-feeds 1 2 3 4 5 6 src-git packages https://github.com/coolsnowwolf/packages src-git luci https://github.com/coolsnowwolf/luci src-git routing https://git.openwrt.org/feed/routing.git src-git telephony https://git.openwrt.org/feed/telephony.git src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main]]></description>
 </item><item>
     <title>PVE-OPENWRT-VLAN组网</title>
     <link>https://www.thy.pub/pve-openwrt-vlan-dual-wan/</link>
@@ -67,12 +74,5 @@
         <name>chariothy</name>
     </author><guid>https://www.thy.pub/openwrt-compile/</guid>
     <description><![CDATA[openwrt-compile 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 #!/bin/bash proj=immortalwrt home=/home/henry ver=openwrt-23.05 nasdir=henry@10.8.0.2:/volume1/pve/images system=x86 target=64 profile=generic bindir=$home/$proj/bin/targets/$system/$target combined=$proj-$system-$target-$profile-squashfs-combined-efi timestamp=$(date +&#34;%Y%m%d&#34;) ## For the first time compile #git clone -b $ver --single-branch --filter=blob:none https://github.com/immortalwrt/immortalwrt cd]]></description>
-</item><item>
-    <title>openwrt配置迁移备忘</title>
-    <link>https://www.thy.pub/migrate-config-to-new-openwrt-image/</link>
-    <pubDate>Mon, 10 Jan 2022 11:02:09 &#43;0800</pubDate><author>
-        <name>chariothy</name>
-    </author><guid>https://www.thy.pub/migrate-config-to-new-openwrt-image/</guid>
-    <description><![CDATA[openwrt配置迁移备忘 优先使用恢复配置的方法，如果无法启动再尝试下面的方法 具体步骤 将openwrt的配置文件下载 将openwrt的网络接]]></description>
 </item></channel>
 </rss>

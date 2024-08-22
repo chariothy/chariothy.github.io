@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>openwrt-x86-menuconfig - 孤独的长跑者</title><meta name="Description" content="openwrt-x86-menuconfig"><meta property="og:url" content="https://www.thy.pub/openwrt-menuconfig-x86/">
+  <meta property="og:site_name" content="孤独的长跑者">
+  <meta property="og:title" content="openwrt-x86-menuconfig">
+  <meta property="og:description" content="openwrt-x86-menuconfig">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-03-17T12:14:15+08:00">
+    <meta property="article:modified_time" content="2022-03-17T12:14:15+08:00">
+    <meta property="article:tag" content="Openwrt">
+    <meta property="og:image" content="https://www.thy.pub/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.thy.pub/logo.png">
+  <meta name="twitter:title" content="openwrt-x86-menuconfig">
+  <meta name="twitter:description" content="openwrt-x86-menuconfig">
+<meta name="application-name" content="孤独的长跑者">
+<meta name="apple-mobile-web-app-title" content="孤独的长跑者">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.thy.pub/openwrt-menuconfig-x86/" /><link rel="prev" href="https://www.thy.pub/zfs-mirror-replace-damaged-hard-drive/" /><link rel="next" href="https://www.thy.pub/openwrt-compile/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript>
+    
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "openwrt-x86-menuconfig",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.thy.pub\/openwrt-menuconfig-x86\/"
+        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "openwrt","wordcount":  469 ,
+        "url": "https:\/\/www.thy.pub\/openwrt-menuconfig-x86\/","datePublished": "2022-03-17T12:14:15+08:00","dateModified": "2022-03-17T12:14:15+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "chariothy","logo": "https:\/\/www.thy.pub\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "chariothy"
+            },"description": "openwrt-x86-menuconfig"
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="选择语言" id="language-select-desktop" onchange="location = this.value;"><option value="/openwrt-menuconfig-x86/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="孤独的长跑者"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/chariothy" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="选择语言" onchange="location = this.value;"><option value="/openwrt-menuconfig-x86/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents"></nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">openwrt-x86-menuconfig</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-17">2022-03-17</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-03-17">2022-03-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 469 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;
+    
+
+    
+        
+
+        
+        
+            <span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读</span>
+        
+    
+
+</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><h1 id="openwrt-menuconfig" class="headerLink">
+    <a href="#openwrt-menuconfig" class="header-mark"></a>openwrt-menuconfig</h1><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">Target</span> <span class="n">system</span> 	<span class="o">-</span> <span class="n">x84</span>
+</span></span><span class="line"><span class="cl"><span class="n">Subtarget</span>		<span class="o">-</span> <span class="n">x86_64</span>
+</span></span><span class="line"><span class="cl"><span class="n">Target</span> <span class="n">profile</span>	<span class="o">-</span> <span class="n">x86</span><span class="o">/</span><span class="mi">64</span>
+</span></span><span class="line"><span class="cl"><span class="n">Target</span> <span class="n">images</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">squashfs</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">grub</span><span class="o">-</span><span class="n">efi</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">console</span> <span class="n">terminal</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="mi">3</span> <span class="n">sec</span> <span class="n">to</span> <span class="n">wait</span> <span class="n">boot</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">kvm</span> <span class="o">/</span> <span class="n">qcow2</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">kernal</span> <span class="mi">512</span> <span class="n">MB</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">root</span> <span class="mi">1024</span> <span class="n">MB</span>
+</span></span><span class="line"><span class="cl"><span class="n">Kernal</span> <span class="n">modules</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">USB</span> <span class="n">Support</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">kmod</span><span class="o">-</span><span class="n">usb</span><span class="o">-</span><span class="n">net</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">kmod</span><span class="o">-</span><span class="n">usb</span><span class="o">-</span><span class="n">net</span><span class="o">-</span><span class="n">cdc</span><span class="o">-</span><span class="n">ether</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">kmod</span><span class="o">-</span><span class="n">usb</span><span class="o">-</span><span class="n">net</span><span class="o">-</span><span class="n">rndis</span>  <span class="c1">#手机热点usb共享Modem拨号</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">virtualization</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">iommu</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">kvm</span> <span class="n">intel</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">vhost</span><span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="n">LUCI</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">application</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">accesscontrol</span> <span class="err">访问时间控制</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">autoreboot</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">ahcp</span><span class="err">：自动配置</span><span class="n">IPv6</span><span class="err">，</span><span class="n">IPv4v6双栈</span><span class="err">；用于路由探测与地址分配</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">argon</span> <span class="n">config</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">attendedsysupgrade</span> <span class="err">系统更新</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">banip</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">commands</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="c1">#cshark：Cloud Shark，数据流抓取工具套件</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">ddns</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">nut</span> <span class="p">(</span><span class="n">network</span> <span class="n">ups</span> <span class="k">tool</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="c1">#diag-core：诊断工具套件，执行ping，扫描等，视安装的工具套件而定</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="c1">#DNSCrypt-Proxy：将特定于 DNSCrypt-Proxy 的设置应用到 Dnsmasq 配置</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">passwall</span> <span class="err">（</span><span class="n">trojan</span><span class="o">-</span><span class="n">plus如果有gsl编译错误一般是因为git</span> <span class="n">clone出错</span><span class="err">，多试几次即可）</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">privoxy</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">pushbot</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">smartdns</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">socat</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">ssr</span><span class="o">-</span><span class="n">plus</span> <span class="p">(</span><span class="err">加</span><span class="n">trojan</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">timecontrol</span> <span class="err">?</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">timewol</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">tiny</span> <span class="n">proxy</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">ttyd</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="c1">#transmission</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">turbo</span> <span class="n">acc</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">udp2raw</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">upnp</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">vlmcsd</span> <span class="p">(</span><span class="n">KMS</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">watchcat</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">wol</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">wrtbwmon</span> <span class="p">(</span><span class="n">Realtime</span> <span class="n">monitor</span> <span class="n">traffic</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">zerotier</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">themes</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">argon</span>
+</span></span><span class="line"><span class="cl"><span class="n">Utilities</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">Editors</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">nano</span><span class="o">-</span><span class="n">full</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">usbutils</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">virtualization</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">qemu</span><span class="o">-</span><span class="n">efi</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">qemu</span><span class="o">-</span><span class="n">ga</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">qemu</span><span class="o">-</span><span class="n">img</span>
+</span></span><span class="line"><span class="cl"><span class="n">Extra</span> <span class="n">packages</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">ipv6helper</span>
+</span></span><span class="line"><span class="cl"><span class="n">Base</span> <span class="n">system</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">dnsmasq</span><span class="o">-</span><span class="n">full</span>
+</span></span><span class="line"><span class="cl"><span class="n">Networt</span> 
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">Ip</span> <span class="n">addresses</span> <span class="ow">and</span> <span class="n">names</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">ddns</span><span class="o">-</span><span class="n">scripts</span><span class="o">-</span><span class="n">dnspod</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">Web</span> <span class="n">Servers</span><span class="o">/</span><span class="n">Proxies</span> <span class="p">(</span><span class="err">?</span> <span class="err">会导致包较大</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">nginx</span><span class="o">-</span><span class="n">full</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">nginx</span><span class="o">-</span><span class="n">ssl</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-03-17</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><button title="分享到 Twitter" data-sharer="twitter" data-url="https://www.thy.pub/openwrt-menuconfig-x86/" data-title="openwrt-x86-menuconfig" data-hashtags="openwrt"><span class="fab fa-twitter fa-fw"></span></button><button title="分享到 Facebook" data-sharer="facebook" data-url="https://www.thy.pub/openwrt-menuconfig-x86/" data-hashtag="openwrt"><span class="fab fa-facebook-square fa-fw"></span></button><button title="分享到 微博" data-sharer="weibo" data-url="https://www.thy.pub/openwrt-menuconfig-x86/" data-title="openwrt-x86-menuconfig"><span class="fab fa-weibo fa-fw"></span></button><button title="分享到 百度" data-sharer="baidu" data-url="https://www.thy.pub/openwrt-menuconfig-x86/" data-title="openwrt-x86-menuconfig"><span data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@v5.21.1/icons/baidu.svg"></span></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/openwrt/">Openwrt</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/zfs-mirror-replace-damaged-hard-drive/" class="prev" rel="prev" title="zfs-mirror更换损坏的硬盘"><i class="fas fa-angle-left fa-fw"></i>zfs-mirror更换损坏的硬盘</a>
+            <a href="/openwrt-compile/" class="next" rel="next" title="openwrt-x86-compile">openwrt-x86-compile<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line"><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> • <span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span>人次</span></div><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.129.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">chariothy</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    
+        
+        <script async src=" //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+    
+
+    
+        
+            <section>
+                
+                    <span id="busuanzi_container_value_site_pv"><i class="far fa-eye fa-fw"></i>
+                        
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+
+                
+                    &nbsp;|&nbsp;              
+                
+
+                
+                    <span id="busuanzi_container_value_site_uv"><i class="fa fa-user"></i>
+                        
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+            </section>
+        
+
+        
+        
+    
+
+</div><script>
+                    if('serviceWorker' in navigator) {
+                        navigator.serviceWorker
+                            .register('/sw.min.js', { scope: '/' })
+                            .then(function(registration) {
+                            });
+                
+                        navigator.serviceWorker
+                            .ready
+                            .then(function(registration) {
+                            });
+                    }
+                </script></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["chariothy"],"clientID":"0e48b6595a9725cd9cf9","clientSecret":"d9ee702d2cbedaecf2693bee849b867325b990b1","id":"2022-03-17T12:14:15+08:00","owner":"chariothy","repo":"chariothy.github.io","title":"openwrt-x86-menuconfig"}},"data":{"desktop-header-typeit":"孤独的长跑者","mobile-header-typeit":"孤独的长跑者"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.2/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?fbbcc12eba9fd250dabc045b58df3809";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script></div>
+</body>
+
+</html>
