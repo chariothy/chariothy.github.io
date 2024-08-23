@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://www.thy.pub/categories/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
+            <loc>https://www.thy.pub/categories/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://www.thy.pub/en/categories/"
@@ -11,11 +11,11 @@
                     hreflang="zh-cn"
                     href="https://www.thy.pub/categories/"
                     /></url><url>
-            <loc>https://www.thy.pub/categories/linux/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://www.thy.pub/tags/openwrt/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://www.thy.pub/openwrt-privoxy-http-proxy-from-socks5/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://www.thy.pub/posts/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://www.thy.pub/tags/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
+            <loc>https://www.thy.pub/categories/linux/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://www.thy.pub/tags/openwrt/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://www.thy.pub/openwrt-privoxy-http-proxy-from-socks5/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://www.thy.pub/posts/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://www.thy.pub/tags/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://www.thy.pub/en/tags/"
@@ -24,7 +24,7 @@
                     hreflang="zh-cn"
                     href="https://www.thy.pub/tags/"
                     /></url><url>
-            <loc>https://www.thy.pub/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
+            <loc>https://www.thy.pub/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://www.thy.pub/en/"
