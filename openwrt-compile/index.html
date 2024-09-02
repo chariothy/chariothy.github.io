@@ -44,7 +44,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.thy.pub\/openwrt-compile\/"
-        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "openwrt","wordcount":  279 ,
+        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "openwrt","wordcount":  286 ,
         "url": "https:\/\/www.thy.pub\/openwrt-compile\/","datePublished": "2022-03-17T12:14:15+08:00","dateModified": "2022-03-17T12:14:15+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "chariothy","logo": "https:\/\/www.thy.pub\/images\/avatar.png"},"author": {
@@ -148,7 +148,7 @@
             <div class="post-meta-line">
                 <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a>&nbsp;<a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>Linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-17">2022-03-17</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-03-17">2022-03-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 279 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-17">2022-03-17</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-03-17">2022-03-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 286 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;
     
 
     
@@ -215,6 +215,8 @@
 </span><span class="lnt">41
 </span><span class="lnt">42
 </span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
@@ -243,9 +245,11 @@
 </span></span><span class="line"><span class="cl"><span class="c1">#git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config &amp;&amp; \</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#git clone https://github.com/nixonli/ddns-scripts_dnspod.git package/ddns-scripts_dnspod &amp;&amp; \</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#git clone https://github.com/zzsj0928/luci-app-pushbot package/luci-app-pushbot &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## If select passwall</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#git clone https://github.com/Microsoft/GSL build_dir/target-x86_64_musl/trojan-plus-10.0.3/external/GSL &amp;&amp; \</span>
 </span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/192.168.1.1/10.8.9.1/g&#39;</span> package/base-files/files/bin/config_generate <span class="o">&amp;&amp;</span> <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>./scripts/feeds update -a <span class="o">&amp;&amp;</span> ./scripts/feeds install -a <span class="o">&amp;&amp;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>make clean <span class="o">&amp;&amp;</span> <span class="o">{</span> make -j1 <span class="o">||</span> make -j1 <span class="nv">V</span><span class="o">=</span>s <span class="o">}</span> <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>make clean <span class="o">&amp;&amp;</span> make -j1 <span class="nv">V</span><span class="o">=</span>s <span class="o">&amp;&amp;</span> <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>scp -i <span class="nv">$home</span>/.ssh/id_ed25519 <span class="nv">$bindir</span>/<span class="nv">$combined</span>.qcow2 <span class="nv">$nasdir</span>/<span class="nv">$combined</span>-<span class="nv">$timestamp</span>.qcow2 <span class="o">&amp;&amp;</span> <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>scp -i <span class="nv">$home</span>/.ssh/id_ed25519 <span class="nv">$bindir</span>/<span class="nv">$combined</span>.img.gz <span class="nv">$nasdir</span>/<span class="nv">$combined</span>-<span class="nv">$timestamp</span>.img.gz
 </span></span><span class="line"><span class="cl">
