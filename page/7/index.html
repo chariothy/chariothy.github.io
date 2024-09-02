@@ -192,7 +192,7 @@
         <a href="/docker-frps-command/">frps docker command</a>
     </h1><div class="post-meta">
         <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
-        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-03-18">2021-03-18</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">frps===============使用本机网络============== 1 2 3 4 5 6 docker run -d -it \ --restart unless-stopped \ --name frps \ -v /volume2/docker/frps.ini:/etc/frp/frps.ini \ --network=host \ snowdreamtech/frps ========</div><div class="post-footer">
+        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-03-18">2021-03-18</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">frps===============使用本机网络============== 1 2 3 4 5 6 docker run -d -it \ --restart unless-stopped \ --name frps \ -v /etc/frp/frps.toml:/etc/frp/frps.toml \ --network=host \ snowdreamtech/frps ========</div><div class="post-footer">
         <a href="/docker-frps-command/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/docker/">Docker</a></div></div>
 </article><ul class="pagination"><li class="page-item ">

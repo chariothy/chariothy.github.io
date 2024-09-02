@@ -184,7 +184,7 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run -d -it \
 </span></span><span class="line"><span class="cl">--restart unless-stopped \
 </span></span><span class="line"><span class="cl">--name frps \
-</span></span><span class="line"><span class="cl">-v /volume2/docker/frps.ini:/etc/frp/frps.ini \
+</span></span><span class="line"><span class="cl">-v /etc/frp/frps.toml:/etc/frp/frps.toml \
 </span></span><span class="line"><span class="cl">--network=host \
 </span></span><span class="line"><span class="cl">snowdreamtech/frps
 </span></span></code></pre></td></tr></table>
@@ -219,7 +219,7 @@
 </span></span><span class="line"><span class="cl">--restart unless-stopped \
 </span></span><span class="line"><span class="cl">--name frps \
 </span></span><span class="line"><span class="cl">--ip=192.168.1.99 \
-</span></span><span class="line"><span class="cl">-v /volume2/docker/frps.ini:/etc/frp/frps.ini \
+</span></span><span class="line"><span class="cl">-v /etc/frp/frps.toml:/etc/frp/frps.toml \
 </span></span><span class="line"><span class="cl">--network=openwrt \
 </span></span><span class="line"><span class="cl">snowdreamtech/frps
 </span></span></code></pre></td></tr></table>
@@ -242,7 +242,7 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl"># start frps
-</span></span><span class="line"><span class="cl">/app/frps -c /app/frps.ini 2&gt;&amp;1 &amp;
+</span></span><span class="line"><span class="cl">/app/frps -c /app/frps.toml 2&gt;&amp;1 &amp;
 </span></span><span class="line"><span class="cl"># start ss-server
 </span></span><span class="line"><span class="cl">/app/ss -s &#34;ss://AEAD_AES_256_GCM:$SS_PWD@:7788&#34; 2&gt;&amp;1 &amp;
 </span></span><span class="line"><span class="cl">

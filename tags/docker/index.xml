@@ -10,7 +10,7 @@
     <pubDate>Thu, 18 Mar 2021 11:36:36 &#43;0800</pubDate><author>
         <name>chariothy</name>
     </author><guid>https://www.thy.pub/docker-frps-command/</guid>
-    <description><![CDATA[frps===============使用本机网络============== 1 2 3 4 5 6 docker run -d -it \ --restart unless-stopped \ --name frps \ -v /volume2/docker/frps.ini:/etc/frp/frps.ini \ --network=host \ snowdreamtech/frps ========]]></description>
+    <description><![CDATA[frps===============使用本机网络============== 1 2 3 4 5 6 docker run -d -it \ --restart unless-stopped \ --name frps \ -v /etc/frp/frps.toml:/etc/frp/frps.toml \ --network=host \ snowdreamtech/frps ========]]></description>
 </item><item>
     <title>Docker安装OpenWRT</title>
     <link>https://www.thy.pub/install-openwrt-in-docker/</link>
@@ -31,7 +31,7 @@
     <pubDate>Tue, 12 Jan 2021 11:29:35 &#43;0800</pubDate><author>
         <name>chariothy</name>
     </author><guid>https://www.thy.pub/docker-frpc-command/</guid>
-    <description><![CDATA[frpc===============使用本机网络============== 1 2 3 4 5 6 docker run -d -it \ --restart unless-stopped \ --name frpc \ -v /volume2/docker/frpc.ini:/etc/frp/frpc.ini \ --network=host \ snowdreamtech/frpc]]></description>
+    <description><![CDATA[frpc===============使用本机网络============== 1 2 3 4 5 6 docker run -d -it \ --restart unless-stopped \ --name frpc \ -v /etc/frp/frpc.toml:/etc/frp/frpc.toml \ --network=host \ snowdreamtech/frpc]]></description>
 </item><item>
     <title>debian安装docker</title>
     <link>https://www.thy.pub/install-docker-on-debian/</link>
