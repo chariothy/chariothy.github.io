@@ -247,7 +247,7 @@
     <a href="#%e8%bd%ac%e6%88%90qcow2%e6%a0%bc%e5%bc%8f%e5%86%8d%e5%af%bc%e5%85%a5" class="header-mark"></a>转成qcow2格式再导入</h3><p>（raw img最好先转换为qcow2，qcow2格式是QEMU支持的一种主流磁盘映像格式，与raw格式相比，qcow2具有存储空间占用小、支持写时拷贝（COW, copy-on-write）、支持zlib压缩及支持AES加密等特性。）</p>
 <p><code>qemu-img convert -f raw -O qcow2 ./openwrt-x86-64-generic-squashfs-combined.img vm-101-disk-0.qcow2</code></p>
 <h3 id="导入qcow2" class="headerLink">
-    <a href="#%e5%af%bc%e5%85%a5qcow2" class="header-mark"></a>导入qcow2</h3><p><code>/sbin/qm importdisk 101 vm-101-disk-0.qcow2 local-zfs</code></p>
+    <a href="#%e5%af%bc%e5%85%a5qcow2" class="header-mark"></a>导入qcow2</h3><p><code>/sbin/qm importdisk 101 /mnt/pve/dsm/images/immortalwrt-x86-64-generic-squashfs-combined-efi-20240902.qcow2 local-zfs</code></p>
 </li>
 <li>
 <p>使用磁盘
