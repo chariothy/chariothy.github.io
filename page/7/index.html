@@ -140,13 +140,6 @@
         alt="/images/profile.jpg"
         title="/images/profile.jpg" height="100"   width="100" ></a></div><h1 class="home-title">欢迎来到我的博客</h1><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/chariothy" title="GitHub" target="_blank" rel="noopener noreferrer me"><span class="fab fa-github-alt fa-fw"></span></a><a href="mailto:chariothy@gmail.com" title="Email" rel=" me"><span class="far fa-envelope fa-fw"></span></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreferrer me"><span class="fas fa-rss fa-fw"></span></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/pve-recovery-from-disaster/">pve灾难故障恢复</a>
-    </h1><div class="post-meta">
-        <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
-        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-08-15">2021-08-15</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">pve灾难故障恢复（以恢复/usr为例） (记录在一次pve中rm /usr -R之后) 先脱离集群（集群内机器都需要脱群，否则单独工作时仍会出错） 集群机</div><div class="post-footer">
-        <a href="/pve-recovery-from-disaster/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/pve/">PVE</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/ecs-centos-config-mailx/">阿里云ECS配置mailx</a>
     </h1><div class="post-meta">
         <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
@@ -159,7 +152,7 @@
         <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
         </span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-07-12">2021-07-12</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">创建虚拟机要点 General中开机自启动要勾上 OS中 不使用任何介质 BIOS中使用默认SeaBIOS (如果要用UEFI启动需要导入EFI镜像)</div><div class="post-footer">
         <a href="/install-openwrt-kvm-on-pve/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/pve/">PVE</a>,&nbsp;<a href="/tags/openwrt/">Openwrt</a></div></div>
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/pve/">Pve</a>,&nbsp;<a href="/tags/openwrt/">Openwrt</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/word-vba-dual-print/">Word宏手动双面打印</a>
     </h1><div class="post-meta">
@@ -180,7 +173,7 @@
         <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
         </span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-04-11">2021-04-11</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">pve zfs 先将编译好的raw img（不要选EFI的，实测UEFI无法启动。原始img+pve seabios成功启动）上传到local(pve)下的</div><div class="post-footer">
         <a href="/import-openwrt-kvm-image-pve-zfs/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/pve/">PVE</a>,&nbsp;<a href="/tags/openwrt/">Openwrt</a></div></div>
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/pve/">Pve</a>,&nbsp;<a href="/tags/openwrt/">Openwrt</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/alpine-command-remark/">alpine命令简介</a>
     </h1><div class="post-meta">
@@ -195,6 +188,13 @@
         </span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-03-18">2021-03-18</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">frps===============使用本机网络============== 1 2 3 4 5 6 docker run -d -it \ --restart unless-stopped \ --name frps \ -v /etc/frp/frps.toml:/etc/frp/frps.toml \ --network=host \ snowdreamtech/frps ========</div><div class="post-footer">
         <a href="/docker-frps-command/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/docker/">Docker</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/install-openwrt-in-docker/">Docker安装OpenWRT</a>
+    </h1><div class="post-meta">
+        <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-02-17">2021-02-17</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">Docker安装OpenWRT 打开网卡混杂模式sudo ip link set eth0 promisc on 创建网络(须结合实际网络情况，不能照抄命令) 使Docker支持IPV6， 1</div><div class="post-footer">
+        <a href="/install-openwrt-in-docker/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/docker/">Docker</a>,&nbsp;<a href="/tags/openwrt/">Openwrt</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

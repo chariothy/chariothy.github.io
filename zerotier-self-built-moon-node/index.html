@@ -195,7 +195,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -s https://install.zerotier.com/ <span class="p">|</span> sudo bash
-</span></span><span class="line"><span class="cl">sudozerotier-cli join abfd389e23
+</span></span><span class="line"><span class="cl">sudozerotier-cli join $planetid
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> /var/lib/zerotier-one/
 </span></span><span class="line"><span class="cl">sudo zerotier-idtool initmoon identity.public &gt; moon.json
 </span></span><span class="line"><span class="cl">nano moon.json <span class="c1"># &#34;stableEndpoints&#34;: [ &#34;111.111.111.111/9993&#34; ]    # 111.111.111.111修改为自己的公网ip</span>
@@ -204,7 +204,7 @@
 </span></span><span class="line"><span class="cl">mv 000000xxxxxxxxxxxx.moon moons.d/
 </span></span><span class="line"><span class="cl">systemctl restart zerotier-one <span class="c1"># 重启zerotier</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># 另一台openwrt</span>
-</span></span><span class="line"><span class="cl">zerotier-cli orbit ca531f ca5d3f
+</span></span><span class="line"><span class="cl">zerotier-cli orbit $orbitid $orbitid
 </span></span></code></pre></td></tr></table>
 </div>
 </div></div>

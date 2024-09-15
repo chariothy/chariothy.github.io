@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>PVE - 标签 - 孤独的长跑者</title>
+        <title>Pve - 标签 - 孤独的长跑者</title>
         <link>https://www.thy.pub/tags/pve/</link>
-        <description>PVE - 标签 - 孤独的长跑者</description>
+        <description>Pve - 标签 - 孤独的长跑者</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
             <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 Apr 2024 00:16:10 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/pve/" rel="self" type="application/rss+xml" /><item>
     <title>PVE开启SR-IOV</title>
@@ -25,13 +25,6 @@
         <name>chariothy</name>
     </author><guid>https://www.thy.pub/pve-solves-the-inbound-packet-loss-problem/</guid>
     <description><![CDATA[PVE解决inbound丢包问题 最近经常收到netdata的警告邮件 netdata inbound packet 查了github之后找到的解决方案sudo install llpdap #安装在pve的ho]]></description>
-</item><item>
-    <title>PVE-OPENWRT-VLAN组网</title>
-    <link>https://www.thy.pub/pve-openwrt-vlan-dual-wan/</link>
-    <pubDate>Thu, 14 Apr 2022 14:12:53 &#43;0800</pubDate><author>
-        <name>chariothy</name>
-    </author><guid>https://www.thy.pub/pve-openwrt-vlan-dual-wan/</guid>
-    <description><![CDATA[PVE-OPENWRT-VLAN组网 需求 访问外网从电信家宽走，SNF内网从LAN走 snfchina.com和snf.com从SNF解析，其它]]></description>
 </item><item>
     <title>PVE黑群单盘扩容方案</title>
     <link>https://www.thy.pub/pve-dsm-single-disk-dilatation/</link>

@@ -24,7 +24,7 @@
     <pubDate>Sun, 14 Feb 2021 13:37:23 &#43;0800</pubDate><author>
         <name>chariothy</name>
     </author><guid>https://www.thy.pub/docker-softether-command/</guid>
-    <description><![CDATA[softether client 1 2 3 4 5 6 7 8 9 docker run -d --name=softether-vpnclient \ --net=host --privileged \ -e VPN_SERVER=tq.thy.pub \ -e VPN_PORT=45555 \ -e ACCOUNT_USER=henry \ -e ACCOUNT_PASS=770808 \ -e VIRTUAL_HUB=VPNAT \ -e TAP_IPADDR=192.168.30.111 \ mitsutaka/softether-vpnclient]]></description>
+    <description><![CDATA[softether client 1 2 3 4 5 6 7 8 9 docker run -d --name=softether-vpnclient \ --net=host --privileged \ -e VPN_SERVER=tq.thy.pub \ -e VPN_PORT=45555 \ -e ACCOUNT_USER=henry \ -e ACCOUNT_PASS=password \ -e VIRTUAL_HUB=VPNAT \ -e TAP_IPADDR=192.168.30.111 \ mitsutaka/softether-vpnclient]]></description>
 </item><item>
     <title>frpc docker command</title>
     <link>https://www.thy.pub/docker-frpc-command/</link>

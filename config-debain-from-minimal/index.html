@@ -298,7 +298,7 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt install sudo
 </span></span><span class="line"><span class="cl">adduser henry
 </span></span><span class="line"><span class="cl">nano /etc/sudoers 			# henry ALL=(ALL:ALL) ALL
-</span></span><span class="line"><span class="cl">passwd henry
+</span></span><span class="line"><span class="cl">passwd password
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>su henry</code></p>
@@ -416,7 +416,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">smtp.163.com:phone@163.com:plain-password 	# 它的结构为&lt;163的SMTP服务器地址&gt;:&lt;发件人邮箱地址&gt;:&lt;邮箱授权码&gt;
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">smtp.163.com:email.163.com:password 	# 它的结构为&lt;163的SMTP服务器地址&gt;:&lt;发件人邮箱地址&gt;:&lt;邮箱授权码&gt;
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="配置etcemail-addresses" class="headerLink">
@@ -426,16 +426,16 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root: phone@163.com			# 否则系统会告诉你发件人帐号与发件人不符合
-</span></span><span class="line"><span class="cl">henry: phone@163.com
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root: email.163.com			# 否则系统会告诉你发件人帐号与发件人不符合
+</span></span><span class="line"><span class="cl">henry: email.163.com
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>systemctl restart exim4.service</code></p>
 <h3 id="测试" class="headerLink">
-    <a href="#%e6%b5%8b%e8%af%95" class="header-mark"></a>测试</h3><p><code>echo &quot;Email test body&quot; | mail -s &quot;Email test subject&quot; 6314849@qq.com</code></p>
+    <a href="#%e6%b5%8b%e8%af%95" class="header-mark"></a>测试</h3><p><code>echo &quot;Email test body&quot; | mail -s &quot;Email test subject&quot; email.163.com</code></p>
 <h3 id="如果需要发送给用户如root" class="headerLink">
     <a href="#%e5%a6%82%e6%9e%9c%e9%9c%80%e8%a6%81%e5%8f%91%e9%80%81%e7%bb%99%e7%94%a8%e6%88%b7%e5%a6%82root" class="header-mark"></a>如果需要发送给用户，如root</h3><h4 id="配置etcalias" class="headerLink">
-    <a href="#%e9%85%8d%e7%bd%aeetcalias" class="header-mark"></a>配置/etc/alias</h4><p><code>root: 6314849@qq.com</code></p>
+    <a href="#%e9%85%8d%e7%bd%aeetcalias" class="header-mark"></a>配置/etc/alias</h4><p><code>root: email.163.com</code></p>
 <h4 id="运行" class="headerLink">
     <a href="#%e8%bf%90%e8%a1%8c" class="header-mark"></a>运行</h4><p><code>newaliases </code></p>
 <p><code>echo &quot;Email test body&quot; | mail -s &quot;Email test subject&quot; root</code></p>
@@ -474,9 +474,9 @@
 </span></span><span class="line"><span class="cl">certutil -L -d /etc/pki/nssdb/
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">cat &gt;&gt; /etc/mail.rc &lt;&lt;EOF
-</span></span><span class="line"><span class="cl">set from=phone@163.com
+</span></span><span class="line"><span class="cl">set from=email.163.com
 </span></span><span class="line"><span class="cl">set smtp=smtps://smtp.163.com:465
-</span></span><span class="line"><span class="cl">set smtp-auth-user=phone@163.com
+</span></span><span class="line"><span class="cl">set smtp-auth-user=email.163.com
 </span></span><span class="line"><span class="cl">set smtp-auth-password=password
 </span></span><span class="line"><span class="cl">set smtp-auth=login
 </span></span><span class="line"><span class="cl">set ssl-verify=ignore
@@ -485,7 +485,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">nano /etc/exim4/update-exim4.conf.conf			# dc_eximconfig_configtype=&#39;internet&#39;
 </span></span><span class="line"><span class="cl">/etc/init.d/exim4 restart
-</span></span><span class="line"><span class="cl">echo  &#34; 邮件正文内容 &#34; | mail -v -s  &#34; 邮件主题 &#34;   6314849@qq.com
+</span></span><span class="line"><span class="cl">echo  &#34; 邮件正文内容 &#34; | mail -v -s  &#34; 邮件主题 &#34;   email.163.com
 </span></span></code></pre></td></tr></table>
 </div>
 </div></div>

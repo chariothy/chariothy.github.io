@@ -66,7 +66,7 @@
     <pubDate>Tue, 07 Nov 2023 14:27:54 &#43;0800</pubDate><author>
         <name>chariothy</name>
     </author><guid>https://www.thy.pub/zerotier-self-built-moon-node/</guid>
-    <description><![CDATA[zerotier自建moon节点 OneDrive\configs\OWV9\etc\config\zero\moons.d 1 2 3 4 5 6 7 8 9 10 11 curl -s https://install.zerotier.com/ | sudo bash sudozerotier-cli join abfd389e23 cd /var/lib/zerotier-one/ sudo zerotier-idtool initmoon identity.public &gt; moon.json nano moon.json # &#34;stableEndpoints&#34;: [ &#34;111.111.111.111/9993&#34; ] # 111.111.111.111修改]]></description>
+    <description><![CDATA[zerotier自建moon节点 OneDrive\configs\OWV9\etc\config\zero\moons.d 1 2 3 4 5 6 7 8 9 10 11 curl -s https://install.zerotier.com/ | sudo bash sudozerotier-cli join $planetid cd /var/lib/zerotier-one/ sudo zerotier-idtool initmoon identity.public &gt; moon.json nano moon.json # &#34;stableEndpoints&#34;: [ &#34;111.111.111.111/9993&#34; ] # 111.111.111.111修改]]></description>
 </item><item>
     <title>PVE解决e1000-detect-hardware-unit-hang的问题</title>
     <link>https://www.thy.pub/pve-troubleshoot-the-e1000-detect-hardware-unit-hang/</link>

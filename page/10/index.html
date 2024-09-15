@@ -140,13 +140,6 @@
         alt="/images/profile.jpg"
         title="/images/profile.jpg" height="100"   width="100" ></a></div><h1 class="home-title">欢迎来到我的博客</h1><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/chariothy" title="GitHub" target="_blank" rel="noopener noreferrer me"><span class="fab fa-github-alt fa-fw"></span></a><a href="mailto:chariothy@gmail.com" title="Email" rel=" me"><span class="far fa-envelope fa-fw"></span></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreferrer me"><span class="fas fa-rss fa-fw"></span></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/migrate-data-of-docker/">docker迁移数据目录</a>
-    </h1><div class="post-meta">
-        <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
-        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-11-13">2020-11-13</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">docker迁移数据目录 Docker的数据目录在/var/lib/docker下，往往需要大量空间，迁移过程：sudo mkdir /home/docker sudo rsync -aP /var/lib/docker/ /home/docker sudo nano /etc/docker/daemon.json 1</div><div class="post-footer">
-        <a href="/migrate-data-of-docker/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/docker/">Docker</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/install-openwrt-on-esxi/">Esxi安装OpenWrt</a>
     </h1><div class="post-meta">
         <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
@@ -166,7 +159,7 @@
         <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
         </span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-10-08">2020-10-08</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div><div class="content">PVE acme部署Let&rsquo;s crypt证书cd ~ 安装脚本curl https://get.acme.sh | sh cd .acme.sh 申请证书 （会定期自动申请新证书）export DP_Id=&quot;174377&quot;; export DP_Key=&quot;e3a766b6fdf83a1a39dd5caea80daa25&quot;; ./acme.sh --issue --dns dns_dp</div><div class="post-footer">
         <a href="/issue-ssl-cert-using-acme-on-pve/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/pve/">PVE</a>,&nbsp;<a href="/tags/ssl/">Ssl</a></div></div>
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/pve/">Pve</a>,&nbsp;<a href="/tags/ssl/">Ssl</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/how-to-handle-billion-rows-in-sqlserver/">如何在SQLServer中处理亿万级别的数据(历史数据)</a>
     </h1><div class="post-meta">
@@ -195,6 +188,13 @@
         </span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-07-18">2020-07-18</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw"></i>软件开发</a></span></div><div class="content">PHP常见坑和避免的方法 filesize缓存的问题可以用clearstatcache()清除缓存，且不能正确获取大于2G文件的大小 null和</div><div class="post-footer">
         <a href="/common-php-pits-and-ways-to-avoid-them/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/php/">PHP</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/python-list-dict-generator/">python生成式</a>
+    </h1><div class="post-meta">
+        <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
+        </span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-06-18">2020-06-18</time></span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw"></i>软件开发</a></span></div><div class="content">python生成式 1. 列表生成式 1 [experssion for i in sequence if...] 2. 字典生成式 1 { key: value for i in sequence if...}</div><div class="post-footer">
+        <a href="/python-list-dict-generator/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/python/">Python</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

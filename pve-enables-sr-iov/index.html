@@ -16,7 +16,7 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-04-05T00:16:10+08:00">
     <meta property="article:modified_time" content="2024-04-05T00:16:10+08:00">
-    <meta property="article:tag" content="PVE">
+    <meta property="article:tag" content="Pve">
     <meta property="article:tag" content="SR-IOV">
     <meta property="og:image" content="https://www.thy.pub/logo.png">
 
@@ -45,7 +45,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.thy.pub\/pve-enables-sr-iov\/"
-        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "PVE, SR-IOV","wordcount":  1119 ,
+        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "PVE, SR-IOV","wordcount":  1161 ,
         "url": "https:\/\/www.thy.pub\/pve-enables-sr-iov\/","datePublished": "2024-04-05T00:16:10+08:00","dateModified": "2024-04-05T00:16:10+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "chariothy","logo": "https:\/\/www.thy.pub\/images\/avatar.png"},"author": {
@@ -151,14 +151,18 @@
         <li><a href="#cpu-支持vt-d和vt-x并在bios中打开">CPU 支持VT-D和VT-X，并在BIOS中打开</a></li>
       </ul>
     </li>
-    <li><a href="#开启sr-iov">开启SR-IOV</a></li>
+    <li><a href="#开启sr-iov">开启SR-IOV</a>
+      <ul>
+        <li><a href="#cmdline这一步搜索了很久">cmdline这一步搜索了很久</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">PVE开启SR-IOV</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>Linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-04-05">2024-04-05</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-04-05">2024-04-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1119 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-04-05">2024-04-05</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-04-05">2024-04-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1161 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;
     
 
     
@@ -185,7 +189,11 @@
         <li><a href="#cpu-支持vt-d和vt-x并在bios中打开">CPU 支持VT-D和VT-X，并在BIOS中打开</a></li>
       </ul>
     </li>
-    <li><a href="#开启sr-iov">开启SR-IOV</a></li>
+    <li><a href="#开启sr-iov">开启SR-IOV</a>
+      <ul>
+        <li><a href="#cmdline这一步搜索了很久">cmdline这一步搜索了很久</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h1 id="pve开启sr-iov" class="headerLink">
@@ -194,29 +202,80 @@
     <a href="#cpu-%e6%94%af%e6%8c%81vt-d%e5%92%8cvt-x%e5%b9%b6%e5%9c%a8bios%e4%b8%ad%e6%89%93%e5%bc%80" class="header-mark"></a>CPU 支持VT-D和VT-X，并在BIOS中打开</h3><p>编辑文件/etc/default/grub
 修改行GRUB_CMDLINE_LINUX_DEFAULT=&ldquo;quiet&rdquo;
 使其为GRUB_CMDLINE_LINUX_DEFAULT=&ldquo;quiet intel_iommu=on iommu=pt&rdquo;</p>
-<p>update-grub</p>
-<p>dmesg | grep -e DMAR -e IOMMU</p>
-<p>DMAR: IOMMU enabled</p>
-<p>vi /etc/modules</p>
-<p>vfio
-vfio_iommu_type1
-vfio_pci
-vfio_virqfd</p>
-<p>update-initramfs -u -k all</p>
-<p>cat /etc/kernel/cmdline</p>
-<p>root=ZFS=rpool/ROOT/pve-1 boot=zfs quiet intel_iommu=on iommu=pt</p>
-<p>reboot</p>
-<h2 id="开启sr-iov" class="headerLink">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">update-grub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">dmesg <span class="p">|</span> grep -e DMAR -e IOMMU
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DMAR: IOMMU enabled
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">vi /etc/modules
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">vfio
+</span></span><span class="line"><span class="cl">vfio_iommu_type1
+</span></span><span class="line"><span class="cl">vfio_pci
+</span></span><span class="line"><span class="cl">vfio_virqfd
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">update-initramfs -u -k all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat /etc/kernel/cmdline
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">root</span><span class="o">=</span><span class="nv">ZFS</span><span class="o">=</span>rpool/ROOT/pve-1 <span class="nv">boot</span><span class="o">=</span>zfs quiet <span class="nv">intel_iommu</span><span class="o">=</span>on <span class="nv">iommu</span><span class="o">=</span>pt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">reboot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="开启sr-iov" class="headerLink">
     <a href="#%e5%bc%80%e5%90%afsr-iov" class="header-mark"></a>开启SR-IOV</h2><p>打开 /etc/default/grub 文件,在GRUB_CMDLINE_LINUX_DEFAULT行添加以下内容
 pci=assign-busses是因为部署SR IOV的时候报错”write error: Cannot allocate memory“</p>
 <p>编辑文件/etc/default/grub
 修改行GRUB_CMDLINE_LINUX_DEFAULT=&ldquo;quiet&rdquo;
 使其为GRUB_CMDLINE_LINUX_DEFAULT=&ldquo;quiet intel_iommu=on iommu=pt pci=assign-busses pcie_acs_override=downstream&rdquo;</p>
-<p>cat /etc/kernel/cmdline</p>
-<p>root=ZFS=rpool/ROOT/pve-1 boot=zfs quiet intel_iommu=on iommu=pt pci=assign-busses pcie_acs_override=downstream</p>
-<p>cat /sys/bus/pci/devices/0000:01:00.1/sriov_totalvfs</p>
-<p>echo 7 &gt; /sys/class/net/ens3f1/device/sriov_numvfs</p>
-<p>vi /etc/systemd/system/sriov.service</p>
+<h3 id="cmdline这一步搜索了很久" class="headerLink">
+    <a href="#cmdline%e8%bf%99%e4%b8%80%e6%ad%a5%e6%90%9c%e7%b4%a2%e4%ba%86%e5%be%88%e4%b9%85" class="header-mark"></a>cmdline这一步搜索了很久</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /etc/kernel/cmdline
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">root</span><span class="o">=</span><span class="nv">ZFS</span><span class="o">=</span>rpool/ROOT/pve-1 <span class="nv">boot</span><span class="o">=</span>zfs quiet <span class="nv">intel_iommu</span><span class="o">=</span>on <span class="nv">iommu</span><span class="o">=</span>pt <span class="nv">pci</span><span class="o">=</span>assign-busses <span class="nv">pcie_acs_override</span><span class="o">=</span>downstream
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat /sys/bus/pci/devices/0000:01:00.1/sriov_totalvfs
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="m">7</span> &gt; /sys/class/net/ens3f1/device/sriov_numvfs
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>vi /etc/systemd/system/sriov.service</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -384,7 +443,7 @@ iface ens16 inet dhcp</p>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/pve/">PVE</a>,&nbsp;<a href="/tags/sr-iov/">SR-IOV</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/pve/">Pve</a>,&nbsp;<a href="/tags/sr-iov/">SR-IOV</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
