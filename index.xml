@@ -4,9 +4,16 @@
         <link>https://www.thy.pub/</link>
         <description>关于</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
-            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 12 Oct 2024 21:57:29 &#43;0800</lastBuildDate>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 13 Oct 2024 09:36:24 &#43;0800</lastBuildDate>
             <atom:link href="https://www.thy.pub/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>postgrest配置及说明</title>
+    <link>https://www.thy.pub/postgrest-config-and-explanation/</link>
+    <pubDate>Sun, 13 Oct 2024 09:36:24 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/postgrest-config-and-explanation/</guid>
+    <description><![CDATA[postgrest配置及说明 准备scecret和token 1 2 3 4 5 # Allow &#34;tr&#34; to process non-utf8 byte sequences export LC_CTYPE=C # Read random bytes keeping only alphanumerics and add the secret to the configuration file echo &#34;jwt-secret = \&#34;$(&lt; /dev/urandom tr -dc A-Za-z0-9 | head -c32)\&#34;&#34;]]></description>
+</item><item>
     <title>git解决</title>
     <link>https://www.thy.pub/git-solve-gnutls-recv-error/</link>
     <pubDate>Sat, 12 Oct 2024 21:57:29 &#43;0800</pubDate><author>
@@ -69,12 +76,5 @@
         <name>chariothy</name>
     </author><guid>https://www.thy.pub/mount-one-disk-of-raid1/</guid>
     <description><![CDATA[挂载raid1的其中一块盘直接挂载会报错 sudo mount /dev/sdf3 /volume1/sync/old mount: /volume1/sync/old: unknown filesystem type &rsquo;linux_raid_member'. 需要先组装成软raid1 sudo mdadm --assemble --run /dev/md6 /dev/sdf3 然后再挂载软raid1 sudo mount /dev/md6 /volume1/sync/old]]></description>
-</item><item>
-    <title>PVE安装黑群DSM7</title>
-    <link>https://www.thy.pub/pve-xpenology-dsm7/</link>
-    <pubDate>Thu, 18 Apr 2024 09:33:01 &#43;0800</pubDate><author>
-        <name>chariothy</name>
-    </author><guid>https://www.thy.pub/pve-xpenology-dsm7/</guid>
-    <description><![CDATA[PVE安装黑群DSM7 下载最新引导arpl 新建vm cpu选host，打开NUMA 打开QEMU GA 内存4G 默认的硬盘（装完就分离此硬盘） 接上要直]]></description>
 </item></channel>
 </rss>
