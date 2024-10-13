@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://www.thy.pub/categories/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://www.thy.pub/categories/</loc><lastmod>2024-10-12T21:57:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://www.thy.pub/en/categories/"
@@ -11,11 +11,10 @@
                     hreflang="zh-cn"
                     href="https://www.thy.pub/categories/"
                     /></url><url>
-            <loc>https://www.thy.pub/categories/linux/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.thy.pub/tags/openwrt/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.thy.pub/openwrt-privoxy-http-proxy-from-socks5/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.thy.pub/posts/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.thy.pub/tags/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://www.thy.pub/tags/git/</loc><lastmod>2024-10-12T21:57:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.thy.pub/git-solve-gnutls-recv-error/</loc><lastmod>2024-10-12T21:57:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.thy.pub/posts/</loc><lastmod>2024-10-12T21:57:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.thy.pub/tags/</loc><lastmod>2024-10-12T21:57:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://www.thy.pub/en/tags/"
@@ -24,7 +23,7 @@
                     hreflang="zh-cn"
                     href="https://www.thy.pub/tags/"
                     /></url><url>
-            <loc>https://www.thy.pub/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://www.thy.pub/</loc><lastmod>2024-10-12T21:57:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://www.thy.pub/en/"
@@ -33,6 +32,10 @@
                     hreflang="zh-cn"
                     href="https://www.thy.pub/"
                     /></url><url>
+            <loc>https://www.thy.pub/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91-git/</loc><lastmod>2024-10-12T21:57:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.thy.pub/categories/linux/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.thy.pub/tags/openwrt/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.thy.pub/openwrt-privoxy-http-proxy-from-socks5/</loc><lastmod>2024-08-09T15:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/tags/windows/</loc><lastmod>2024-08-09T10:28:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/categories/windows/</loc><lastmod>2024-08-09T10:28:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/proxy-setting-on-windows/</loc><lastmod>2024-08-09T10:28:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -105,7 +108,6 @@
             <loc>https://www.thy.pub/ubuntu-change-the-scroll-direction-of-the-touchpad/</loc><lastmod>2022-02-24T10:42:56&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/tags/vagrant/</loc><lastmod>2022-02-17T14:26:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/vagrant-use-samba-share-folder/</loc><lastmod>2022-02-17T14:26:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.thy.pub/tags/git/</loc><lastmod>2022-02-15T18:45:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/tags/hugo/</loc><lastmod>2022-02-15T18:45:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/combine-hugo-with-vscode/</loc><lastmod>2022-02-15T18:45:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.thy.pub/config-debain-from-minimal/</loc><lastmod>2022-01-15T13:51:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

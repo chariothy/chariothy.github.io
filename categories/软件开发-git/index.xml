@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>软件开发 Git - 分类 - 孤独的长跑者</title>
+        <link>https://www.thy.pub/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91-git/</link>
+        <description>软件开发 Git - 分类 - 孤独的长跑者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 12 Oct 2024 21:57:29 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91-git/" rel="self" type="application/rss+xml" /><item>
+    <title>git解决</title>
+    <link>https://www.thy.pub/git-solve-gnutls-recv-error/</link>
+    <pubDate>Sat, 12 Oct 2024 21:57:29 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/git-solve-gnutls-recv-error/</guid>
+    <description><![CDATA[git解决 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 sudo apt install gnutls-bin git config --global http.sslverify false git config --global http.postBuffer 1048576000 //增加至1GB缓存 #设置git最小和最大下载速度 git config --global http.lowSpeedLimit 0 git config --global http.lowSpeedTime 999999 #]]></description>
+</item></channel>
+</rss>
