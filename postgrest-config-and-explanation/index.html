@@ -44,7 +44,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.thy.pub\/postgrest-config-and-explanation\/"
-        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Database postgres","wordcount":  842 ,
+        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Database postgres","wordcount":  848 ,
         "url": "https:\/\/www.thy.pub\/postgrest-config-and-explanation\/","datePublished": "2024-10-13T09:36:24+08:00","dateModified": "2024-10-13T09:36:24+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "chariothy","logo": "https:\/\/www.thy.pub\/images\/avatar.png"},"author": {
@@ -155,7 +155,7 @@
             <div class="post-meta-line">
                 <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91-database/"><i class="far fa-folder fa-fw"></i>软件开发 Database</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-10-13">2024-10-13</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-10-13">2024-10-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 842 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-10-13">2024-10-13</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-10-13">2024-10-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 848 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;
     
 
     
@@ -344,9 +344,11 @@
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
+</span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">token</span><span class="o">=</span>sample_token
+</span></span><span class="line"><span class="cl">set-variable -name token -value sample_token
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">curl http://10.8.0.68:3000/msfund -X POST -H <span class="s2">&#34;Authorization: Bearer </span><span class="nv">$token</span><span class="s2">&#34;</span> -H <span class="s2">&#34;Content-Type: application/json&#34;</span> -d <span class="s1">&#39;{&#34;code&#34;: &#34;002644&#34;, &#34;data&#34;: &#34;{\&#34;FundName\&#34;:\&#34;大成景荣债券A\&#34;, \&#34;CategoryName\&#34;: \&#34;普通债券\&#34;}&#34;}&#39;</span>
 </span></span><span class="line"><span class="cl">
