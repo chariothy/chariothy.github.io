@@ -4,7 +4,14 @@
         <link>https://www.thy.pub/tags/</link>
         <description>Tags - 标签 - 孤独的长跑者</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
-            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 13 Oct 2024 09:36:24 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 25 Oct 2024 21:37:54 &#43;0800</lastBuildDate><atom:link href="https://www.thy.pub/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux VPS</title>
+    <link>https://www.thy.pub/tags/linux-vps/</link>
+    <pubDate>Fri, 25 Oct 2024 21:37:54 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/tags/linux-vps/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>Database Postgres</title>
     <link>https://www.thy.pub/tags/database-postgres/</link>
     <pubDate>Sun, 13 Oct 2024 09:36:24 &#43;0800</pubDate><author>
@@ -66,13 +73,6 @@
     <pubDate>Tue, 07 May 2024 20:16:30 &#43;0800</pubDate><author>
         <name>chariothy</name>
     </author><guid>https://www.thy.pub/tags/%E7%BD%91%E7%BB%9C/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Linux Disk</title>
-    <link>https://www.thy.pub/tags/linux-disk/</link>
-    <pubDate>Thu, 25 Apr 2024 19:17:19 &#43;0800</pubDate><author>
-        <name>chariothy</name>
-    </author><guid>https://www.thy.pub/tags/linux-disk/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

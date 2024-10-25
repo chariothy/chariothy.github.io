@@ -4,9 +4,16 @@
         <link>https://www.thy.pub/</link>
         <description>关于</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
-            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 13 Oct 2024 09:36:24 &#43;0800</lastBuildDate>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 25 Oct 2024 21:37:54 &#43;0800</lastBuildDate>
             <atom:link href="https://www.thy.pub/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>新建VPS安装记录</title>
+    <link>https://www.thy.pub/log-for-new-vps/</link>
+    <pubDate>Fri, 25 Oct 2024 21:37:54 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/log-for-new-vps/</guid>
+    <description><![CDATA[新建VPS安装记录 核对时区 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57]]></description>
+</item><item>
     <title>postgrest配置及说明</title>
     <link>https://www.thy.pub/postgrest-config-and-explanation/</link>
     <pubDate>Sun, 13 Oct 2024 09:36:24 &#43;0800</pubDate><author>
@@ -69,12 +76,5 @@
         <name>chariothy</name>
     </author><guid>https://www.thy.pub/tplink-ap-connot-connect/</guid>
     <description><![CDATA[TPLINK的AP无法连接突然发现4个AP中有两个无法连接（管理），查资料后发现是因为AP无法在DHCP获取IP。 因为我的TPLINK路由器]]></description>
-</item><item>
-    <title>挂载raid1的其中一块盘</title>
-    <link>https://www.thy.pub/mount-one-disk-of-raid1/</link>
-    <pubDate>Thu, 25 Apr 2024 19:17:19 &#43;0800</pubDate><author>
-        <name>chariothy</name>
-    </author><guid>https://www.thy.pub/mount-one-disk-of-raid1/</guid>
-    <description><![CDATA[挂载raid1的其中一块盘直接挂载会报错 sudo mount /dev/sdf3 /volume1/sync/old mount: /volume1/sync/old: unknown filesystem type &rsquo;linux_raid_member'. 需要先组装成软raid1 sudo mdadm --assemble --run /dev/md6 /dev/sdf3 然后再挂载软raid1 sudo mount /dev/md6 /volume1/sync/old]]></description>
 </item></channel>
 </rss>
