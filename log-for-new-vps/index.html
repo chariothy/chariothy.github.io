@@ -44,7 +44,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.thy.pub\/log-for-new-vps\/"
-        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Linux VPS","wordcount":  355 ,
+        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Linux VPS","wordcount":  364 ,
         "url": "https:\/\/www.thy.pub\/log-for-new-vps\/","datePublished": "2024-10-25T21:37:54+08:00","dateModified": "2024-10-25T21:37:54+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "chariothy","logo": "https:\/\/www.thy.pub\/images\/avatar.png"},"author": {
@@ -152,7 +152,7 @@
             <div class="post-meta-line">
                 <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98-linux/"><i class="far fa-folder fa-fw"></i>IT备忘 Linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-10-25">2024-10-25</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-10-25">2024-10-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 355 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-10-25">2024-10-25</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-10-25">2024-10-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 364 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;
     
 
     
@@ -249,6 +249,9 @@
 </span><span class="lnt">66
 </span><span class="lnt">67
 </span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">timedatectl</span> <span class="c1"># 显示时区</span>
@@ -257,7 +260,8 @@
 </span></span><span class="line"><span class="cl"><span class="c1">## sudo &amp; user</span>
 </span></span><span class="line"><span class="cl"><span class="n">apt</span> <span class="n">install</span> <span class="n">sudo</span>
 </span></span><span class="line"><span class="cl"><span class="n">adduser</span> <span class="n">henry</span>
-</span></span><span class="line"><span class="cl"><span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sudoers</span> 			<span class="c1"># (henry ALL=(ALL:ALL) ALL)</span>
+</span></span><span class="line"><span class="cl"><span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sudoers</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">henry</span> <span class="o">&lt;&lt;&lt;</span> <span class="s1">&#39;henry ALL=(ALL) ALL&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">chmod</span> <span class="mi">440</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sudoers</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">henry</span>
 </span></span><span class="line"><span class="cl"><span class="n">passwd</span> <span class="n">password</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">## 以下均使用root用户 ##</span>
@@ -306,6 +310,8 @@
 </span></span><span class="line"><span class="cl"><span class="n">apt</span> <span class="n">install</span> <span class="n">rsync</span>
 </span></span><span class="line"><span class="cl"><span class="n">cp</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">rsync</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">rsyncd</span><span class="o">.</span><span class="n">conf</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span>
 </span></span><span class="line"><span class="cl"><span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rsyncd</span><span class="o">.</span><span class="n">conf</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">net</span><span class="o">-</span><span class="n">tools</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 修改以下：</span>
 </span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">website</span><span class="p">]</span>
