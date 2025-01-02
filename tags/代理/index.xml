@@ -10,6 +10,6 @@
     <pubDate>Fri, 09 Aug 2024 10:28:49 &#43;0800</pubDate><author>
         <name>chariothy</name>
     </author><guid>https://www.thy.pub/proxy-setting-on-windows/</guid>
-    <description><![CDATA[常见工具的代理设置.socks5代理转http代理可见 openwrt安装privoxy转换socks5到http代理 powershell proxy 1 2 $env:http_proxy=&#34;http://10.18.18.1:1071&#34; $env:https_proxy=&#34;http://10.18.18.1:1071&#34; scoop proxyscoop config proxy 10.18.18.1:1071 ##]]></description>
+    <description><![CDATA[常见工具的代理设置.socks5代理转http代理可见 openwrt安装privoxy转换socks5到http代理 更新2024-09-20]]></description>
 </item></channel>
 </rss>
