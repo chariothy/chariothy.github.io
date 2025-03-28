@@ -4,9 +4,16 @@
         <link>https://www.thy.pub/</link>
         <description>关于</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chariothy@gmail.com (chariothy)</managingEditor>
-            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 25 Oct 2024 21:37:54 &#43;0800</lastBuildDate>
+            <webMaster>chariothy@gmail.com (chariothy)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 28 Mar 2025 23:42:02 &#43;0800</lastBuildDate>
             <atom:link href="https://www.thy.pub/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>openwrt无法透明使用代理的处理</title>
+    <link>https://www.thy.pub/openwrt-cannot-transparent-proxy/</link>
+    <pubDate>Fri, 28 Mar 2025 23:42:02 &#43;0800</pubDate><author>
+        <name>chariothy</name>
+    </author><guid>https://www.thy.pub/openwrt-cannot-transparent-proxy/</guid>
+    <description><![CDATA[openwrt无法透明使用代理的处理 现象openwrt无法透明使用代理，比如我在openwrt上安装了passwall，openwrt本身可]]></description>
+</item><item>
     <title>新建VPS安装记录</title>
     <link>https://www.thy.pub/log-for-new-vps/</link>
     <pubDate>Fri, 25 Oct 2024 21:37:54 &#43;0800</pubDate><author>
@@ -69,12 +76,5 @@
         <name>chariothy</name>
     </author><guid>https://www.thy.pub/raspberry-3b-openwrt/</guid>
     <description><![CDATA[树莓派3B+编译openwrt 更换CPU架构 如果需要同时编译多个CPU架构，可以将每个CPU架构用一个虚拟机编译 清除之前CPU架构的编译残留]]></description>
-</item><item>
-    <title>TPLINK的AP无法连接</title>
-    <link>https://www.thy.pub/tplink-ap-connot-connect/</link>
-    <pubDate>Tue, 07 May 2024 20:16:30 &#43;0800</pubDate><author>
-        <name>chariothy</name>
-    </author><guid>https://www.thy.pub/tplink-ap-connot-connect/</guid>
-    <description><![CDATA[TPLINK的AP无法连接突然发现4个AP中有两个无法连接（管理），查资料后发现是因为AP无法在DHCP获取IP。 因为我的TPLINK路由器]]></description>
 </item></channel>
 </rss>
