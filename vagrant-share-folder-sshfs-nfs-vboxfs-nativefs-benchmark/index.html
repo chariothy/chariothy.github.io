@@ -183,7 +183,15 @@
     <li><a href="#结论">结论</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="vagrant共享目录文件系统sshfsnfsvboxfsnative-fs性能比较测试" class="headerLink">
+            </div><div class="content" id="content"><div class="details admonition note open">
+                <div class="details-summary admonition-title">
+                    <i class="icon fas fa-pencil-alt fa-fwnote"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+                </div>
+                <div class="details-content">
+                    <div class="admonition-content">
+                        本文最后更新于 <span class="timeago" datetime="2017-08-13T14:36:47" title="August 13, 2017">2017-08-13</span>，文中内容可能已过时。</div>
+                </div>
+            </div><h1 id="vagrant共享目录文件系统sshfsnfsvboxfsnative-fs性能比较测试" class="headerLink">
     <a href="#vagrant%e5%85%b1%e4%ba%ab%e7%9b%ae%e5%bd%95%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9fsshfsnfsvboxfsnative-fs%e6%80%a7%e8%83%bd%e6%af%94%e8%be%83%e6%b5%8b%e8%af%95" class="header-mark"></a>Vagrant共享目录文件系统sshfs、nfs、vboxfs、native fs性能比较测试</h1><h2 id="为什么测试" class="headerLink">
     <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e6%b5%8b%e8%af%95" class="header-mark"></a>为什么测试</h2><p>工作中使用vagrant作为开发环境，一直比较懒，直接用的默认方式共享目录，但随着项目越来越大，而且我的笔记本一般又不关机，都是直接合上，导致系统越来越慢，不但在guest中慢（比如切换目录要1秒），连在host上打开目录也变得很慢。</p>
 <p>终于有一天实在受不了，决定查查原因，网上看了很多文章，包括官网的文档，了解到大概有这样几种共享目录的方式：</p>
