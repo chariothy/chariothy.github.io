@@ -44,7 +44,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.thy.pub\/openwrt-menuconfig-x86\/"
-        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "openwrt","wordcount":  476 ,
+        },"image": ["https:\/\/www.thy.pub\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "openwrt","wordcount":  555 ,
         "url": "https:\/\/www.thy.pub\/openwrt-menuconfig-x86\/","datePublished": "2022-03-17T12:14:15+08:00","dateModified": "2022-03-17T12:14:15+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "chariothy","logo": "https:\/\/www.thy.pub\/images\/avatar.png"},"author": {
@@ -148,7 +148,7 @@
             <div class="post-meta-line">
                 <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">chariothy</a>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/it%E5%A4%87%E5%BF%98/"><i class="far fa-folder fa-fw"></i>IT备忘</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-17">2022-03-17</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-03-17">2022-03-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 476 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-17">2022-03-17</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-03-17">2022-03-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 555 字&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;
     
 
     
@@ -248,6 +248,11 @@
 </span><span class="lnt">74
 </span><span class="lnt">75
 </span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">Target</span> <span class="n">system</span> 	<span class="o">-</span> <span class="n">x84</span>
@@ -285,9 +290,10 @@
 </span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="c1">#diag-core：诊断工具套件，执行ping，扫描等，视安装的工具套件而定</span>
 </span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="c1">#DNSCrypt-Proxy：将特定于 DNSCrypt-Proxy 的设置应用到 Dnsmasq 配置</span>
 </span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">frpc</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">homeproxy</span> <span class="p">(</span><span class="err">默认支持</span><span class="n">sing</span><span class="o">-</span><span class="n">box透明代理依赖</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">nut</span> <span class="p">(</span><span class="n">network</span> <span class="n">ups</span> <span class="k">tool</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">keepalived</span>
-</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="c1"># passwall （trojan-plus如果有gsl编译错误一般是因为git clone出错，多试几次即可）</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="c1"># passwall （不默认支持sing-box透明代理依赖，trojan-plus如果有gsl编译错误一般是因为git clone出错，多试几次即可）</span>
 </span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">privoxy</span>
 </span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">pushbot</span>
 </span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">smartdns</span>
@@ -326,6 +332,10 @@
 </span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">Web</span> <span class="n">Servers</span><span class="o">/</span><span class="n">Proxies</span> <span class="p">(</span><span class="err">?</span> <span class="err">会导致包较大</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">nginx</span><span class="o">-</span><span class="n">full</span>
 </span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">nginx</span><span class="o">-</span><span class="n">ssl</span>
+</span></span><span class="line"><span class="cl">	<span class="o">-</span> <span class="n">Fileware</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">iptables</span><span class="o">-</span><span class="n">mod</span><span class="o">-</span><span class="n">socket</span> <span class="p">(</span><span class="err">透明代理依赖</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">iptables</span><span class="o">-</span><span class="n">mod</span><span class="o">-</span><span class="n">iprange</span> <span class="p">(</span><span class="err">透明代理依赖</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="o">-</span> <span class="n">iptables</span><span class="o">-</span><span class="n">mod</span><span class="o">-</span><span class="n">conntrack</span><span class="o">-</span><span class="n">extra</span> <span class="p">(</span><span class="err">透明代理依赖</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></div>
